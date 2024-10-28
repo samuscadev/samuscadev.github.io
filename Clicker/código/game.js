@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Array de zumbis com nome, vida e imagem
     const zumbis = [
-        { nome: "Girassol", vida: 1, img: "images/zombie level 1.gif" },
-        { nome: "Aí meu zoió", vida: 1, img: "images/zombie 2.gif" },
-        { nome: "Maicombi", vida: 1, img: "images/zombie 3.gif" },
-        { nome: "ICone", vida: 1, img: "images/zombie 4.gif" }
+        { nome: "Girassol", vida: 100, img: "images/zombie level 1.gif" },
+        { nome: "Aí meu zoió", vida: 550, img: "images/zombie 2.gif" },
+        { nome: "Maicombi", vida: 1700, img: "images/zombie 3.gif" },
+        { nome: "ICone", vida: 2200, img: "images/zombie 4.gif" }
     ];
 
     // Array com danos das espadas
-    const danosEspadas = [1, 5, 10, 15, 25]; // Dano das espadas
-    const precosEspadas = [0, 50, 75, 200, 250]; // Preço das espadas
+    const danosEspadas = [1, 5, 10, 15, 35]; // Dano das espadas
+    const precosEspadas = [0, 100, 500, 800, 1000]; // Preço das espadas
 
     // Função para atualizar o zumbi
     function atualizarZumbi() {

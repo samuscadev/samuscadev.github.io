@@ -26,3 +26,10 @@ header h1 {
 .c_jogador, .c_zombie{
     width: 50%;
 }
+
+.menu-lateral h1{
+    display: none;
+}
+.menu-lateral{
+    overflow:scroll ;
+}
