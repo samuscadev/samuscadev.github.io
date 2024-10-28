@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoombie Clicker</title>
+    <link rel="stylesheet" href="estilos_base_clicker.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="estilos_clicker_short.css">
+    <link rel="icon" href="images/coin.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nosifer&family=Oswald:wght@200..700&family=Potta+One&family=Squada+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+
+        <div id="inicio_header"> 
+            <img src="images/zombie-mine.gif" alt="Coin Icon">
+            <h1>Zoombie Clicker Game</h1>
+        </div>
+        
+        <button id="alterna-menu">Loja</button>
+    </header>
+
+    <main class="conteudo-principal">
+        <section id="store" class="c_store">
+            <div class="menu-lateral">
+                <h1>Selecione sua Espada:</h1>
+
+                    </article>
+                    <article class="espadinha" data-espadinha="espadaDePiedra">
+                        <img src="images/Espada_de_piedra.webp">
+                        <div class="preco_espadinha">
+                            <img src="images/coin.png">
+                            <p>Grátis</p>
+                        </div>
+                    </article>
+                    <article class="espadinha" data-espadinha="espadaDeOuro">
+                        <img src="images/Espada_de_oro.webp">
+                        <div class="preco_espadinha">
+                            <img src="images/coin.png">
+                            <p>50</p>
+                        </div>
+                    </article>
+                    <article class="espadinha" data-espadinha="espadaDeDiamante">
+                        <img src="images/Diamond_Sword.webp">
+                        <div class="preco_espadinha">
+                            <img src="images/coin.png">
+                            <p>75</p>
+                        </div>
+                    </article>
+                    <article class="espadinha" data-espadinha="espadaDeNetherite">
+                        <img src="images/Netherite_Sword.webp">
+                        <div class="preco_espadinha">
+                            <img src="images/coin.png">
+                            <p>200</p>
+                        </div>
+                    </article>
+                    <article class="espadinha" data-espadinha="espadaSuprema">
+                        <img src="images/espada suprema.gif">
+                        <div class="preco_espadinha">
+                            <img src="images/coin.png">
+                            <p>250</p>
+                        </div>
+                    </article>
+                    
+            </div>        
+        </section>
+
+        <section class="game_em_si">
+            <article id="jogador" class="c_jogador">
+
+                <p id="dano_atual">Dano Atual: 1</p>
+                <p id="cliques">Cliques: 0</p>
+                <p id="zumbis_mortos">Zumbis Mortos: 0</p>
+            </article>
+        
+            <article id="zombie" class="c_zombie">
+                <img src="images/zombie level 1.gif" alt="Zumbi" id="zombie-atual">
+                <p id="Nome_inimigo">Zumbi 1</p>
+                <p id="vida_zumbi_atual">Vida: 100</p>
+            </article>
+        </section>
+
+
+        <h1>Como Jogar:</h1>
+        
+    </main>
+
+    <script src="código/lojinha.js"></script>
+    <script src="código/game.js"></script>
+</body>
+</html>

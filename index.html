@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-pagina-principal.css">
+    <link rel="icon" href="">
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fira+Code:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Squada+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="apresentation">
+            <h1>Meus Sites</h1>
+            <input type="text" name="input-principal" id="meuInput" class="input-principal" placeholder="Digite algo aqui...">>
+        </section>
+
+        <p id="resultado"></p> <!-- Elemento onde o texto será exibido -->
+
+    </main>
+
+<script>
+document.getElementById("meuInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") { // Verifica se a tecla pressionada é "Enter"
+        event.preventDefault(); // Evita o envio do formulário, se houver
+        const textoDigitado = event.target.value; // Armazena o valor do input em uma variável
+
+        if (textoDigitado.toLowerCase().includes(" cu") || textoDigitado.toLowerCase().includes(" puta") || textoDigitado.toLowerCase().includes(" quero gozar")) {
+            document.getElementById("resultado").textContent = "o texto digitado é ofensivo"; // Mensagem para João
+        } else {
+            document.getElementById("resultado").textContent = "Texto digitado: " + textoDigitado; // Mensagem padrão
+        }
+    }
+});
+</script>
+
+</body>
+</html>

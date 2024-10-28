@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+h1{
+    color: white;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;     
+}
+
+body {
+    background-color: rgb(29, 53, 28);
+}
+
+header {
+    background-color: rgb(12, 32, 11);
+    width: 100%;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: inset 0px -9px 11px 0px rgba(0, 0, 0, 0.445);
+    z-index: 8; position: fixed; top: 0;
+}
+#inicio_header{
+    display: flex;    flex-direction: row;    align-items: center;
+}
+#alterna-menu{
+    margin-right: 10px;
+    background-color: rgba(255, 255, 0, 0);
+    border: none;
+    color: white;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+#alterna-menu:hover{
+    color: rgb(12, 32, 11);
+    border: none;
+    background-color: #ffffff;
+    padding: 8px; border-radius: 2px;
+}
+
+header img {
+    width: 10%;
+}
+
+header h1 {
+    color: white;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+main {
+    width: 100%;
+    margin: 0px;
+}
+
+.menu-lateral {
+    width: 100%;
+    height: 180px;
+    background-color: #305c0f;
+    position: fixed;
+    top: -500px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    display: flex; flex-direction: row; gap: 5px;
+    padding: 10px; 
+    color: white;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+body.menu-visivel .menu-lateral {
+    top: 85px;
+    opacity: 1;
+}
+
+.conteudo-principal {
+    transition: all 0.5s ease-in-out;
+}
+
+body.menu-visivel .conteudo-principal {
+    margin-top: 300px; 
+}
+
+
+.espadinha{
+    padding: 10px 5px;
+    background-color:#0d3016;
+    border: #021b04 2px solid; border-radius: 5px;
+    display: flex; flex-direction: column;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.espadinha img{
+    width: 100px;
+    filter: drop-shadow(0 0 10px rgba(218, 208, 75, 0.473));
+}
+.preco_espadinha{
+    display: flex; flex-direction: row; align-items: center;
+}
+.preco_espadinha img{
+    width: 50px; height: 50px;
+}
+
+.game_em_si{
+    height: 300px;
+    margin: 90px 10px 10px 10px;
+    padding: 5px;
+    border: 2px rgba(255, 255, 255, 0.171) solid; border-radius: 5px;
+    display: flex; flex-direction: row; align-items: stretch;  justify-content: space-between
+}
+
+
+.c_jogador, .c_zombie{
+    display: flex; flex-direction: column; align-items: center;
+}
+.c_zombie{
+    justify-content: flex-end
+}
+.c_jogador img, .c_zombie img{
+    width: 40%;
+}
+.c_jogador p, .c_zombie p{
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+    color: #ffffff;
+    margin-left: 10px;
+}
+.c_zombie p{
+    color: yellow;
+}
+.c_zombie img {
+    transition: all 0.3s ease; /* Adiciona uma transição suave ao filtro */
+}
+
+
+  
