@@ -1,41 +1,40 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const zumbiEl = document.querySelector('#zombie'); // Seleciona o zumbi
-    const vidaZumbiAtualEl = document.querySelector('#vida_zumbi_atual'); // Seleciona a vida do zumbi
-    const cliquesEl = document.querySelector('#cliques'); // Seleciona o contador de cliques
-    const danoAtualEl = document.querySelector('#dano_atual'); // Seleciona o dano atual
-    const zumbisMortosEl = document.querySelector('#zumbis_mortos'); // Seleciona o contador de zumbis mortos
+    const zumbiEl = document.querySelector('#zombie');
+    const vidaZumbiAtualEl = document.querySelector('#vida_zumbi_atual');
+    const cliquesEl = document.querySelector('#cliques');
+    const danoAtualEl = document.querySelector('#dano_atual');
+    const zumbisMortosEl = document.querySelector('#zumbis_mortos');
 
-    let vidaZumbi = 0; // Inicializa a vida do zumbi
-    let dano = 1; // Dano inicial (padrão)
-    let moedas = 0; // Contador de moedas (cliques)
-    let zumbiIndex = 0; // Índice do zumbi atual
-    let zumbisMortos = 0; // Contador de zumbis mortos
+    let vidaZumbi = 0;
+    let dano = 1;
+    let moedas = 0;
+    let zumbiIndex = 0;
+    let zumbisMortos = 0;
+    let zumbiEspecialAtivo = false;
 
-    // Array de zumbis com nome, vida e imagem
+    // Array de zumbis normais e o zumbi especial
     const zumbis = [
         { nome: "Girassol", vida: 100, img: "images/zombie level 1.gif" },
-        { nome: "Aí meu zoió", vida: 550, img: "images/zombie 2.gif" },
-        { nome: "Maicombi", vida: 1700, img: "images/zombie 3.gif" },
-        { nome: "ICone", vida: 2200, img: "images/zombie 4.gif" }
+        { nome: "Aí meu zoió", vida: 552, img: "images/zombie 2.gif" },
+        { nome: "Maicombi", vida: 1458, img: "images/zombie 3.gif" },
+        { nome: "ICone", vida: 2223, img: "images/zombie 4.gif" }
     ];
 
-    // Array com danos das espadas
-    const danosEspadas = [1, 5, 10, 15, 35]; // Dano das espadas
-    const precosEspadas = [0, 100, 500, 800, 1000]; // Preço das espadas
+    const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 10000, img: "images/Ocram.webp" };
 
-    // Função para atualizar o zumbi
+    const danosEspadas = [1, 5, 10, 15, 35, 50];
+    const precosEspadas = [0, 100, 500, 800, 1000, 10000];
+
     function atualizarZumbi() {
-        const zumbiAtual = zumbis[zumbiIndex];
+        const zumbiAtual = zumbiEspecialAtivo ? zumbiEspecial : zumbis[zumbiIndex];
         zumbiEl.querySelector('img').src = zumbiAtual.img;
         zumbiEl.querySelector('#Nome_inimigo').textContent = zumbiAtual.nome;
-        vidaZumbi = zumbiAtual.vida; // Reseta a vida do novo zumbi
+        vidaZumbi = zumbiAtual.vida;
         vidaZumbiAtualEl.textContent = `Vida: ${vidaZumbi}`;
     }
 
-    // Inicializa o primeiro zumbi
     atualizarZumbi();
 
-    // Atualiza cliques ao clicar no zumbi
     zumbiEl.addEventListener('click', function() {
         if (vidaZumbi > 0) {
             zumbiEl.querySelector('img').style.filter = "brightness(0%)";
@@ -51,35 +50,36 @@ document.addEventListener("DOMContentLoaded", function() {
             cliquesEl.textContent = `Cliques: ${moedas}`;
 
             if (vidaZumbi <= 0) {
-                zumbisMortos++; // Incrementa o contador de zumbis mortos
-                zumbisMortosEl.textContent = `Zumbis Mortos: ${zumbisMortos}`; // Atualiza o contador de zumbis mortos
+                zumbisMortos++;
+                zumbisMortosEl.textContent = `Zumbis Mortos: ${zumbisMortos}`;
 
-                zumbiIndex++;
-                if (zumbiIndex < zumbis.length) {
-                    atualizarZumbi();
+                if (zumbisMortos % 10 === 0) {
+                    // Ativa o zumbi especial a cada 10 zumbis mortos
+                    zumbiEspecialAtivo = true;
                 } else {
-                    zumbiIndex = Math.floor(Math.random() * zumbis.length); // Define um zumbi aleatório
-                    atualizarZumbi();
+                    zumbiEspecialAtivo = false;
+                    zumbiIndex = (zumbiIndex + 1) % zumbis.length;
                 }
+
+                atualizarZumbi();
             }
         }
     });
 
-    // Seleciona espadas
     const espadas = document.querySelectorAll('.espadinha');
     espadas.forEach((espada, index) => {
         espada.addEventListener('click', function() {
-            const preco = precosEspadas[index]; // Obtém o preço da espada
+            const preco = precosEspadas[index];
 
-            if (moedas >= preco) { // Verifica se tem moedas suficientes (cliques)
-                dano = danosEspadas[index]; // Define o dano da espada selecionada
-                danoAtualEl.textContent = `Dano Atual: ${dano}`; // Atualiza o texto do dano atual
-                moedas -= preco; // Deduz o preço da espada das moedas (cliques)
-                cliquesEl.textContent = `Cliques: ${moedas}`; // Atualiza o contador de cliques
-                precosEspadas[index] = 0; // Define o preço da espada como zero após a primeira compra
-                espada.querySelector('.preco_espadinha p').textContent = "Grátis"; // Atualiza o preço exibido para o usuário
+            if (moedas >= preco) {
+                dano = danosEspadas[index];
+                danoAtualEl.textContent = `Dano Atual: ${dano}`;
+                moedas -= preco;
+                cliquesEl.textContent = `Cliques: ${moedas}`;
+                precosEspadas[index] = 0;
+                espada.querySelector('.preco_espadinha p').textContent = "Grátis";
             } else {
-                alert("Você não tem moedas suficientes para comprar esta espada!"); // Mensagem de erro
+                alert("Você não tem moedas suficientes para comprar esta espada!");
             }
         });
     });

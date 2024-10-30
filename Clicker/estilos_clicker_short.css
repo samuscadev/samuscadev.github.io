@@ -5,6 +5,16 @@ header h1 {
     font-style: normal;   
     font-size: 80%;
 }
+
+@media screen and (max-width:305px) {
+    header h1 {
+        display: none;
+    }
+
+    header img{
+        width: 22%;
+    }
+}
 #alterna-menu, #alterna-menu:hover{
     font-size: 80%;
     color: rgb(12, 32, 11);
@@ -12,7 +22,13 @@ header h1 {
     background-color: #ffffff;
     padding: 2px; border-radius: 2px;
 }
-
+.espadinha{
+    padding: 5px 2px;
+    background-color:#0d3016;
+    border: #021b04 2px solid; border-radius: 5px;
+    display: flex; flex-direction: column;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
 .game_em_si{
     flex-direction: column;
     justify-content: center;
@@ -24,7 +40,15 @@ header h1 {
 }
 
 .c_jogador, .c_zombie{
-    width: 50%;
+    width: 100%;
+}
+.c_jogador{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0px 0px;
+    box-shadow: none;
+}
+.c_zombie{
+    margin-top: 2%;
 }
 
 .menu-lateral h1{
@@ -32,4 +56,7 @@ header h1 {
 }
 .menu-lateral{
     overflow:scroll ;
+}
+.como-jogar, .como-jogar p{
+    font-size: 15px;
 }
