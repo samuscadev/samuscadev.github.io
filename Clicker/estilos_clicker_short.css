@@ -54,6 +54,9 @@ div .preco_espadinha img{
     font-size: 60%;
     margin-left: 0px;
 }
+.c_jogador p{
+    color: white;
+}
 
 .c_jogador, .c_zombie{
     width: 100%;
