@@ -1,0 +1,59 @@
+.colecionaveis{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex; flex-direction: row; align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+    overflow: hidden;
+    padding: 5px;
+    align-items: stretch;
+    gap: 2px;
+    margin: 10px 5px;
+}
+.item-colecao{
+    width: 30%;
+    display: flex; flex-direction: column; align-items: flex-start;
+    padding: 2px;
+    background-color: rgba(0, 0, 0, 0.226);
+    border-radius: 8px;
+}
+.item-colecao p, h2{
+    color: rgb(7, 53, 7);
+}
+
+.item-colecao h2{
+    font-family: "Nosifer", sans-serif;
+    font-style: normal;
+}
+.item-colecao img{
+    width: 100px;
+    filter: brightness(0%);
+}
+
+.item-colecao p{
+    display: inline;
+    width: 100%;
+}
+
+.item-colecao .colecao-especial{
+    filter: none;
+}
+
+@media screen and (max-width: 500px) {
+    .item-colecao img{
+        width: 65px;
+    }
+    .item-colecao{
+        width: 40%;
+        align-items: center;
+    }
+    .colecionaveis{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .item-colecao{
+        width: 100%;
+        align-items: center;
+    }
+}

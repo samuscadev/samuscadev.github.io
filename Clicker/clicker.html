@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoombie Clicker</title>
     <link rel="stylesheet" href="estilos_base_clicker.css">
+    <link rel="stylesheet" href="estilo-colecionaveis.css">
     <link rel="stylesheet" media="(max-width: 600px)" href="estilos_clicker_short.css">
     <link rel="icon" href="images/coin.png">
 
@@ -101,6 +102,10 @@
             </div>        
         </section>
 
+        <div id="timer">01:00</div>
+        <p>Meta de cliques atual: 0</p>
+
+
         <section class="game_em_si">
             <article id="jogador" class="c_jogador">
 
@@ -116,6 +121,46 @@
             </article>
         </section>
 
+        <h1>Colecionaveis:</h1>
+        <section class="colecionaveis">
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/anel.webp">
+                <h2>Anel</h2>
+                <p>Aumenta a quantia de cliques em +100 a cada minuto</p>
+                <button>500 cliques</button>
+            </article>
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/pocao.png">
+                <h2>Poção</h2>
+                <p>Faz cada clique dar 2x Dano por 1 minutos</p>
+                <button>1500 cliques</button>
+            </article>
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/paint.webp">
+                <h2>Pintura</h2>
+                <p>Troca a cor do Zumbi pra rosa (é só isso, esse item é inutil), por 30 seg</p>
+                <button>1500 cliques</button>
+            </article>
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/mascara.webp">
+                <h2>Máscara</h2>
+                <p>Rouba metade da vida dos zumbis por 30 seg</p>
+                <button>1500 cliques</button>
+            </article>
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/mapa.png">
+                <h2>Mapa</h2>
+                <p>Ele te guia por um caminho íncrivel!!! 🤩</p>
+                <button>1500 cliques</button>
+            </article>
+            <article class="item-colecao">
+                <img src="images/Colecionaveis/chest.webp" class="colecao-especial">
+                <h2>Baú</h2>
+                <p>Te dá surpresas!</p>
+                <button>Comprar - 100 cliques</button>
+            </article>
+
+        </section>
 
         <section class="como-jogar">
             <h1>Como Jogar:</h1>
@@ -123,13 +168,22 @@
                 -Se teu nome for: Samuel Brito, apenas pare, exite vida lá fora.<br>
                 -Clique nos Zumbis pra remover a vida deles<br>
                 -Seus Cliques podem ser utilizados pra aumentar seu poder de clique comprando armas na loja;<br>
-                -Espadas especiais (douradas) possuem aumeto de clique especial.
+                -Espadas especiais (douradas) possuem aumeto de clique especial.<br>
+                -Você só pode usae um especial por vez, uma vez comprado o especial pode ser usado quando quiser. Exceto pelo Baú.
             </p>
         </section>
         
+        <section class="como-jogar">
+            <h1>Recordes:</h1>
+            <p>
+                Samuel Brito, sla quantos cliques.<br>
+                </p>
+        </section>
         
+        <p>Versão 4.0 (beta algumas funções não estão funcionando)</p>
     </main>
 
+    <script src="código/timer.js"></script>
     <script src="código/lojinha.js"></script>
     <script src="código/game.js"></script>
 </body>
