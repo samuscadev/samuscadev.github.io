@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let zumbiIndex = 0;
     let zumbisMortos = 0;
     let zumbiEspecialAtivo = false;
+    let especialluminite = 2;
 
     // Array de zumbis normais e o zumbi especial
     const zumbis = [
@@ -20,10 +21,20 @@ document.addEventListener("DOMContentLoaded", function() {
         { nome: "ICone", vida: 2223, img: "images/zombie 4.gif" }
     ];
 
+
+    const mensagensObj = [
+        {mensagens: 'Você não tem cliques suficientes para comprar esta arma, clique em mais vezes para conseguir!'},
+        {mensagens: 'Luta contra Boss!'},
+        {mensagens: 'Você não possui cliques sufientes pra desbloquear este artefato'},
+        {mensagens: 'Lutar contra zumbis é divertido!'},
+        {mensagens: 'Ok, você é bom nisso!'},
+        {mensagens: 'Seu nome é Samuel Brito?'},
+    ];
+
     const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 10000, img: "images/Ocram.webp" };
 
-    const danosEspadas = [1, 5, 10, 15, 35, 50];
-    const precosEspadas = [0, 100, 500, 800, 1000, 10000];
+    const danosEspadas = [1, 5, 10, 15, 20, 35, 45, 65, 95];
+    const precosEspadas = [0, 100, 300, 500, 800, 1000, 2500, 5000, 8555];
 
     function atualizarZumbi() {
         const zumbiAtual = zumbiEspecialAtivo ? zumbiEspecial : zumbis[zumbiIndex];
@@ -43,8 +54,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 zumbiEl.querySelector('img').style.filter = "brightness(100%)";
             }, 100);
 
+            if(dano === 95){
+                if(especialluminite == 2){
+                    moedas += especialluminite;
+                    especialluminite = 1;
+                }
+                else if(especialluminite == 1){
+                    moedas += especialluminite;
+                    especialluminite = 2;
+                }
+            }
+            else if(dano === 65){
+                moedas += 2;
+            }
+            else{
+                moedas += 1;
+            }
             vidaZumbi -= dano;
-            moedas += 1;
+            
 
             vidaZumbiAtualEl.textContent = `Vida: ${vidaZumbi}`;
             cliquesEl.textContent = `Cliques: ${moedas}`;

@@ -15,6 +15,9 @@ header h1 {
         width: 22%;
     }
 }
+div .preco_espadinha img{
+    width: 50%;
+}
 #alterna-menu, #alterna-menu:hover{
     font-size: 80%;
     color: rgb(12, 32, 11);
@@ -22,12 +25,25 @@ header h1 {
     background-color: #ffffff;
     padding: 2px; border-radius: 2px;
 }
+.c_jogador{
+    text-align: center;
+    color: #ffffff;
+    background-image: none;
+    font-weight: bold;
+}
 .espadinha{
-    padding: 5px 2px;
+    box-sizing: border-box;
+    padding: 5px 10px;
     background-color:#0d3016;
     border: #021b04 2px solid; border-radius: 5px;
-    display: flex; flex-direction: column;
+    display: flex; flex-direction: column; align-items: center;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.espadinha img{
+    width: 80px;
+}
+.espadinha p{
+    font-size: 90%;
 }
 .game_em_si{
     flex-direction: column;
