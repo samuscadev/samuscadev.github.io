@@ -57,3 +57,20 @@
         align-items: center;
     }
 }
+
+#playerContainer{
+    margin-top: 78px;
+    padding: 8px;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+}
+#playerContainer h2{
+    font-size: 70%;
+}
+#playerContainer button{
+    background-color: #ffffff00;
+    border: none;
+}

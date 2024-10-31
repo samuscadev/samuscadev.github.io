@@ -138,7 +138,6 @@ body.menu-visivel .conteudo-principal {
 }
 
 #timer{
-    margin-top: 80px;
     margin-left: 10px;
     font-family: "Nosifer", sans-serif;
     font-style: normal;
@@ -176,6 +175,7 @@ body.menu-visivel .conteudo-principal {
 }
 .c_jogador p, .c_zombie p{  
     margin-left: 10px;
+    color: #032503;
 }
 .c_zombie p{
     color: yellow;
