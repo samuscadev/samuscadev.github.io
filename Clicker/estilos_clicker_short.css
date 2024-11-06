@@ -54,16 +54,15 @@ div .preco_espadinha img{
     font-size: 60%;
     margin-left: 0px;
 }
-.c_jogador p{
-    color: white;
-}
+
 
 .c_jogador, .c_zombie{
     width: 100%;
 }
 .c_jogador{
-    background-color: rgba(255, 255, 255, 0);
-    padding: 0px 0px;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+    padding: 5px 0px;
+    border-radius: 0px;
     box-shadow: none;
 }
 .c_zombie{
@@ -78,4 +77,11 @@ div .preco_espadinha img{
 }
 .como-jogar, .como-jogar p{
     font-size: 15px;
+}
+
+#timer{
+    font-size: 110%;
+}
+#reloginho{
+    width: 45px;
 }

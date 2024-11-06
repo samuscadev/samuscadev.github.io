@@ -10,7 +10,7 @@
     margin: 10px 5px;
 }
 .item-colecao{
-    width: 30%;
+    width: 32%;
     display: flex; flex-direction: column; align-items: flex-start;
     padding: 2px;
     background-color: rgba(0, 0, 0, 0.226);
@@ -61,14 +61,17 @@
 #playerContainer{
     margin-top: 78px;
     padding: 8px;
-     width: 100%;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0000003f;
 }
 #playerContainer h2{
     font-size: 70%;
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
 }
 #playerContainer button{
     background-color: #ffffff00;

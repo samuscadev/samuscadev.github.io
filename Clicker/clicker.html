@@ -30,6 +30,8 @@
     </header>
 
     <main class="conteudo-principal">
+    
+        <img id="efeitosdeclique" src="images/efeito-ponteiro.gif">
         <section id="store" class="c_store">
             <div class="menu-lateral">
                 <h1>Selecione sua Arma:</h1>
@@ -103,13 +105,14 @@
         </section>
 
         <section id="playerContainer">
-            <h2 id="currentTrack">Tocando: </h2> <!-- Exibe a faixa atual -->
+            <h2 id="currentTrack">Tocar: </h2> <!-- Exibe a faixa atual -->
             <audio id="audioPlayer" autoplay></audio> <!-- Player de áudio sem controles padrão -->
             <button id="playPauseButton">▶️</button> <!-- Botão Play/Pause -->
         </section>
 
-        <div id="timer">01:00</div>
-        <p>Meta de cliques atual: 0</p>
+        <img id="reloginho" src="images/clock.gif">
+        <div id="timer">Tempo: 1:00</div>
+        <p id="meta">Meta de cliques atual: 100</p>
         <section class="game_em_si">
             <article id="jogador" class="c_jogador">
 
@@ -184,14 +187,15 @@
                 </p>
         </section>
         
-        <p>Versão 4.0 (beta algumas funções não estão funcionando)</p>
+        <p id="version">Versão 4.0 (beta algumas funções não estão funcionando)</p>
 
         
     </main>
 
+    <script src="código/game.js"></script>
     <script src="código/timer.js"></script>
     <script src="código/lojinha.js"></script>
-    <script src="código/game.js"></script>
     <script src="código/sounds.js"></script>
+    <script src="código/efeitos-ponteiro.js"></script>
 </body>
 </html>

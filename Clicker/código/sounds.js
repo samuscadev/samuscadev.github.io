@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function playTrack(index) {
         audioPlayer.src = tracks[index].src;
-        currentTrack.textContent = `Tocando: ${tracks[index].name}`;
+        currentTrack.textContent = `Tocar: ${tracks[index].name}`;
         audioPlayer.play().catch(error => {
             console.log('Reprodução automática bloqueada, clique para continuar.');
         });

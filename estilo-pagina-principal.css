@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    box-sizing: border-box;
 }
 body{
     background-color: black;
@@ -10,32 +9,35 @@ body{
 html, body {
     overflow: hidden;
 }
-main{
-    display: flex; flex-direction: column-reverse;
-}
 
 h1{
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     color: white;
-    font-size: 35px;
-    grid-row: 2;
+    font-size: 110%;
+}
+
+#textotipo{
+    font-family: "Krona One", sans-serif;
+    font-style: normal;
+    font-size: 220%;
+}
+@media screen and (max-width: 400px) {
+    #textotipo{
+        font-size: 110%;
+    }
 }
 .apresentation{
-    max-width: 100%;
-    height: 60%;
-    display: grid;
-    grid-template-rows: 20% 60% 20%;
-    z-index: 1;
+    margin-top: 2%;
+    width: 100%;
+    display: flex; flex-direction: column;
 }
 .input-principal{
-    background-color: rgb(14, 13, 19);
-    color: rgb(184, 175, 255);
-    grid-row: 3;
-    height: 20px; width: 200px;
-    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    color: rgb(16, 15, 20);
+    height: 35px; width: 100%;
+    border-radius: 20px;
     border: none;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -62,17 +64,23 @@ p{
 
 #resultado{
     display: block;
+    padding: 8px 0px;
+    margin-top: 0px;
+    border-left: rgba(255, 255, 255, 0.774) 2px solid;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.164), rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0));
 }
 
 .section-box-sites{
     display: flex; flex-direction: row;
-    max-width: 100%;
+    width: 100%;
 }
 
 .box-sites{
     background-color: rgba(255, 166, 2, 0.637);
     padding: 2%;
     border-radius: 5px;
+    margin: 2% 2px;
+    display: flex; flex-direction: column; align-items: center;
 }
 .box-sites a{
     color: aliceblue;

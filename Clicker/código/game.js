@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const cliquesEl = document.querySelector('#cliques');
     const danoAtualEl = document.querySelector('#dano_atual');
     const zumbisMortosEl = document.querySelector('#zumbis_mortos');
+    const timerEl = document.querySelector('#timer');
+    const metaAtualEl = document.querySelector('#meta');
+    let taxaAumentoDeMeta;
+    let quatidadedeaumentos = 0;
 
     let vidaZumbi = 0;
     let dano = 1;
@@ -12,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let zumbisMortos = 0;
     let zumbiEspecialAtivo = false;
     let especialluminite = 2;
+    let metaCliques =  5;
+    metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
 
     // Array de zumbis normais e o zumbi especial
     const zumbis = [
@@ -110,7 +116,50 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    
+    let timeLeft = 60;
+
+    function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+    
+        // Atualiza o display do timer
+        timerEl.textContent = `Tempo: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    
+        // Muda a cor para vermelho quando o tempo é menor que 10 segundos
+        if (timeLeft < 10) {
+            timerEl.style.color = '#ff0000'; // vermelho
+        } else {
+            timerEl.style.color = '#ffffff'; // cor original
+        }
+    
+        // Verifica se a meta de cliques foi atingida e reseta o tempo
+        if (moedas >= metaCliques) {
+            timeLeft = 60;  // Reseta o tempo
+            taxaAumentoDeMeta = Math.floor(Math.random() * 50) + 1;
+            metaCliques+= taxaAumentoDeMeta + moedas;  // Incrementa a meta de cliques
+            metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
+            quatidadedeaumentos ++;
+        }
+    
+        // Reduz o tempo se ele ainda não tiver acabado
+        if (timeLeft > 0) {
+            timeLeft--;
+        } else {
+            return;
+        }
+    }
+    
+    // Atualiza o timer a cada segundo
+    setInterval(updateTimer, 1000);
+    
+    
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+
+});
+
 
 
 

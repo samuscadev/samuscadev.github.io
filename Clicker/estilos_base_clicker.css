@@ -142,7 +142,8 @@ body.menu-visivel .conteudo-principal {
     font-family: "Nosifer", sans-serif;
     font-style: normal;
     color: #ffffff;
-    font-size: 110%;
+    font-size: 220%;
+    display: inline;
 }
 
 .game_em_si{
@@ -191,12 +192,39 @@ body.menu-visivel .conteudo-principal {
 
 .como-jogar{
     margin: 0px 10px;
-    background-image: linear-gradient(to right bottom, rgb(40, 100, 35), rgb(19, 56, 17), rgb(6, 26, 5));
-    border: #032503 2px solid;
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+    margin-bottom: 5px;
     padding: 10px 5px;
     border-radius: 10px;
-    color: #ffffff;
+
 }
+.como-jogar p, .como-jogar h1{
+    color: #032503;
+}
+#meta{
+    margin-left: 10px;
+    padding: 2px;
+}
+
+#efeitosdeclique{
+    position: absolute;
+    display: none; /* Esconde inicialmente */
+    padding: 0px;
+    z-index: 9;
+    width: 150px;
+    filter: contrast(5);
+}
+#reloginho{
+    width: 75px;
+    display: inline;
+}
+#version{
+    font-style: italic;
+    font-size: 80%;
+    opacity: 0.7;
+    margin: auto;
+}
+
 
 
   
