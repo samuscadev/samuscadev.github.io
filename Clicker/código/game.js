@@ -6,8 +6,28 @@ document.addEventListener("DOMContentLoaded", function() {
     const zumbisMortosEl = document.querySelector('#zumbis_mortos');
     const timerEl = document.querySelector('#timer');
     const metaAtualEl = document.querySelector('#meta');
+    const fecharMensagem = document.querySelector('#fechar-mensagem');
+    const mensagemEl = document.querySelector('#mensagem-de-tela');
+    const textoDaMensagem = document.querySelector('#texto-mensagem-tela');
+    const tituloDaMensagem = document.querySelector('#Titulo-mensagem-tela');
     let taxaAumentoDeMeta;
     let quatidadedeaumentos = 0;
+
+    const mensagensObj = [
+        {mensagens: 'Os zumbis estão por toda a cidade, precisamos de um heroí que recupere as armas lendarias e os derrote!'},
+        {mensagens: 'A vida é assim garoto, na próxima você consegue :D'},
+        {mensagens: 'Você não tem cliques suficientes para comprar esta arma, clique em mais vezes para conseguir!'},
+        {titulos: 'Bem Vindo Ao Game!'},
+        {titulos: 'Você Morreu!'},
+        {titulos: 'Falta-lhe Dinheiro!'}
+    ];
+
+    tituloDaMensagem.textContent = mensagensObj[3].titulos;
+    textoDaMensagem.textContent = mensagensObj[0].mensagens;
+
+    fecharMensagem.addEventListener('click', function() {
+        mensagemEl.style.display = "none";
+    });
 
     let vidaZumbi = 0;
     let dano = 1;
@@ -15,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let zumbiIndex = 0;
     let zumbisMortos = 0;
     let zumbiEspecialAtivo = false;
-    let especialluminite = 2;
     let metaCliques =  5;
     metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
 
@@ -27,15 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
         { nome: "ICone", vida: 2223, img: "images/zombie 4.gif" }
     ];
 
-
-    const mensagensObj = [
-        {mensagens: 'Você não tem cliques suficientes para comprar esta arma, clique em mais vezes para conseguir!'},
-        {mensagens: 'Luta contra Boss!'},
-        {mensagens: 'Você não possui cliques sufientes pra desbloquear este artefato'},
-        {mensagens: 'Lutar contra zumbis é divertido!'},
-        {mensagens: 'Ok, você é bom nisso!'},
-        {mensagens: 'Seu nome é Samuel Brito?'},
-    ];
 
     const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 10000, img: "images/Ocram.webp" };
 
@@ -60,18 +70,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 zumbiEl.querySelector('img').style.filter = "brightness(100%)";
             }, 100);
 
-            if(dano === 95){
-                if(especialluminite == 2){
-                    moedas += especialluminite;
-                    especialluminite = 1;
-                }
-                else if(especialluminite == 1){
-                    moedas += especialluminite;
-                    especialluminite = 2;
-                }
+            if(dano === 5){
+                moedas += 3;
             }
-            else if(dano === 65){
-                moedas += 2;
+            else if(dano === 10 || dano === 15){
+                moedas += 5;
+            }
+            else if(dano === 20 || dano === 35){
+                moedas += 8;
+            }
+            else if(dano === 45 || dano === 65){
+                moedas += 10;
+            }
+            else if(dano === 95){
+                moedas += 12;
             }
             else{
                 moedas += 1;
@@ -111,8 +123,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 cliquesEl.textContent = `Cliques: ${moedas}`;
                 precosEspadas[index] = 0;
                 espada.querySelector('.preco_espadinha p').textContent = "Grátis";
+                metaCliques = 5;
+                metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
             } else {
-                alert("Você não tem moedas suficientes para comprar esta espada!");
+
+                tituloDaMensagem.textContent = mensagensObj[5].titulos;
+                textoDaMensagem.textContent = mensagensObj[2].mensagens;
+                mensagemEl.style.display = "flex";
             }
         });
     });
@@ -132,21 +149,31 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             timerEl.style.color = '#ffffff'; // cor original
         }
-    
+        
         // Verifica se a meta de cliques foi atingida e reseta o tempo
         if (moedas >= metaCliques) {
             timeLeft = 60;  // Reseta o tempo
-            taxaAumentoDeMeta = Math.floor(Math.random() * 50) + 1;
-            metaCliques+= taxaAumentoDeMeta + moedas;  // Incrementa a meta de cliques
+            taxaAumentoDeMeta = Math.floor(Math.random() * 43) + 1;
+            metaCliques+= taxaAumentoDeMeta + (moedas/2 - 0.5);  // Incrementa a meta de cliques
             metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
             quatidadedeaumentos ++;
+            if(quatidadedeaumentos %3 == 0){
+                timeLeft += 10;
+                quatidadedeaumentos = 0;
+            }
         }
     
         // Reduz o tempo se ele ainda não tiver acabado
         if (timeLeft > 0) {
             timeLeft--;
         } else {
-            return;
+            tituloDaMensagem.textContent = mensagensObj[4].titulos;
+            textoDaMensagem.textContent = mensagensObj[1].mensagens;
+            mensagemEl.style.display = "flex";
+
+            fecharMensagem.addEventListener('click', function() {
+                location.reload();
+            });
         }
     }
     

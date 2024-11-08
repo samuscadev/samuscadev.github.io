@@ -9,16 +9,27 @@
     gap: 2px;
     margin: 10px 5px;
 }
+.item-colecao button{
+    color: rgb(255, 208, 0);
+    background-color: rgb(18, 46, 16);
+    border-radius: 5px;
+    border: none;
+}
 .item-colecao{
     width: 32%;
-    display: flex; flex-direction: column; align-items: flex-start;
+    display: flex; flex-direction: column; align-items: center;
     padding: 2px;
     background-color: rgba(0, 0, 0, 0.226);
     border-radius: 8px;
 }
 .item-colecao p, h2{
-    color: rgb(7, 53, 7);
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
+.item-colecao h2{
+    color: rgb(3, 37, 1);
+}
+
 
 .item-colecao h2{
     font-family: "Nosifer", sans-serif;
@@ -32,6 +43,7 @@
 .item-colecao p{
     display: inline;
     width: 100%;
+    margin-bottom: 2px;
 }
 
 .item-colecao .colecao-especial{
@@ -51,7 +63,7 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 390px) {
     .item-colecao{
         width: 100%;
         align-items: center;
@@ -59,7 +71,6 @@
 }
 
 #playerContainer{
-    margin-top: 78px;
     padding: 8px;
     width: 100%;
     display: flex;
@@ -76,4 +87,35 @@
 #playerContainer button{
     background-color: #ffffff00;
     border: none;
+}
+
+#mensagem-de-tela{
+    position: fixed;
+    z-index: 99;
+    width: 90%; height: 60%;
+    background-image: linear-gradient(to bottom right, rgb(104, 206, 44), rgb(38, 94, 33));
+    border: #ffffff23 2px solid; border-radius: 5px;
+    margin-left: 4%; margin-right: auto; 
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+
+}
+
+#fechar-mensagem{
+    background-color: white;
+    color: rgb(18, 46, 16);
+    display: inline;
+    position: relative;
+    font-family: "Nosifer", sans-serif;
+    padding: 2px; border-radius: 5px;
+    border: none; cursor: pointer;
+}
+
+#Titulo-mensagem-tela{
+    font-size: 220%;
+    text-align: center;
+}
+#texto-mensagem-tela{
+    font-size: 110%;
+    margin-bottom: 2%;
+    text-align: center;
 }

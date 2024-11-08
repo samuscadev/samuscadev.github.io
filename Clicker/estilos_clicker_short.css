@@ -20,10 +20,6 @@ div .preco_espadinha img{
 }
 #alterna-menu, #alterna-menu:hover{
     font-size: 80%;
-    color: rgb(12, 32, 11);
-    border: none;
-    background-color: #ffffff;
-    padding: 2px; border-radius: 2px;
 }
 .c_jogador{
     text-align: center;
@@ -35,7 +31,6 @@ div .preco_espadinha img{
     box-sizing: border-box;
     padding: 5px 10px;
     background-color:#0d3016;
-    border: #021b04 2px solid; border-radius: 5px;
     display: flex; flex-direction: column; align-items: center;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
@@ -79,9 +74,11 @@ div .preco_espadinha img{
     font-size: 15px;
 }
 
-#timer{
+#timer, #meta{
     font-size: 110%;
+    margin-left: 25%;
 }
+
 #reloginho{
     width: 45px;
 }
