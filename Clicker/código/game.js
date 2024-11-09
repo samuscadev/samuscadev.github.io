@@ -10,25 +10,31 @@ document.addEventListener("DOMContentLoaded", function() {
     const mensagemEl = document.querySelector('#mensagem-de-tela');
     const textoDaMensagem = document.querySelector('#texto-mensagem-tela');
     const tituloDaMensagem = document.querySelector('#Titulo-mensagem-tela');
+    const balaoMagicoEL = document.querySelector('#Balao-magico');
     let taxaAumentoDeMeta;
     let quatidadedeaumentos = 0;
 
     const mensagensObj = [
         {mensagens: 'Os zumbis estão por toda a cidade, precisamos de um heroí que recupere as armas lendarias e os derrote!'},
         {mensagens: 'A vida é assim garoto, na próxima você consegue :D'},
-        {mensagens: 'Você não tem cliques suficientes para comprar esta arma, clique em mais vezes para conseguir!'},
+        {mensagens: 'Os cliques são usados pra comprar ou desbloquear itens e você não tem cliques suficientes para comprar esse item, clique em mais vezes para conseguir!'},
         {titulos: 'Bem Vindo Ao Game!'},
         {titulos: 'Você Morreu!'},
-        {titulos: 'Falta-lhe Dinheiro!'}
+        {titulos: 'Falta-lhe Cliques!'}
     ];
 
     tituloDaMensagem.textContent = mensagensObj[3].titulos;
     textoDaMensagem.textContent = mensagensObj[0].mensagens;
+            
+        mensagemEl.style.display = "flex";
+        localStorage.setItem("primeiraVisita", "true");
+
 
     fecharMensagem.addEventListener('click', function() {
         mensagemEl.style.display = "none";
     });
 
+    let itemAtual;
     let vidaZumbi = 0;
     let dano = 1;
     let moedas = 0;
@@ -41,28 +47,56 @@ document.addEventListener("DOMContentLoaded", function() {
     // Array de zumbis normais e o zumbi especial
     const zumbis = [
         { nome: "Girassol", vida: 100, img: "images/zombie level 1.gif" },
-        { nome: "Aí meu zoió", vida: 552, img: "images/zombie 2.gif" },
-        { nome: "Maicombi", vida: 1458, img: "images/zombie 3.gif" },
-        { nome: "ICone", vida: 2223, img: "images/zombie 4.gif" }
+        { nome: "Aí meu zoió", vida: 550, img: "images/zombie 2.gif" },
+        { nome: "Maicombi", vida: 1530, img: "images/zombie 3.gif" },
+        { nome: "ICone", vida: 2022, img: "images/zombie 4.gif" }
     ];
 
+    const nomesItens = [
+        {nome: "Anel"},
+        {nome: "Poção"},
+        {nome: "Pintura"},
+        {nome: "Máscara"},
+        {nome: "Mapa"},
+        {nome: "Baú"},
+    ];
 
     const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 10000, img: "images/Ocram.webp" };
 
     const danosEspadas = [1, 5, 10, 15, 20, 35, 45, 65, 95];
     const precosEspadas = [0, 100, 300, 500, 800, 1000, 2500, 5000, 8555];
+    const idUtensilios = [1, 2, 3, 4, 5, 6];
+    const precosUtensilios = [1, 1, 1, 1, 1, 1];
+
+    function mostrarObjeto() {
+        balaoMagicoEL.style.display = 'block'; // Mostra o objeto
+        setTimeout(() => {
+            balaoMagicoEL.style.display = 'none'; // Esconde após 2 segundos
+        }, 250);
+    }
+
+    // Exibe o objeto a cada 1 minuto (60000 ms)
+    setInterval(mostrarObjeto, 45000);
 
     function atualizarZumbi() {
         const zumbiAtual = zumbiEspecialAtivo ? zumbiEspecial : zumbis[zumbiIndex];
         zumbiEl.querySelector('img').src = zumbiAtual.img;
         zumbiEl.querySelector('#Nome_inimigo').textContent = zumbiAtual.nome;
-        vidaZumbi = zumbiAtual.vida;
-        vidaZumbiAtualEl.textContent = `Vida: ${vidaZumbi}`;
+        if(itemAtual == 4){
+            vidaZumbi = zumbiAtual.vida/2;
+        }
+        if(itemAtual == 3){
+            vidaZumbi = zumbiAtual.vida/3;
+        }
+        else{
+            vidaZumbi = zumbiAtual.vida;
+        }
+        vidaZumbiAtualEl.textContent = `Vida: ${Math.trunc(Number(vidaZumbi))}`;
     }
-
     atualizarZumbi();
 
     zumbiEl.addEventListener('click', function() {
+        
         if (vidaZumbi > 0) {
             zumbiEl.querySelector('img').style.filter = "brightness(0%)";
 
@@ -88,8 +122,12 @@ document.addEventListener("DOMContentLoaded", function() {
             else{
                 moedas += 1;
             }
-            vidaZumbi -= dano;
-            
+            if(itemAtual == 2){
+                vidaZumbi -= dano * 2;
+            }
+            else{
+                vidaZumbi -= dano;
+            }
 
             vidaZumbiAtualEl.textContent = `Vida: ${vidaZumbi}`;
             cliquesEl.textContent = `Cliques: ${moedas}`;
@@ -111,6 +149,43 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    balaoMagicoEL.addEventListener("click", function(){
+        moedas += 50;
+        cliquesEl.textContent = `Cliques: ${moedas}`;
+    });
+
+
+    const utencilios = document.querySelectorAll('.item-colecao');
+    const nomeItemAtual = document.querySelector('#txto-item-atual');
+    utencilios.forEach((utencilio, indexUtenciclios) => {
+        utencilio.addEventListener('click', function() {
+            const preco = precosUtensilios[indexUtenciclios];
+
+            if (moedas >= preco) {
+                itemAtual = idUtensilios[indexUtenciclios];
+                moedas -= preco;
+                precosUtensilios[indexUtenciclios] = 0;
+                utencilio.querySelector('button').textContent = "Desbloqueado";
+                utencilio.querySelector('img').style.filter = "brightness(100%)";
+
+                if(itemAtual == 6){
+                    let temp = Math.floor(Math.random() * 4) + 1;
+                    itemAtual = idUtensilios[temp];
+                    nomeItemAtual.textContent = `Ativo: ${nomesItens[temp].nome}`;
+                }
+                else{
+                    nomeItemAtual.textContent = `Ativo: ${nomesItens[indexUtenciclios].nome}`;
+                }
+
+            } else {
+                tituloDaMensagem.textContent = mensagensObj[5].titulos;
+                textoDaMensagem.textContent = mensagensObj[2].mensagens;
+                mensagemEl.style.display = "flex";
+            }
+        });
+    });
+
+
     const espadas = document.querySelectorAll('.espadinha');
     espadas.forEach((espada, index) => {
         espada.addEventListener('click', function() {
@@ -119,11 +194,14 @@ document.addEventListener("DOMContentLoaded", function() {
             if (moedas >= preco) {
                 dano = danosEspadas[index];
                 danoAtualEl.textContent = `Dano Atual: ${dano}`;
+                if(precosEspadas[index] != 0){
+                    metaCliques = 5;
+                }
                 moedas -= preco;
                 cliquesEl.textContent = `Cliques: ${moedas}`;
                 precosEspadas[index] = 0;
                 espada.querySelector('.preco_espadinha p').textContent = "Grátis";
-                metaCliques = 5;
+                
                 metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
             } else {
 
@@ -145,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
         // Muda a cor para vermelho quando o tempo é menor que 10 segundos
         if (timeLeft < 10) {
-            timerEl.style.color = '#ff0000'; // vermelho
+            timerEl.style.color = 'rgb(255, 221, 31)'; // vermelho
         } else {
             timerEl.style.color = '#ffffff'; // cor original
         }
@@ -153,11 +231,16 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica se a meta de cliques foi atingida e reseta o tempo
         if (moedas >= metaCliques) {
             timeLeft = 60;  // Reseta o tempo
-            taxaAumentoDeMeta = Math.floor(Math.random() * 43) + 1;
+            taxaAumentoDeMeta = Math.floor(Math.random() * 75) + 1;
             metaCliques+= taxaAumentoDeMeta + (moedas/2 - 0.5);  // Incrementa a meta de cliques
-            metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
+            metaAtualEl.textContent = `Meta de Cliques: ${Math.trunc(metaCliques)}`;
+    
             quatidadedeaumentos ++;
-            if(quatidadedeaumentos %3 == 0){
+            if(itemAtual == 5 && quatidadedeaumentos %2 == 0){
+                timeLeft += 25;
+                quatidadedeaumentos = 0;
+            }
+            else if(quatidadedeaumentos %3 == 0){
                 timeLeft += 10;
                 quatidadedeaumentos = 0;
             }
@@ -166,6 +249,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // Reduz o tempo se ele ainda não tiver acabado
         if (timeLeft > 0) {
             timeLeft--;
+            if(itemAtual == 1){
+                moedas +=5;
+                cliquesEl.textContent = `Cliques: ${moedas}`;
+            }
+            
         } else {
             tituloDaMensagem.textContent = mensagensObj[4].titulos;
             textoDaMensagem.textContent = mensagensObj[1].mensagens;

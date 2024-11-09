@@ -38,3 +38,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Tenta iniciar automaticamente a primeira faixa
     playTrack(currentTrackIndex);
 });
+

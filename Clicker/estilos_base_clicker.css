@@ -22,18 +22,21 @@ p{
     color: #ffffff;
 }
 
-body {
-    background-color: rgb(29, 53, 28);
+body{
+    background-color: rgb(46, 109, 45);
 }
 
 header {
+    background-color: rgb(36, 85, 35);
     width: 100%;
     height: 70px;
+    position: fixed; top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 5px;
+    z-index: 98;
 }
 #inicio_header{
     display: flex;    flex-direction: row;    align-items: center;
@@ -42,16 +45,15 @@ header {
     margin-right: 10px;
     background-color: rgba(255, 255, 0, 0);
     border: none;
-    color: rgb(12, 32, 11);
-    background-color: #ffffff;
-    padding: 2px; border-radius: 2px;
+    color: rgb(36, 85, 35);
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
+    padding: 2px 8px; border-radius: 2px;
     font-family: "Nosifer", sans-serif;
-    font-weight: 400;
     font-style: normal;    
+    transition: all 500ms ease-in-out;
 }
 
 #alterna-menu:hover{
-    color: rgb(37, 48, 36);
     border: none;
     background-color: #ffffff;
     padding: 8px; border-radius: 2px;
@@ -69,6 +71,7 @@ header h1 {
 }
 
 main {
+
     width: 100%;
     margin: 0px;
 }
@@ -76,7 +79,6 @@ main {
 .menu-lateral {
     width: 100%;
     height: 180px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.247), rgba(255, 255, 255, 0));
     position: fixed;
     top: -500px;
     opacity: 0;
@@ -86,55 +88,52 @@ main {
     padding: 10px; 
     color: white;
     font-family: "Nosifer", sans-serif;
-    font-weight: 400;
-    font-style: normal;   
-    margin-right: 20px; 
+    font-style: normal; 
+    margin: 0px 20px 10px 0px;  
 }
 
-.menu-lateral{
-    overflow:scroll ;
-}
 body.menu-visivel .menu-lateral {
     top: 85px;
     opacity: 1;
 }
 
 .conteudo-principal {
+    margin-top: 95px;
     transition: all 0.5s ease-in-out;
 }
 
 body.menu-visivel .conteudo-principal {
-    margin-top: 220px; 
+    margin-top: 280px; 
 }
 
 
 .espadinha{
     padding: 10px 5px;
-    background-image: linear-gradient(to bottom right, rgb(104, 206, 44), rgb(38, 94, 33), rgb(18, 46, 16));
-    border: #ffffff23 2px solid; border-radius: 5px;
-    display: flex; flex-direction: column;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
+    border-radius: 8px;
+    display: flex; flex-direction: column; 
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.253);
     transition: 100ms all ease-in-out;
     cursor: pointer;
 }
-.especial{
-    background-image: linear-gradient(to bottom right, rgb(245, 184, 93), rgb(255, 166, 0), rgb(63, 48, 15));
-    color: #001802;
+.espadinha p{
+    color: rgb(36, 85, 35);
 }
 
+/* background-image: linear-gradient(to bottom right, rgb(104, 206, 44), rgb(38, 94, 33), rgb(18, 46, 16));*/
+
 .espadinha:hover{
-    border: #ffffff 2px solid;
+    border: rgb(36, 85, 35) 2px solid;
     padding: 10px 10px;
 }
 .espadinha img{
     width: 100px;
-    filter: drop-shadow(0 0 10px rgba(218, 208, 75, 0.473));
 }
 .preco_espadinha{
     display: flex; flex-direction: row; align-items: center;
 }
 .preco_espadinha img{
-    width: 50px; height: 50px;
+    width: 26px; height: 26px;
 }
 
 #timer{
@@ -147,11 +146,11 @@ body.menu-visivel .conteudo-principal {
 }
 
 .game_em_si{
-    background-image: linear-gradient(to right bottom, rgb(40, 100, 35), rgb(19, 56, 17), rgb(6, 26, 5));
+    background-image: linear-gradient(to right bottom, rgb(46, 109, 45), rgb(19, 56, 17), rgb(6, 26, 5));
     height: 300px;
     margin: 10px 10px 10px 10px;
     padding: 5px;
-    border: #032503 2px solid; border-radius: 10px;
+    border-radius: 10px;
     display: flex; flex-direction: row; align-items: stretch;  justify-content: space-between
 }
 
@@ -166,8 +165,7 @@ body.menu-visivel .conteudo-principal {
 
 .c_jogador{
     text-align: left;
-    color: #053008;
-    background-image: linear-gradient(rgb(255, 255, 67), yellow, rgb(175, 175, 0));
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
     padding: 2px 10px; border-radius: 8px;
     box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.11);
 }
@@ -179,7 +177,7 @@ body.menu-visivel .conteudo-principal {
     color: #032503;
 }
 .c_zombie p{
-    color: yellow;
+    color: rgb(255, 221, 31);
 }
 
 #Nome_inimigo{
@@ -192,14 +190,14 @@ body.menu-visivel .conteudo-principal {
 
 .como-jogar{
     margin: 0px 10px;
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
+    background-image: linear-gradient(to left, rgb(46, 109, 45), rgb(19, 56, 17));
     margin-bottom: 5px;
-    padding: 10px 5px;
+    padding: 10px 5px 10px 20px;
     border-radius: 10px;
 
 }
 .como-jogar p, .como-jogar h1{
-    color: #032503;
+    color: rgb(255, 255, 255);
 }
 #meta{
     margin-left: 10px;
@@ -220,6 +218,37 @@ body.menu-visivel .conteudo-principal {
     font-size: 80%;
     opacity: 0.7;
     margin: auto;
+}
+
+#utensilios{
+    margin-left: 10px;
+    font-size: 120%;
+}
+@media screen and (min-width: 400px) {
+    #utensilios{
+        font-size: 190%;
+    }
+}
+
+#txto-item-atual{
+    font-size: 120%;
+    display: inline;
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
+    color: rgb(36, 85, 35);
+    margin-left: 10px;
+    padding: 3px 8px;
+    border-radius: 8px;
+}
+
+#Balao-magico{
+
+    position: fixed;
+    bottom: 40%; right: 2%;
+    width: 50px; height: 50px;
+    background-color: rgb(184, 33, 33);
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 

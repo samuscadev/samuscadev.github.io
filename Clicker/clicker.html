@@ -26,95 +26,91 @@
             <h1>Zoombie Clicker Game</h1>
         </div>
         
-        <button id="alterna-menu">Loja</button>
+        <button id="alterna-menu">Armas</button>
     </header>
+    <div id="mensagem-de-tela">
+        <h1 id="Titulo-mensagem-tela">Você perdeu!</h1> 
+        <img src="https://pa1.aminoapps.com/6603/771c6920522bed9255acf2c486e360e6b51a15cc_00.gif" >
+        <p id="texto-mensagem-tela">Textinho</p>
+        <button id="fechar-mensagem">Fechar</button>
+    </div>
+
 
     <main class="conteudo-principal">
+
+        <img id="Balao-magico" src="images/balões.webp">
     
         <img id="efeitosdeclique" src="images/efeito-ponteiro.gif">
         <section id="store" class="c_store">
             <div class="menu-lateral">
-                <h1>Selecione sua Arma:</h1>
-
                     </article>
                     <article class="espadinha" data-espadinha="espadaDePiedra">
                         <img src="images/Espada_de_piedra.webp">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>Grátis</p>
                         </div>
                     </article>
                     <article class="espadinha" data-espadinha="espadaDeOuro">
                         <img src="images/Espada_de_oro.webp">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>100</p>
                         </div>
                     </article>
                     <article class="espadinha" data-espadinha="espadaDeDiamante">
                         <img src="images/Diamond_Sword.webp">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>300</p>
                         </div>
                     </article>
                     <article class="espadinha" data-espadinha="espadaDeDiamante">
                         <img src="images/espadaroxinha.gif">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>500</p>
                         </div>
                     </article>
                     <article class="espadinha" data-espadinha="espadaDeNetherite">
                         <img src="images/Netherite_Sword.webp">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>800</p>
                         </div>
                     </article>
-                    <article class="espadinha" data-espadinha="espadaSuprema">
+                    <article class="espadinha" >
                         <img src="images/espada suprema.gif">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>1000</p>
                         </div>
                     </article>
                     <article class="espadinha" data-espadinha="espadaSuprema">
                         <img src="images/deusessword.gif">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>2500</p>
                         </div>
                     </article>
                     <article class="espadinha especial" data-espadinha="espadaSuprema">
                         <img src="images/machadin.gif">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>5000</p><br>
                         </div>
                     </article>
                     <article class="espadinha especial" data-espadinha="espadaSuprema">
                         <img src="images/luminite-sword.gif">
                         <div class="preco_espadinha">
-                            <img src="images/coin.png">
+                            <img src="images/click.webp">
                             <p>8555</p><br>
                         </div>
                     </article>
                     
             </div>        
         </section>
-        <div id="mensagem-de-tela">
-            <h1 id="Titulo-mensagem-tela">Você perdeu!</h1>
-            <p id="texto-mensagem-tela">Textinho</p>
-            <button id="fechar-mensagem">Fechar</button>
-        </div>
-
-        <section id="playerContainer">
-            <h2 id="currentTrack">Tocar: </h2> <!-- Exibe a faixa atual -->
-            <audio id="audioPlayer" autoplay></audio> <!-- Player de áudio sem controles padrão -->
-            <button id="playPauseButton">▶️</button> <!-- Botão Play/Pause -->
-        </section>
-        
+                
         <div id="timer">Tempo: 1:00</div>
         <p id="meta">Meta de cliques atual: 100</p>
         <section class="game_em_si">
@@ -132,43 +128,50 @@
             </article>
         </section>
 
-        <h1>Colecionaveis:</h1>
+        <section id="playerContainer">
+            <h2 id="currentTrack">Tocar: </h2> <!-- Exibe a faixa atual -->
+            <audio id="audioPlayer" autoplay></audio> <!-- Player de áudio sem controles padrão -->
+            <button id="playPauseButton">▶️</button> <!-- Botão Play/Pause -->
+        </section>
+
+        <h1 id="utensilios">Utensilios:</h1>
+        <p id="txto-item-atual">Nenhum item Ativo</p>
         <section class="colecionaveis">
             <article class="item-colecao">
                 <img src="images/Colecionaveis/anel.webp">
                 <h2>Anel</h2>
-                <p>Aumenta a quantia de cliques em +100 a cada minuto</p>
+                <p>Enquanto Ativo, dá +5 cliques por segundo</p>
                 <button>500 cliques</button>
             </article>
             <article class="item-colecao">
                 <img src="images/Colecionaveis/pocao.png">
                 <h2>Poção</h2>
-                <p>Faz cada clique dar 2x Dano por 1 minutos</p>
+                <p>Faz cada clique dar 2x Dano</p>
                 <button>1500 cliques</button>
             </article>
             <article class="item-colecao">
                 <img src="images/Colecionaveis/paint.webp">
                 <h2>Pintura</h2>
-                <p>Troca a cor do Zumbi pra rosa (é só isso, esse item é inutil), por 30 seg</p>
+                <p>Troca a cor do Zumbi pra rosa (é só isso, esse item é inutil)</p>
                 <button>1500 cliques</button>
             </article>
             <article class="item-colecao">
                 <img src="images/Colecionaveis/mascara.webp">
                 <h2>Máscara</h2>
-                <p>Rouba metade da vida dos zumbis por 30 seg</p>
+                <p>Rouba metade da vida dos próximos zumbis</p>
                 <button>1500 cliques</button>
             </article>
             <article class="item-colecao">
                 <img src="images/Colecionaveis/mapa.png">
                 <h2>Mapa</h2>
-                <p>Ele te guia por um caminho íncrivel!!! 🤩</p>
+                <p>Não perca tanto tempo sem um mapa!!! 🗺️</p>
                 <button>1500 cliques</button>
             </article>
             <article class="item-colecao">
                 <img src="images/Colecionaveis/chest.webp" class="colecao-especial">
                 <h2>Baú</h2>
                 <p>Te dá surpresas!</p>
-                <button>Comprar - 100 cliques</button>
+                <button>100 cliques</button>
             </article>
 
         </section>
@@ -184,14 +187,7 @@
             </p>
         </section>
         
-        <section class="como-jogar">
-            <h1>Recordes:</h1>
-            <p>
-                Samuel Brito, sla quantos cliques.<br>
-                </p>
-        </section>
-        
-        <p id="version">Versão 5.0 (to quase finalizando o projeto..)</p>
+        <p id="version">Versão 6.0 (Penultima Versão)</p>
 
         
     </main>

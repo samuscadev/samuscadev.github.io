@@ -2,7 +2,6 @@
     width: 100%;
     flex-wrap: wrap;
     display: flex; flex-direction: row; align-items: center;
-    background-image: linear-gradient(to bottom right, rgb(255, 255, 78), rgb(255, 208, 0), rgb(134, 106, 27));
     overflow: hidden;
     padding: 5px;
     align-items: stretch;
@@ -10,26 +9,25 @@
     margin: 10px 5px;
 }
 .item-colecao button{
-    color: rgb(255, 208, 0);
-    background-color: rgb(18, 46, 16);
+    font-family: "Chakra Petch", sans-serif;
+    font-style: normal;
+    padding: 2px 15px;
+    color: rgb(255, 221, 31);
+    background-color: rgb(36, 85, 35);
     border-radius: 5px;
     border: none;
 }
 .item-colecao{
     width: 32%;
-    display: flex; flex-direction: column; align-items: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: 2px;
-    background-color: rgba(0, 0, 0, 0.226);
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
     border-radius: 8px;
 }
 .item-colecao p, h2{
-    color: rgb(0, 0, 0);
+    color: rgb(36, 85, 35);
     text-align: center;
 }
-.item-colecao h2{
-    color: rgb(3, 37, 1);
-}
-
 
 .item-colecao h2{
     font-family: "Nosifer", sans-serif;
@@ -76,7 +74,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #0000003f;
+    background-color: #ffffff2f;
 }
 #playerContainer h2{
     font-size: 70%;
@@ -91,22 +89,24 @@
 
 #mensagem-de-tela{
     position: fixed;
+    padding: 2px;
     z-index: 99;
+    border: rgba(255, 255, 255, 0.63) 2px solid;
     width: 90%; height: 60%;
-    background-image: linear-gradient(to bottom right, rgb(104, 206, 44), rgb(38, 94, 33));
-    border: #ffffff23 2px solid; border-radius: 5px;
+    background-image: linear-gradient(to right bottom, rgb(34, 119, 216), rgb(19, 63, 104));
+    border-radius: 5px;
+    margin-top: 100px;
     margin-left: 4%; margin-right: auto; 
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    display: none; flex-direction: column; align-items: center; justify-content: center;
 
 }
 
 #fechar-mensagem{
     background-color: white;
-    color: rgb(18, 46, 16);
-    display: inline;
+    color: rgb(19, 63, 104);
     position: relative;
     font-family: "Nosifer", sans-serif;
-    padding: 2px; border-radius: 5px;
+    padding: 2px px; border-radius: 5px;
     border: none; cursor: pointer;
 }
 
