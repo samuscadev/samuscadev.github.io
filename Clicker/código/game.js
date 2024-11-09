@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const danosEspadas = [1, 5, 10, 15, 20, 35, 45, 65, 95];
     const precosEspadas = [0, 100, 300, 500, 800, 1000, 2500, 5000, 8555];
     const idUtensilios = [1, 2, 3, 4, 5, 6];
-    const precosUtensilios = [1, 1, 1, 1, 1, 1];
+    const precosUtensilios = [10000, 15000, 22000, 18000, 35000, 100000];
 
     function mostrarObjeto() {
         balaoMagicoEL.style.display = 'block'; // Mostra o objeto
