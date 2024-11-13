@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const textoDaMensagem = document.querySelector('#texto-mensagem-tela');
     const tituloDaMensagem = document.querySelector('#Titulo-mensagem-tela');
     const balaoMagicoEL = document.querySelector('#Balao-magico');
-    let taxaAumentoDeMeta;
-    let quatidadedeaumentos = 0;
 
+    let taxaAumentoDeMeta;
+
+    let quatidadedeaumentos = 0;
     const mensagensObj = [
-        {mensagens: 'Os zumbis estão por toda a cidade, precisamos de um heroí que recupere as armas lendarias e os derrote!'},
+        {mensagens: `Os zumbis estão por toda a cidade, precisamos de um heroí que recupere as armas lendarias e os derrote!`},
         {mensagens: 'A vida é assim garoto, na próxima você consegue :D'},
         {mensagens: 'Os cliques são usados pra comprar ou desbloquear itens e você não tem cliques suficientes para comprar esse item, clique em mais vezes para conseguir!'},
         {titulos: 'Bem Vindo Ao Game!'},
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
         balaoMagicoEL.style.display = 'block'; // Mostra o objeto
         setTimeout(() => {
             balaoMagicoEL.style.display = 'none'; // Esconde após 2 segundos
-        }, 250);
+        }, 1500);
     }
 
     // Exibe o objeto a cada 1 minuto (60000 ms)
@@ -150,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     balaoMagicoEL.addEventListener("click", function(){
-        moedas += 50;
+        moedas *= 2;
         cliquesEl.textContent = `Cliques: ${moedas}`;
     });
 
@@ -161,12 +162,13 @@ document.addEventListener("DOMContentLoaded", function() {
         utencilio.addEventListener('click', function() {
             const preco = precosUtensilios[indexUtenciclios];
 
+            
             if (moedas >= preco) {
                 itemAtual = idUtensilios[indexUtenciclios];
-                moedas -= preco;
                 precosUtensilios[indexUtenciclios] = 0;
                 utencilio.querySelector('button').textContent = "Desbloqueado";
                 utencilio.querySelector('img').style.filter = "brightness(100%)";
+                utencilio.querySelector('img').style.opacity = "1";
 
                 if(itemAtual == 6){
                     let temp = Math.floor(Math.random() * 4) + 1;

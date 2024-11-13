@@ -8,10 +8,8 @@ html, body {
 
 h1{
     color: white;
-    font-family: "Nosifer", sans-serif;
-    font-weight: 400;
-    font-style: normal; 
-    font-size: 110%;    
+    font-family: "Barrio", system-ui;
+    font-size: 150%;    
 }
 
 p{
@@ -48,8 +46,8 @@ header {
     color: rgb(36, 85, 35);
     background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
     padding: 2px 8px; border-radius: 2px;
-    font-family: "Nosifer", sans-serif;
-    font-style: normal;    
+    font-family: "Barrio", system-ui;
+    font-size: 110%; 
     transition: all 500ms ease-in-out;
 }
 
@@ -65,9 +63,7 @@ header img {
 
 header h1 {
     color: white;
-    font-family: "Nosifer", sans-serif;
-    font-weight: 400;
-    font-style: normal;   
+    font-family: "Barrio", system-ui; 
 }
 
 main {
@@ -87,8 +83,7 @@ main {
     display: flex; flex-direction: row; gap: 5px;
     padding: 10px; 
     color: white;
-    font-family: "Nosifer", sans-serif;
-    font-style: normal; 
+    font-family: "Barrio", system-ui;
     margin: 0px 20px 10px 0px;  
 }
 
@@ -117,6 +112,9 @@ body.menu-visivel .conteudo-principal {
     cursor: pointer;
 }
 .espadinha p{
+    font-family: "Barrio", system-ui;
+    font-size: 110%;
+    letter-spacing: 1px;
     color: rgb(36, 85, 35);
 }
 
@@ -138,10 +136,9 @@ body.menu-visivel .conteudo-principal {
 
 #timer{
     margin-left: 10px;
-    font-family: "Nosifer", sans-serif;
-    font-style: normal;
+    font-family: "Barrio", system-ui;
     color: #ffffff;
-    font-size: 220%;
+    font-size: 250%;
     display: inline;
 }
 
@@ -179,6 +176,9 @@ body.menu-visivel .conteudo-principal {
 .c_zombie p{
     color: rgb(255, 221, 31);
 }
+.c_zombie #Nome_inimigo{
+    font-family: "Barrio", system-ui;
+}
 
 #Nome_inimigo{
     font-size: 22px;
@@ -188,41 +188,102 @@ body.menu-visivel .conteudo-principal {
     transition: all 0.3s ease;
 }
 
+#bem-viendo{
+    margin-left: 10px;
+    font-size: 180%;
+}
 .como-jogar{
-    margin: 0px 10px;
-    background-image: linear-gradient(to left, rgb(46, 109, 45), rgb(19, 56, 17));
+    width: 100%;
     margin-bottom: 5px;
-    padding: 10px 5px 10px 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(36, 85, 35);
+    padding: 8px;
 
+}
+.como-jogar p{
+    margin: 0px 10px 5px 0px;
 }
 .como-jogar p, .como-jogar h1{
     color: rgb(255, 255, 255);
+    font-size: 120%;
+    margin-left: 10px;
 }
+
+.marcacao{
+    letter-spacing: 2px;
+    font-family: "Barrio", system-ui;
+    font-size: 90%;
+    padding: 1px 5px;
+    margin: 0px 2px;
+    border-radius: 10px;
+    color: #032503;
+    background-image: linear-gradient(rgb(255, 255, 35), rgb(255, 221, 31),rgb(255, 217, 0));
+}
+
+#dados{
+    background-color: rgb(36, 85, 35);
+    display: flex; flex-direction: column;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+#dados label{
+    font-size: 150%;
+    color: white;
+    font-family: "Barrio", system-ui;
+    margin-top: 10px;
+}
+.campo-de-input{
+    font-family: "Barrio", system-ui;
+    background-color: #032503;
+    width: 100%;
+    color: #ffffff;
+    padding: 5px 5px;
+    border-radius: 25px;
+    border: none;
+}
+.campo-de-input:focus{
+    background-color: #ffffff;
+    color: #032503;
+}
+
+#play{
+    font-family: "Barrio", system-ui;
+    text-decoration: none;
+    font-size: 180%;
+    background-color: #ffffff;
+    color: #032503;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+#play:hover{
+    background-color: rgb(36, 85, 35);
+    color: #ffffff;
+}
+
 #meta{
     margin-left: 10px;
     padding: 2px;
 }
 
-#efeitosdeclique{
-    position: absolute;
-    display: none; /* Esconde inicialmente */
-    padding: 0px;
-    z-index: 9;
-    width: 150px;
-    filter: contrast(5);
-}
-
 #version{
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 30px;
+    display: block;
+    font-family: "Barrio", system-ui;
     font-style: italic;
-    font-size: 80%;
-    opacity: 0.7;
-    margin: auto;
+    font-size: 90%;
+    opacity: 0.8;
 }
 
 #utensilios{
+    margin-top: 5px;
+    margin-bottom: 5px;
     margin-left: 10px;
-    font-size: 120%;
+    font-size: 150%;
 }
 @media screen and (min-width: 400px) {
     #utensilios{
