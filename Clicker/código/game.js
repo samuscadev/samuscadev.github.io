@@ -73,11 +73,10 @@ document.addEventListener("DOMContentLoaded", function() {
         balaoMagicoEL.style.display = 'block'; // Mostra o objeto
         setTimeout(() => {
             balaoMagicoEL.style.display = 'none'; // Esconde após 2 segundos
-        }, 1500);
+        }, 1250);
     }
 
-    // Exibe o objeto a cada 1 minuto (60000 ms)
-    setInterval(mostrarObjeto, 45000);
+    setInterval(mostrarObjeto, 50000);
 
     function atualizarZumbi() {
         const zumbiAtual = zumbiEspecialAtivo ? zumbiEspecial : zumbis[zumbiIndex];
@@ -151,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     balaoMagicoEL.addEventListener("click", function(){
-        moedas *= 2;
+        moedas += 100;
         cliquesEl.textContent = `Cliques: ${moedas}`;
     });
 
@@ -233,8 +232,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica se a meta de cliques foi atingida e reseta o tempo
         if (moedas >= metaCliques) {
             timeLeft = 60;  // Reseta o tempo
-            taxaAumentoDeMeta = Math.floor(Math.random() * 75) + 1;
-            metaCliques+= taxaAumentoDeMeta + (moedas/2 - 0.5);  // Incrementa a meta de cliques
+            taxaAumentoDeMeta = (Math.random() * 0.4 + 1.1);
+            metaCliques = taxaAumentoDeMeta * moedas;  // Incrementa a meta de cliques
             metaAtualEl.textContent = `Meta de Cliques: ${Math.trunc(metaCliques)}`;
     
             quatidadedeaumentos ++;

@@ -265,6 +265,7 @@ body.menu-visivel .conteudo-principal {
 }
 
 #meta{
+    font-size: 110%;
     margin-left: 10px;
     padding: 2px;
 }
@@ -310,6 +311,18 @@ body.menu-visivel .conteudo-principal {
     border: 2px solid white;
     border-radius: 50%;
     padding: 10px;
+}
+
+#morcegu{
+    width: 15%;
+    position: fixed; top: 85px; right: 5px;
+    transition: 250ms all ease-in-out;
+}
+#flor{
+    transform: scaleX(1);
+    width: 10%;
+    position: absolute; bottom:20px; right: 5px;
+    transition: 250ms all ease-in-out;
 }
 
 
