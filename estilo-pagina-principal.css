@@ -2,12 +2,12 @@
     margin: 0;
 }
 body{
-    background-color: black;
+    background-color: rgb(10, 12, 15);
     margin: 15px;
 }
 
 html, body {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1{
@@ -28,7 +28,7 @@ h1{
     }
 }
 .apresentation{
-    margin-top: 2%;
+    margin-top: 15%;
     width: 100%;
     display: flex; flex-direction: column;
 }
@@ -75,13 +75,33 @@ p{
     width: 100%;
 }
 
+#zombie{
+    background-color: rgb(23, 63, 38);
+}
+#zombie a{
+    background-color: rgb(255, 255, 255);
+    color: rgb(23, 63, 38);
+}
+#zombie img{
+    width: 40%;
+}
 .box-sites{
-    background-color: rgba(255, 166, 2, 0.637);
-    padding: 2%;
+    -webkit-box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.568);
+    -moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.507);
+    padding: 4% 2%;
     border-radius: 5px;
     margin: 2% 2px;
     display: flex; flex-direction: column; align-items: center;
 }
 .box-sites a{
+    margin-top: 5px;
+    padding: 3px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.11);
+    text-decoration: none;
     color: aliceblue;
 }

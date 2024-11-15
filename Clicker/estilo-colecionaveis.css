@@ -101,6 +101,9 @@
     display: none; flex-direction: column; align-items: center; justify-content: center;
 
 }
+#mensagem-de-tela img{
+    width: 10%;
+}
 
 #fechar-mensagem{
     font-size: 180%;

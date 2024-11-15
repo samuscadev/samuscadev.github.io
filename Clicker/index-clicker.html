@@ -42,8 +42,15 @@
                 -Seus Cliques podem ser utilizados pra <span class="marcacao">Comprar Itens</span> na loja.<br>
                 -Espadas diferentes aumentam de <span class="marcacao">Forma Diferente</span> a quantidade de cliques<br>
                 -Utensílios podem ser <span class="marcacao">Desbloqueadas, sem Gasto de Cliques</span>
-                porém você só pode usar <span class="marcacao">um utensilio por vez.</span>
+                porém você só pode usar <span class="marcacao">um utensilio por vez.</span><br>
+                -As vezes pode aperecer um <span class="marcacao">Balão</span> que aumenta 100 na quantidade de cliques
             </p>
+        </section>
+
+        <section id="playerContainer">
+            <h2 id="currentTrack">Clique pra escutar: </h2> <!-- Exibe a faixa atual -->
+            <audio id="audioPlayer" autoplay></audio> <!-- Player de áudio sem controles padrão -->
+            <button id="playPauseButton">▶️</button> <!-- Botão Play/Pause -->
         </section>
 
         <h1 id="bem-viendo">Exemplo de caixa do jogo:</h1>
@@ -62,14 +69,9 @@
             </article>
         </section>
 
-        <section id="playerContainer">
-            <h2 id="currentTrack">Tocar: </h2> <!-- Exibe a faixa atual -->
-            <audio id="audioPlayer" autoplay></audio> <!-- Player de áudio sem controles padrão -->
-            <button id="playPauseButton">▶️</button> <!-- Botão Play/Pause -->
-        </section>
 
         <section id="dados">
-            <label for="Nome"> Nome:
+            <label for="Nome"> Nome (teste):
                 <input type="text" class="campo-de-input" id="input-nome" placeholder="digite seu Nome">
             </label>
             <label for="Recado"> Um recado para o mundo:
@@ -78,7 +80,7 @@
         </section>
 
         <a href="clicker.html" id="play">Jogar</a>
-        <p id="version">Versão 7.0 (Você está na Ultima Versão)</p>
+        <p id="version">Versão 7.1 (Você está na Ultima Versão)</p>
     </main>
 
     <script src="código/sounds.js"></script>

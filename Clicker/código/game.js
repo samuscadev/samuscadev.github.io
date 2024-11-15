@@ -46,12 +46,17 @@ document.addEventListener("DOMContentLoaded", function() {
     metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
 
     // Array de zumbis normais e o zumbi especial
-    const zumbis = [
+        const zumbis = [
         { nome: "Girassol", vida: 100, img: "images/zombie level 1.gif" },
         { nome: "Aí meu zoió", vida: 550, img: "images/zombie 2.gif" },
         { nome: "Maicombi", vida: 1530, img: "images/zombie 3.gif" },
-        { nome: "ICone", vida: 2022, img: "images/zombie 4.gif" }
+        { nome: "ICone", vida: 2022, img: "images/zombie 4.gif" },
+        { nome: "Pros Crias", vida: 3400, img: "images/ganon.gif" },
+        { nome: "Monstro Aleatorio", vida: 4000, img: "images/geco.gif" },
+        { nome: "Não é um Zumbi", vida: 5555, img: "images/flor-head.gif" }
+        
     ];
+    
 
     const nomesItens = [
         {nome: "Anel"},
@@ -62,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {nome: "Baú"},
     ];
 
-    const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 10000, img: "images/Ocram.webp" };
+    const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 1, img: "images/Ocram.webp" };
 
     const danosEspadas = [1, 5, 10, 15, 20, 35, 45, 65, 95];
     const precosEspadas = [0, 100, 300, 500, 800, 1000, 2500, 5000, 8555];
@@ -70,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const precosUtensilios = [10000, 15000, 22000, 18000, 35000, 100000];
 
     function mostrarObjeto() {
-        balaoMagicoEL.style.display = 'block'; // Mostra o objeto
+        balaoMagicoEL.style.display = 'flex';  // Mostra o objeto
         setTimeout(() => {
             balaoMagicoEL.style.display = 'none'; // Esconde após 2 segundos
         }, 1250);
@@ -137,9 +142,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 zumbisMortosEl.textContent = `Zumbis Mortos: ${zumbisMortos}`;
 
                 if (zumbisMortos % 10 === 0) {
-                    // Ativa o zumbi especial a cada 10 zumbis mortos
+
                     zumbiEspecialAtivo = true;
-                } else {
+                }
+                else if(zumbisMortos >= zumbis.length){
+                    zumbiEspecialAtivo = false;
+                    zumbiIndex = Math.floor(Math.random() * 5) + 1;;
+                }
+                else {
                     zumbiEspecialAtivo = false;
                     zumbiIndex = (zumbiIndex + 1) % zumbis.length;
                 }
@@ -182,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 tituloDaMensagem.textContent = mensagensObj[5].titulos;
                 textoDaMensagem.textContent = mensagensObj[2].mensagens;
                 mensagemEl.style.display = "flex";
+                mensagemEl.style.backgroundImage = "linear-gradient(to right bottom, rgb(230, 148, 25), rgb(95, 64, 6))";
+                mensagemEl.querySelector('img').src = "images/porco.webp";
             }
         });
     });
@@ -209,6 +221,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 tituloDaMensagem.textContent = mensagensObj[5].titulos;
                 textoDaMensagem.textContent = mensagensObj[2].mensagens;
                 mensagemEl.style.display = "flex";
+                mensagemEl.style.backgroundImage = "linear-gradient(to right bottom, rgb(230, 148, 25), rgb(95, 64, 6))";
+                mensagemEl.querySelector('img').src = "images/porco.webp";
             }
         });
     });
@@ -258,8 +272,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             tituloDaMensagem.textContent = mensagensObj[4].titulos;
             textoDaMensagem.textContent = mensagensObj[1].mensagens;
+            mensagemEl.querySelector('img').src = "images/choro.gif";
             mensagemEl.style.display = "flex";
-
+            mensagemEl.style.backgroundImage = "linear-gradient(to right bottom, rgb(209, 51, 51), rgb(80, 18, 18))";
+            
             fecharMensagem.addEventListener('click', function() {
                 location.reload();
             });

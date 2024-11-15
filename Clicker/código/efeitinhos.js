@@ -42,28 +42,3 @@ function superCego() {
 // Defina o intervalo para 1000ms (1 segundo) para repetir o ciclo
 setInterval(cicloMorcego, 1000);
 setInterval(superCego, 8000);
-
-function bixinhaEstruchipada() {
-    setTimeout(() => {
-        imgFlorEl.style.right = '2px';
-    }, 0);
-    setTimeout(() => {
-        imgFlorEl.style.right = '-120px';
-    }, 500);
-    setTimeout(() => {
-        imgFlorEl.style.right = '5px';
-    }, 1500);
-}
-function inverteFlor() {
-    
-    setTimeout(() => {
-        imgFlorEl.style.transform = 'scaleX(-1)'; // Inverte horizontalmente
-    }, 0);
-    setTimeout(() => {
-        imgFlorEl.style.transform = 'scaleX(1)'; // Volta ao normal após 950ms
-    }, 950);
-}
-
-// Repetir a função inverteFlor a cada segundo
-setInterval(inverteFlor, 1000);
-setInterval(bixinhaEstruchipada, 5000);
