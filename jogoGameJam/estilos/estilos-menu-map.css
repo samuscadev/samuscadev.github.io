@@ -1,0 +1,45 @@
+
+*{
+    margin: 0px;
+}
+html, body{
+    overflow: hidden;
+}
+
+body{
+    background-color: rgb(16, 55, 107);
+}
+
+#piso{
+    position: absolute;
+    width: 100%; height: 10%;
+    background-color: rgb(14, 18, 39); 
+    bottom: 0px;
+    z-index: 1;
+}
+#botas img, #lixeira img{
+    width: 30%;
+    z-index: 2;
+}
+#botas{
+    position: absolute;
+    bottom: 5%; left:20%;
+    z-index: 2;
+}
+#lixeira{
+    position: absolute;
+    bottom: 5%; left:60%;
+    z-index: 2;
+}
+#balaozinho-menu-mapa{
+    width: 100px;
+    display: none;
+    position: absolute;
+    background-color: rgb(14, 51, 51);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    border-radius: 8px; border: 2px white solid;
+    z-index: 3;
+}

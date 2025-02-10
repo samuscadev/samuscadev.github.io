@@ -1,0 +1,222 @@
+html, body{
+    overflow: hidden;
+}
+::selection {
+    background: transparent; /* Remove a cor azul */
+    color: inherit; /* Mantém a cor original do texto */
+}
+body {
+    background-color: rgb(73, 55, 46);
+}
+
+#player{
+    width: 110px; height: 180px;
+    margin: 0;
+    position: absolute;
+    transition: all 50ms ease-in-out;
+    z-index: 3;
+    top: 31px; left: 31px;
+}
+#hit-box{
+    width: 80px; height: 110px;
+    position: relative;
+    top:-130px; left:15px;
+}
+#area-Ataque{
+    width: 300px; height: 540px;
+    margin: 0;
+    position: absolute;
+    transition: all 50ms ease-in-out;
+    z-index: 1;
+    top: -130px; left: -60px;
+}
+
+#background{
+    border: 3px solid rgb(36, 26, 21);
+    display: inline;
+    position: absolute;
+    width: 700px; height: 600px;
+    top: 10px; left: 10px;
+    z-index: 1;
+}
+.bau{
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 2;
+}
+.armadilha{
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 2;
+}
+.sujeira{
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 1;
+}
+.inimigo{
+    width: 90px; height: 110px;
+    position: absolute;
+    z-index: 3;
+    transition: all 50ms ease-in-out;
+    cursor: default;
+}
+.specialcursor{
+    cursor: pointer;
+}
+
+#abrirStatus img{
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 50%;
+    width: 80px; height: 80px;
+    background-color: none;
+    border: none;
+    transition: all 100ms ease-in-out;
+    z-index: 6;
+}
+#abrirStatus img:hover{
+    border: rgb(10, 17, 46) 2px solid;
+    width: 85px; height: 85px;
+    bottom: 45px; left: 45px;
+}
+#IndicadorDeStatus{
+    text-align: right;
+    transition: all 100 ms ease-in-out;
+    border: rgb(10, 17, 46) 2px solid;
+    background-color: rgba(21, 42, 66, 0.815);
+    padding-left: 8px;
+    width: 25%;
+    border-radius: 10px;
+    z-index: 5;
+    display: inline;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-family: "Snowburst One", serif;
+    position: absolute;
+    bottom:40px; left: 35px;
+    visibility: hidden;
+}
+#coracoes{
+    position: relative;
+    z-index: 8;
+}
+.icone-coracao{
+    display: inline;
+    width: 50px; height: 50px;
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+}
+#barreira-esquerda, #barreira-direita, #barreira-baixo, #barreira-cima{
+    position: absolute;
+    z-index: 4;
+}
+
+#barreira-esquerda, #barreira-direita{
+    background-image: url("../assets/dirty-boots-walls2.png");
+    height: 100vh; width: 30px;
+}
+#barreira-cima, #barreira-baixo{
+    background-image: url("../assets/dirty-boots-walls1.png");
+    height: 30px; width: 100vw;
+}
+#barreira-esquerda{
+    top: 0; left: 0;
+}
+#barreira-direita{
+    top: 0; right: 10px;
+}
+#barreira-cima{
+    top: 0; left: 0;
+}
+#barreira-baixo{
+    transform: scale(-1);
+    bottom: 0; left: 0;
+}
+#pilar{
+    position: absolute;
+    top: 50vh; right: 50px;
+    width: 100px; height: 120px;
+    z-index: 2;
+}
+.piscando{
+    animation: piscar 0.2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+#container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40px; right: 55px;
+    z-index: 100;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 25px;
+    border: rgba(0, 0, 0, 0.459) 2px solid;
+    background-image: linear-gradient(to left, #13505b, #041d22);
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    z-index: 9;
+}
+
+.progress {
+    width: 0px;
+    height: 100%;
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    transition: all 0.2s ease-in-out;
+}
+.projetil {
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 1px solid;
+    transition: all 50ms ease-in-out;
+}
+#icon-brisas{
+    z-index: 10;
+    position: absolute;
+    top: 45px; left: -35px;
+    width: 50px; height: 50px;
+}
+#sombras{
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100vw; height: 100vh;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.041), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.897));
+}
+
+#vida-inimigo{
+    z-index: 8;
+    position: absolute;
+    top: 50px; left: 100px;
+    display: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-image: linear-gradient(#9e0404 , #460a0a);
+    color: white;
+    font-weight: bolder;
+    font-family: "Snowburst One", serif;
+    font-size: 25px;
+    transition: all 50ms ease-in-out;
+}
+
