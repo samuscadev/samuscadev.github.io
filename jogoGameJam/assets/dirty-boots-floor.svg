@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400px" height="400px">
+  <rect x="-5.713" y="-0.578" width="429.425" height="403.792" style="fill: rgb(123, 53, 36);"/>
+  <g transform="matrix(0.975253, 0, 0, 0.963438, 2.013141, 0.000329)" style="">
+    <rect x="335.302" y="0.009" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="251.353" y="1.058" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="167.343" y="1.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="84.443" y="0.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="0.531" y="1.022" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+  </g>
+  <g transform="matrix(0.985319, 0, 0, 0.963438, 0.020017, 79.998253)" style="">
+    <rect x="335.302" y="0.009" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="251.353" y="1.058" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="167.343" y="1.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="84.443" y="0.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="0.531" y="1.022" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+  </g>
+  <g transform="matrix(0.985319, 0, 0, 0.963438, 2.020015, 159.971741)" style="">
+    <rect x="335.302" y="0.009" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="251.353" y="1.058" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="167.343" y="1.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="84.443" y="0.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="0.531" y="1.022" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+  </g>
+  <g transform="matrix(0.989345, 0, 0, 0.963438, 2.005657, 240.006317)" style="">
+    <rect x="335.302" y="0.009" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="251.353" y="1.058" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="167.343" y="1.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="84.443" y="0.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="0.531" y="1.022" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+  </g>
+  <g transform="matrix(0.997399, 0, 0, 0.984044, 0.013603, 320.028503)" style="">
+    <rect x="335.302" y="0.009" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="251.353" y="1.058" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="167.343" y="1.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="84.443" y="0.034" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+    <rect x="0.531" y="1.022" width="80" height="80" style="fill: none; stroke: rgb(92, 26, 10); stroke-width: 3px; stroke-dasharray: 20;"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 280.123199, 132.278732)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 324.830353, 107.027466)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 286.497192, 139.866821)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 43.803471, 329.351013)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 88.510628, 304.099762)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 50.177464, 336.939117)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 32.947807, 70.484879)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 77.654961, 45.233627)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+  <g transform="matrix(0.006035, 0.608949, 2.612182, -0.025886, 39.3218, 78.072983)" style="transform-origin: 15.427px 8.12px;">
+    <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+    <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+    <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+  </g>
+</svg>

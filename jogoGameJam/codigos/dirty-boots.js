@@ -30,11 +30,6 @@ function somTomarDano() {
 function somAtirar() {
     somTiro.currentTime = 0;
     somTiro.play();
-
-    setTimeout(() => {
-        musica.pause();
-        musica.currentTime = 0;
-    }, 1000);
 }
 let progresso = 0;
 function atualizarProgresso(soma) {
@@ -61,15 +56,15 @@ let animacaoCorrer = null;
 let indiceCorrida = 0;
 
 setInterval(function(){
-    if(detectaColisaoUnica(playerEl, barreiraXR)){
+    if(detectaColisaoUnica(hitBoxEl, barreiraXR)){
         posX -= 15;
         playerEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(1)`;
     }
-    if(detectaColisaoUnica(playerEl, barreiraXL)){
+    if(detectaColisaoUnica(hitBoxEl, barreiraXL)){
         posX += 15; 
         playerEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(-1)`;    
     }
-    if(detectaColisaoUnica(playerEl, barreiraYU)){
+    if(detectaColisaoUnica(hitBoxEl, barreiraYU)){
         posY += 15;
         playerEl.style.transform = `translate(${posX}px, ${posY}px)`;
     }
@@ -102,10 +97,10 @@ function andar(deltaX, deltaY) {
             playerEl.style.transform = "scaleX(-1)";
         }
         if (deltaY == -1) {
-            spriteplayerEl.src = "assets/protagonista-virado-atras.png";
+            spriteplayerEl.src = "assets/protagonista-atras.svg";
         }
         if (deltaY == 1) {
-            spriteplayerEl.src = "assets/protagonista-virado-frente.png";
+            spriteplayerEl.src = "assets/protagonista-base.svg";
         }
         areaDeAtaqueEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(${deltaX < 0 ? -1 : 1})`;
         playerEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(${deltaX < 0 ? -1 : 1})`;
@@ -131,11 +126,11 @@ document.addEventListener("keydown", (event) => {
             break;
         case "ArrowUp":
             intervalID = setInterval(() => andar(0, -1), 50);
-            spriteplayerEl.src = "assets/protagonista-virado-atras.png";
+            spriteplayerEl.src = "assets/protagonista-atras.svg";
             break;
         case "ArrowDown":
             intervalID = setInterval(() => andar(0, 1), 50);
-            spriteplayerEl.src = "assets/protagonista-virado-frente.png";
+            spriteplayerEl.src = "assets/protagonista-base.svg";
             break;
     }
 });
@@ -149,7 +144,7 @@ document.addEventListener("keyup", (event) => {
     ) {
         clearInterval(animacaoCorrer); // Para a animação horizontal
         animacaoCorrer = null;
-        spriteplayerEl.src = "assets/protagonista.png";
+        spriteplayerEl.src = "assets/protagonista-base.svg";
         clearInterval(intervalID); // Para o movimento geral
         intervalID = null;
     }
@@ -165,6 +160,7 @@ const campoGararInimigos = document.querySelector("#campo-inimigos");
 const campoGararBarreiras = document.querySelector("#campo-armadilhas");
 const campoCoracoes = document.querySelector("#coracoes");
 let inimigos = [];
+let vetorSujeiras = [];
 let baus = [];
 let armadilhas = [];
 let coracoes = [];
@@ -244,9 +240,9 @@ function atirar(evento) {
         }
 
         setTimeout(() => {
-            projetil.style.backgroundImage = "linear-gradient(to left, #ffffff, #ffffff)";
+            projetil.style.backgroundImage = `url("assets/tiro-disparado.svg")`;
             projetil.style.width = "30px";
-        }, 400);
+        }, 350);
         setTimeout(() => {
             projetil.remove();
         }, 500);
@@ -265,7 +261,7 @@ function gerarCoisas() {
     const limiteBaus = Math.floor(Math.random() * 2) + 1;
     const limiteInimigos = Math.floor(Math.random() * 3) + 2;
     const limiteBarreiras = Math.floor(Math.random() * 2) + 2;
-    const limiteSujeira = Math.floor(Math.random() * 8) + 4;
+    const limiteSujeira = Math.floor(Math.random() * 10) + 2;
     // Lista de itens existentes para verificar colisões
     let itensExistentes = [];
 
@@ -273,7 +269,7 @@ function gerarCoisas() {
     for (let i = 0; i < limiteBaus; i++) {
         const novoBau = document.createElement("img");
         novoBau.classList.add("bau");
-        novoBau.src = 'assets/bau-fechado.png';
+        novoBau.src = 'assets/bau-fechado-dirty.svg';
         novoBau.style.position = 'absolute';
 
         // Encontra posição livre para o baú
@@ -351,9 +347,9 @@ function gerarCoisas() {
                 textoVidaInimigosEl.style.top = `${mouseY}px`;
                 textoVidaInimigosEl.style.left = `${mouseX}px`;
                 textoVidaInimigosEl.innerHTML = `${inimigosVida[index]}`;
-                novoInimigo.style.filter = `contrast(20%) brightness(200%) blur(2px)`;
+                novoInimigo.style.filter = `contrast(20%) brightness(200%)`;
                 setTimeout(()=>{
-                    novoInimigo.style.filter = `contrast(100%) brightness(100%) blur(0px)`;
+                    novoInimigo.style.filter = `contrast(100%) brightness(100%)`;
                     textoVidaInimigosEl.style.display = `none`;
                 },100)
             
@@ -370,7 +366,8 @@ function gerarCoisas() {
     for (let i = 0; i < limiteSujeira; i++) {
         const novaSujeira = document.createElement("img");
         novaSujeira.classList.add("sujeira");
-        novaSujeira.src = 'assets/sujeira-dirty.png';
+        vetorSujeiras.push(novaSujeira);
+        novaSujeira.src = 'assets/pedras-dirty-boots.svg';
         novaSujeira.style.position = 'absolute';
 
         // Encontra posição livre para a barreira
@@ -385,6 +382,7 @@ function gerarCoisas() {
         novaSujeira.style.top = `${y}px`;
         novaSujeira.style.left = `${x}px`;
         campoGararPedras.appendChild(novaSujeira);
+        itensExistentes.push(novaSujeira);
     }
 }
 
@@ -397,7 +395,7 @@ document.querySelector("#pilar").addEventListener("click", () => {
         somReset();
         document.querySelector("#pilar").style.display = `none`;
         inimigos.forEach((inimigo) => inimigo.remove());
-        sujeiras.forEach((sujeira) => sujeira.remove());
+        vetorSujeiras.forEach((sujeira) => sujeira.remove());
         baus.forEach((bau) => bau.remove());
         armadilhas.forEach((bau) => bau.remove());
         // Limpa arrays e reseta estados
@@ -405,7 +403,7 @@ document.querySelector("#pilar").addEventListener("click", () => {
         baus = [];
         inimigosVida = [];
         bausBrisa = [];
-        bodyEl.style.backgroundColor = `black`;
+        bodyEl.style.backgroundImage = `radial-gradient(rgb(77, 255, 246), rgb(77, 255, 246), rgb(77, 255, 246))`;
         posX = 0;
         posY = 30;
         playerEl.style.display = `none`;
@@ -415,7 +413,7 @@ document.querySelector("#pilar").addEventListener("click", () => {
 
         // Atualiza contador de salas e regenera os elementos após 1 segundo
         setTimeout(() => {
-            bodyEl.style.backgroundColor = `rgb(73, 55, 46)`;
+            bodyEl.style.backgroundImage = "url('assets/dirty-boots-floor.svg')";
             gerarCoisas();
             areaDeAtaqueEl.style.transform = `translate(0px, 0px)`;
             playerEl.classList.add('piscando');
@@ -504,7 +502,7 @@ setInterval(() => {
     // Checa colisão com baús
     baus.forEach((bau, i) => {
         if (detectaColisaoUnica(bau, playerEl)) {
-            bau.src = "assets/bau-aberto.png";            
+            bau.src = 'assets/bau-aberto-dirty.svg';         
             atualizarProgresso(bausBrisa[i]);
             bausBrisa[i] = 0;
         }
@@ -512,11 +510,11 @@ setInterval(() => {
 
     const todosZero = bausBrisa.every(elemento => elemento === 0);
     if(todosZero){
-        document.querySelector("#pilar img").src ="assets/buraco-aberto-dirty-boots.png";
+        document.querySelector("#pilar img").src ="assets/pilar-aberto-dirty-boots.svg";
         todosBausAbertos = true;
     }
     else{
-        document.querySelector("#pilar img").src ="assets/buraco-fechado-dirty-boots.png";
+        document.querySelector("#pilar img").src ="assets/pilar-dirty-boots.svg";
         todosBausAbertos = false;
     }
 
@@ -525,10 +523,12 @@ setInterval(() => {
         tomarDano = false;
         document.querySelector("#pilar").style.display = `none`;
         inimigos.forEach((inimigo) => inimigo.remove());
+        vetorSujeiras.forEach((sujeira) => sujeira.remove());
         baus.forEach((bau) => bau.remove());
         armadilhas.forEach((bau) => bau.remove());
         // Limpa arrays e reseta estados
         inimigos = [];
+        vetorSujeiras = [];
         baus = [];
         inimigosVida = [];
         bausBrisa = [];
