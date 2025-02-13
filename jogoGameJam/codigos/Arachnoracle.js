@@ -11,157 +11,190 @@ let textoApareceu = false;
 let ataqueAcontecendo = false;
 
 let nomeBossEl = document.querySelector("#nome-boss");
-function aparecerTexto(){
-    setTimeout(()=>{
+function aparecerTexto() {
+    setTimeout(() => {
         nomeBossEl.style.opacity = "1";
-    } , 1000);
-    setTimeout(()=>{
+    }, 1000);
+    setTimeout(() => {
         nomeBossEl.style.opacity = "0";
         textoApareceu = true;
-    } , 4000);
-    
+    }, 4000);
 }
 aparecerTexto();
-/*
-setInterval(()=>{
-    if(textoApareceu && !ataqueAcontecendo){
-        proximaFase = Math.floor(Math.random() * 3)+ 1;
 
-        if(proximaFase == 1){
-            bossEl.style.backgroundColor = "red";
+setInterval(() => {
+    if (textoApareceu && !ataqueAcontecendo) {
+        proximaFase = Math.floor(Math.random() * 3) + 1;
+
+        if (proximaFase == 1) {
+            bossEl.style.border = "red 5px solid";
             ataqueAcontecendo = true;
+            setTimeout(onda1, 1500);
         }
-        if(proximaFase == 2){
-            bossEl.style.backgroundColor = "blue";
+        if (proximaFase == 2) {
+            bossEl.style.border = "blue 5px solid";
             ataqueAcontecendo = true;
+            setTimeout(onda2, 1500);
         }
-        if(proximaFase == 3){
-            bossEl.style.backgroundColor = "green";
+        if (proximaFase == 3) {
+            bossEl.style.border = "green 5px solid";
             ataqueAcontecendo = true;
+            setTimeout(onda3, 1500);
         }
     }
-}, 100);*/
+}, 1000);
 
-setTimeout(onda1, 1000);
+let bolRolantes = false;
+let bolBolas = false;
+let bolProgeteis = false;
 
-function onda1(){
-    setTimeout(() => criarProgeteis(2), 500);
-    setTimeout(() => criarBolas(), 1500);
-    setTimeout(() => criarProgeteis(3), 2500);
-    setTimeout(() => criarRolas(), 3000);
-    setTimeout(() => criarProgeteis(4), 4500);
-    setTimeout(() => criarProgeteis(6), 7500);
-    setTimeout(() => criarRolas(), 10000);
-    setTimeout(() => criarBolas(), 11000);
-    setTimeout(() => criarProgeteis(2), 12500);
-    setTimeout(() => criarBolas(), 14500);
-    setTimeout(() => criarProgeteis(3), 15500);
-    setTimeout(() => criarRolas(), 14500);
-    setTimeout(() => criarProgeteis(4), 17500);
-    setTimeout(() => criarProgeteis(6), 20500);
-    setTimeout(() => criarRolas(), 19500);
-    setTimeout(() => criarBolas(), 19500);
-}
-function onda2(){
-    
-}
-function onda3(){
-    
-}
-let coracoes = [];
-let progeteis = [];
-let bolas = [];
-const campoCoracoes = document.querySelector("#coracoes");
-for(let i=0; i<6; i++){
-    const novoCoracao = document.createElement("img");
-    coracoes.push(novoCoracao);
-    novoCoracao.classList.add("icone-coracao");
-    novoCoracao.src = "assets/heart-icon.png";
-    campoCoracoes.appendChild(novoCoracao);
+let intervalos = []; // Para armazenar os IDs dos intervalos
+
+function onda1() {
+    iniciarAtaque();
 }
 
+function onda2() {
+    iniciarAtaque();
+}
 
-function criarProgeteis(gerarQuant){
-    let margem = window.innerWidth/(gerarQuant+1);
-    let posLeft = window.innerWidth/(gerarQuant+1);
+function onda3() {
+    iniciarAtaque();
+}
+
+function iniciarAtaque() {
+    ataqueAcontecendo = true;
+
+    // Intervalo para projéteis
+    let intervaloProjeteis = setInterval(() => {
+        if (!bolProgeteis) {
+            bolProgeteis = true;
+            let randomNumber = Math.floor(Math.random() * 6) + 2;
+            setTimeout(criarProgeteis, 800, randomNumber);
+        }
+    }, 500);
+    intervalos.push(intervaloProjeteis);
+
+    // Intervalo para bolas
+    let intervaloBolas = setInterval(() => {
+        if (!bolBolas) {
+            bolBolas = true;
+            setTimeout(() => {
+                criarBolas();
+            }, 5000);
+        }
+    }, 2000);
+    intervalos.push(intervaloBolas);
+
+    // Intervalo para objetos rolantes
+    let intervaloRolantes = setInterval(() => {
+        if (!bolRolantes) {
+            bolRolantes = true;
+            setTimeout(() => {
+                criarRolas();
+            }, 2000);
+        }
+    }, 500);
+    intervalos.push(intervaloRolantes);
+
+    // Após 15 segundos, limpar todos os intervalos e resetar o estado
+    setTimeout(() => {
+        intervalos.forEach(clearInterval); // Limpa todos os intervalos armazenados
+        intervalos = []; // Limpa o array de IDs
+        ataqueAcontecendo = false; // Permitir chamar outra onda
+        bolProgeteis = false;
+        bolBolas = false;
+        bolRolantes = false; // Resetar os estados, se necessário
+    }, 15000);
+}
+
+// Criação de projéteis
+function criarProgeteis(gerarQuant) {
+    // Evita criar projéteis se já estiverem sendo lançados
+    if (bolProgeteis) return;
+
+    bolProgeteis = true; // Bloqueia novos disparos enquanto os atuais estão em execução
+
+    let margem = window.innerWidth / (gerarQuant + 1);
+    let posLeft = window.innerWidth / (gerarQuant + 1);
     for (let i = 0; i < gerarQuant; i++) {
         const progetil = document.createElement("div");
         progetil.classList.add("progetil");
-    
         progetil.style.left = `${posLeft}px`;
         progetil.style.top = `0px`;
         campoGeracao.appendChild(progetil);
-        progeteis.push(progetil);
         posLeft += margem;
     }
-    setTimeout(()=> dispararProgeteis(), 500); 
+    setTimeout(dispararProgeteis, 500);
 }
 
-function dispararProgeteis(){
+function dispararProgeteis() {
     let topProgeteis = 0;
-    let progeteisCaindo = setInterval(()=>{
-        if(topProgeteis < window.innerHeight * 0.7){
-            progeteis.forEach((progetil) =>{
-                progetil.style.top = `${topProgeteis}px`;
-            });
-            topProgeteis += 20;
+    let progeteisCaindo = setInterval(() => {
+        document.querySelectorAll(".progetil").forEach((progetil) => {
+            progetil.style.top = `${topProgeteis}px`;
+            if (parseInt(progetil.style.top) >= window.innerHeight * 0.99) {
+                progetil.remove();
+            }
+        });
+        topProgeteis += 20;
+        if (topProgeteis >= window.innerHeight * 0.99) {
+            clearInterval(progeteisCaindo); // Para o movimento
+            bolProgeteis = false; // Permite criar outra onda de projéteis
         }
-        else{
-            progeteis.forEach((progetil) => progetil.remove());
-            clearInterval(progeteisCaindo);
-        }
-    },50);
+    }, 50);
 }
 
-function criarBolas(){
+
+// Criação de bolas
+function criarBolas() {
     const novaBola = document.createElement("div");
     novaBola.classList.add("bola");
     bolasGeracao.appendChild(novaBola);
-    bolas.push(novaBola);
 
-    let bolaAndando = setInterval(function(){
-        let posY = 150 * Math.sin(posYBolas) + (window.innerHeight/2);
+    let posXBolas = 0; 
+    let posYBolas = 0;
+
+    let bolaAndando = setInterval(function () {
+        let posY = 150 * Math.sin(posYBolas) + window.innerHeight / 2;
         novaBola.style.top = `${posY}px`;
         novaBola.style.left = `${posXBolas}px`;
-        
+
         posXBolas += 40;
         posYBolas += 0.5;
-        if(posYBolas == (Math.PI * 2)){
-            posYBolas = 0;
-        }
-        if(posXBolas >= window.innerWidth * 0.998){
+
+        if (posXBolas >= window.innerWidth * 0.99) {
             novaBola.remove();
-            posXBolas = 0;
-            posYBolas = 0;
-            clearInterval(bolaAndando);   
+            clearInterval(bolaAndando);
+            bolBolas = false;
         }
-        
     }, 100);
 }
 
-let xRolas = 0;
-let anguloRolas = 0;
-let velocidadeXRola = 1;
-function criarRolas(){
+// Criação de rolantes
+function criarRolas() {
     const rolante = document.createElement("div");
     rolante.classList.add("rola");
     rolantesGeracao.appendChild(rolante);
 
-    let rolando = setInterval(function(){
+    let xRolas = 0;
+    let anguloRolas = 0;
+    let velocidadeXRola = 1;
+
+    const rolando = setInterval(function () {
         xRolas += velocidadeXRola;
         anguloRolas += 5;
 
-        if(xRolas >= window.innerWidth * 0.998){
-            rolante.remove();
-            xRolas = 0;
-            anguloRolas = 0;
-            velocidadeXRola = 1;
-            clearInterval(rolando);
-        }
-        if(velocidadeXRola < 45){
-            velocidadeXRola += 6;
-        }
         rolante.style.transform = `translateX(${xRolas}px) rotate(${anguloRolas}deg)`;
 
-    } ,100);    
+        if (xRolas >= window.innerWidth * 0.99) {
+            rolante.remove();
+            clearInterval(rolando);
+            bolRolantes = false;
+        }
+
+        if (velocidadeXRola < 45) {
+            velocidadeXRola += 6;
+        }
+    }, 100);
 }

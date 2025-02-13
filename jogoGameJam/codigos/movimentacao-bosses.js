@@ -166,10 +166,10 @@ function atirar(evento) {
         setTimeout(() => {
             projetil.style.backgroundImage = "linear-gradient(to left, #ffffff, #ffffff)";
             projetil.style.width = "30px";
-        }, 700);
+        }, 800);
         setTimeout(() => {
             projetil.remove();
-        }, 800); 
+        }, 900); 
         
     }
     requestAnimationFrame(moverProjetil);

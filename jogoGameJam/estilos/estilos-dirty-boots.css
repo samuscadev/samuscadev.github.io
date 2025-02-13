@@ -18,9 +18,9 @@ body {
     top: 31px; left: 31px;
 }
 #hit-box{
-    width: 80px; height: 110px;
+    width: 60px; height: 110px;
     position: relative;
-    top:-130px; left:15px;
+    top:-130px; left:18px;
 }
 #area-Ataque{
     width: 300px; height: 540px;
@@ -220,5 +220,34 @@ body {
     font-family: "Snowburst One", serif;
     font-size: 25px;
     transition: all 50ms ease-in-out;
+}
+
+.bolha {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background: rgba(24, 71, 18, 0.623);
+      border-radius: 50%;
+      animation: subir 5s linear forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+@keyframes subir {
+    0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+50% {
+    opacity: 1;
+}
+70% {
+    opacity: 0.5;
+}
+100% {
+    transform: translateY(-120vh) scale(0.5);
+    opacity: 0;
+    }
 }
 

@@ -53,7 +53,11 @@ let posX = 0;
 let posY = 0;
 let intervalID = null;
 let animacaoCorrer = null;
+let animacaoDescer = null;
+let animacaoSubir = null;
 let indiceCorrida = 0;
+let indiceSubida = 0;
+let indiceDescida = 0;
 
 setInterval(function(){
     if(detectaColisaoUnica(hitBoxEl, barreiraXR)){
@@ -76,10 +80,18 @@ setInterval(function(){
 , 50)
 
 let protagonistaRun = [
-    "assets/protagonista-run1.png",
-    "assets/protagonista-run2.png",
-    "assets/protagonista-run3.png",
-    "assets/protagonista-run4.png",
+    "assets/protagonista-run1.svg",
+    "assets/protagonista-run2.svg",
+    "assets/protagonista-run3.svg",
+    "assets/protagonista-run4.svg",
+];
+let protagonistaUpRun = [
+    "assets/protagonista-atras.svg",
+    "assets/protagonista-atras2.svg",
+];
+let protagonistaDownRun = [
+    "assets/protagonista-base.svg",
+    "assets/protagonista-base2.svg",
 ];
 let inimigosRun = [
     "assets/ant-enados1.png",
@@ -96,21 +108,23 @@ function andar(deltaX, deltaY) {
         } else if (deltaX == -1) {
             playerEl.style.transform = "scaleX(-1)";
         }
-        if (deltaY == -1) {
-            spriteplayerEl.src = "assets/protagonista-atras.svg";
-        }
-        if (deltaY == 1) {
-            spriteplayerEl.src = "assets/protagonista-base.svg";
-        }
+        
         areaDeAtaqueEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(${deltaX < 0 ? -1 : 1})`;
         playerEl.style.transform = `translate(${posX}px, ${posY}px) scaleX(${deltaX < 0 ? -1 : 1})`;
 }
 
 function animarCorrida() {
     spriteplayerEl.src = protagonistaRun[indiceCorrida];
-    indiceCorrida = (indiceCorrida + 1) % protagonistaRun.length; // Cicla os índices
+    indiceCorrida = (indiceCorrida + 1) % protagonistaRun.length;
 }
-
+function animarDescida() {
+    spriteplayerEl.src = protagonistaDownRun[indiceDescida];
+    indiceDescida = (indiceDescida + 1) % protagonistaDownRun.length;
+}
+function animarSubida() {
+    spriteplayerEl.src = protagonistaUpRun[indiceSubida];
+    indiceSubida = (indiceSubida + 1) % protagonistaUpRun.length;
+}
 document.addEventListener("keydown", (event) => {
     tocarMusica();
     if (intervalID) return; // Evita múltiplos intervals para movimento
@@ -125,12 +139,12 @@ document.addEventListener("keydown", (event) => {
             intervalID = setInterval(() => andar(-1, 0), 50);
             break;
         case "ArrowUp":
+            if (!animacaoSubir) animacaoSubir = setInterval(animarSubida, 100);
             intervalID = setInterval(() => andar(0, -1), 50);
-            spriteplayerEl.src = "assets/protagonista-atras.svg";
             break;
         case "ArrowDown":
+            if (!animacaoDescer) animacaoDescer = setInterval(animarDescida, 100);
             intervalID = setInterval(() => andar(0, 1), 50);
-            spriteplayerEl.src = "assets/protagonista-base.svg";
             break;
     }
 });
@@ -142,13 +156,18 @@ document.addEventListener("keyup", (event) => {
         event.key === "ArrowUp" ||
         event.key === "ArrowDown"
     ) {
-        clearInterval(animacaoCorrer); // Para a animação horizontal
+        clearInterval(animacaoCorrer);
         animacaoCorrer = null;
-        spriteplayerEl.src = "assets/protagonista-base.svg";
+        clearInterval(animacaoSubir);
+        animacaoSubir = null;
+        clearInterval(animacaoDescer);
+        animacaoDescer = null;
+        spriteplayerEl.src = "assets/protagonista-comtemplativo.svg";
         clearInterval(intervalID); // Para o movimento geral
         intervalID = null;
     }
     indiceCorrida = 0;
+    indiceDescida = 0;
 });
 
 let itemWidth = 100;
@@ -207,29 +226,24 @@ function atirar(evento) {
     document.body.appendChild(projetil);
 
     // Definir posição inicial do tiro (onde está o jogador)
-    projetil.style.left = `${jogadorX}px`;
-    projetil.style.top = `${jogadorY}px`;
+    projetil.style.left = `${jogadorX + 10}px`;
+    projetil.style.top = `${jogadorY + 10}px`;
 
-    // Calcular ângulo do tiro
     const deltaX = destinoX - jogadorX;
     const deltaY = destinoY - jogadorY;
     const angulo = Math.atan2(deltaY, deltaX);
 
-    // Velocidade do projétil
-    const velocidade = 8; // Pixels por frame
+    const velocidade = 8;
     const velocidadeX = Math.cos(angulo) * velocidade;
     const velocidadeY = Math.sin(angulo) * velocidade;
 
-    // Função de animação
     function moverProjetil() {
         const xAtual = parseFloat(projetil.style.left);
         const yAtual = parseFloat(projetil.style.top);
 
-        // Atualizar posição
         projetil.style.left = `${xAtual + velocidadeX}px`;
         projetil.style.top = `${yAtual + velocidadeY}px`;
 
-        // Remover o projétil se sair da tela
         if (
             xAtual < 0 || xAtual > window.innerWidth ||
             yAtual < 0 || yAtual > window.innerHeight
@@ -502,7 +516,8 @@ setInterval(() => {
     // Checa colisão com baús
     baus.forEach((bau, i) => {
         if (detectaColisaoUnica(bau, playerEl)) {
-            bau.src = 'assets/bau-aberto-dirty.svg';         
+            spriteplayerEl.src = "assets/protagonista-brisa.svg";
+            bau.src = 'assets/bau-aberto-dirty.svg';  
             atualizarProgresso(bausBrisa[i]);
             bausBrisa[i] = 0;
         }
@@ -546,6 +561,29 @@ setInterval(() => {
 
 // Gera os elementos iniciais
 gerarCoisas();
+
+function criarBolha() {
+    const bolha = document.createElement('div');
+    bolha.classList.add('bolha');
+
+    const tamanho = Math.random() * 20 + 10; // Tamanho entre 10px e 30px
+    bolha.style.width = `${tamanho}px`;
+    bolha.style.height = `${tamanho}px`;
+
+    // Posição horizontal aleatória
+    bolha.style.bottom = `10vh`;
+    bolha.style.left = `${Math.random() * 100}vw`;
+
+    document.body.appendChild(bolha);
+
+    // Remover a bolha quando a animação acabar
+    bolha.addEventListener('animationend', () => {
+      bolha.remove();
+    });
+  }
+
+  // Criar bolhas periodicamente
+  setInterval(criarBolha, 500);
 
 
 

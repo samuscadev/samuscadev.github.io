@@ -16,8 +16,6 @@ body{
     z-index: 3;
 }
 #boss{
-    background-image: url("../assets/arac-base.svg");
-    background-repeat: no-repeat;
     width: 800px; height: 500px;
     margin: 0;
     display: inline;
@@ -25,6 +23,12 @@ body{
     top: 0px; left: 30vh;
     transition: all 50ms ease-in-out;
     z-index: 1;
+}
+#boss-hit-box{
+    border: 2px solid rgb(255, 255, 255);
+    width: 160px; height: 100px;
+    position: absolute;
+    top:0px; left:310px;
 }
 .progetil{
     background-image: url("../assets/arac-atck1.svg");
