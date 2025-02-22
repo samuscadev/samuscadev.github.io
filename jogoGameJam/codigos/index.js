@@ -1,11 +1,57 @@
-const blocoEl = document.querySelector("#bloco");
-const spriteblocoEl = document.querySelector("#bloco img");
+
+let dicasInciais = [ "Você pode clicar nas setas 'Esquerda' e 'Direita' pra mover",
+                    "Você pode Pular usando apertando 'Espaço'",
+                    "Clique no Inimigo para atirar",
+                    "Ei!, você parece estar em um sonho"   
+];
+
+const trilhasonoraEl = document.querySelector('#soundtrack');
+const botaofecharEl = document.querySelector('#fechar');
+const instrucoesEl = document.querySelector('#instrucoes');
+const letreiroInicialEl = document.querySelector('#titulo-Principal');
+const inimigoEl = document.querySelector('#inimigo-tutorial');
+const dicasEl = document.querySelector('#dica');
+const botaoPrincipalEl = document.querySelector("#botao-start");
+const blocoEl = document.querySelector("#player-tutorial");
+const spriteblocoEl = document.querySelector("#player-tutorial img");
+
+
+botaofecharEl.addEventListener('click', ()=>{
+    instrucoesEl.style.opacity = '0';
+    trilhasonoraEl.play();
+    setTimeout(()=>{ 
+        instrucoesEl.style.display = 'none';
+    }, 750);
+});
+
+botaoPrincipalEl.addEventListener('click', ()=>{
+    blocoEl.style.display = 'block';
+    letreiroInicialEl.style.opacity= '0';
+    botaoPrincipalEl.style.opacity= '0';
+
+
+    setTimeout(()=>{
+        botaoPrincipalEl.style.display = 'none';
+        dicasEl.innerHTML = "Use ← e → para mover"
+    }, 2000);
+    setTimeout(()=>{
+        dicasEl.innerHTML = "Use ← e → para mover<BR>Use espaço para PULAR"
+    }, 3000);
+    setTimeout(()=>{
+        dicasEl.innerHTML = "Use ← e → para mover<BR>Use espaço para PULAR<br>Se aproxime de Inimigos<br>"
+    }, 4000);
+    setTimeout(()=>{
+        inimigoEl.style.display = 'block';
+        dicasEl.innerHTML = "Use ← e → para mover<BR>Use espaço para PULAR<br>Se aproxime de Inimigos<br>E clique Neles para Atirar"
+    }, 5000);
+});
+
 
 let posX = 0;
 let intervalID = null;
 let velocidade = 1.0; 
 const incrementoVelocidade = 0.1;
-const velocidadeMaxima = 2.5;
+const velocidadeMaxima = 1.5;
 const velocidadeNormal = 1.0;
 
 let animacaoCorrer = null;
@@ -16,16 +62,14 @@ let protagonistaRun = [
     "assets/protagonista-run3.svg",
     "assets/protagonista-run4.svg",
 ];
-
 function animarCorrida() {
     spriteblocoEl.src = protagonistaRun[indiceCorrida];
     indiceCorrida = (indiceCorrida + 1) % protagonistaRun.length; // Cicla os índices
 }
 
 document.addEventListener("keydown", (event) => {
-    if (intervalID) return; 
+    if (intervalID) return; // Evita criar múltiplos intervals
 
-    tocarMusica();
     switch (event.key) {
         case "ArrowRight":
             intervalID = setInterval(() => andar(1), 50);
@@ -44,12 +88,12 @@ document.addEventListener("keyup", (event) => {
     switch (event.key) {
         case "ArrowRight":
         case "ArrowLeft":
-            clearInterval(animacaoCorrer);
+            clearInterval(animacaoCorrer); // Para a animação horizontal
             animacaoCorrer = null;
             spriteblocoEl.src = "assets/protagonista-comtemplativo.svg";
             clearInterval(intervalID);
             intervalID = null;
-            velocidade = velocidadeNormal;
+            velocidade = velocidadeNormal; // Reseta a velocidade ao normal
             break;
     }
 });
@@ -76,11 +120,11 @@ function acelerar() {
         } else {
             velocidade = Math.min(velocidade + incrementoVelocidade, velocidadeMaxima);
         }
-    }, 500); // Incrementar a cada 100 ms
+    }, 500);
 }
-let bottomJogador = 20;
-const alturaInicial = 20; 
-const alturaMaxima = 40;
+let bottomJogador = 30;
+const alturaInicial = 30; 
+const alturaMaxima = 45;
 let pulando = false; // Variável para impedir múltiplos pulos
 
 document.addEventListener("keydown", (event) => {
@@ -104,8 +148,8 @@ function pular() {
 
 function cair() {
     let descendo = setInterval(() => {
-        if (bottomJogador - 5 > alturaInicial) {
-            bottomJogador -= 5;
+        if (bottomJogador - 6 > alturaInicial) {
+            bottomJogador -= 6;
             blocoEl.style.bottom = `${bottomJogador}vh`;
         } else {
             bottomJogador = alturaInicial;
@@ -134,7 +178,7 @@ function atirar(evento) {
 
     // Definir posição inicial do tiro (onde está o jogador)
     projetil.style.left = `${jogadorX}px`;
-    projetil.style.top = `${jogadorY}px`;
+    projetil.style.top = `${jogadorY + 65}px`;
 
     // Calcular ângulo do tiro
     const deltaX = destinoX - jogadorX;
@@ -166,29 +210,17 @@ function atirar(evento) {
         }
 
         setTimeout(() => {
-            projetil.style.backgroundImage = "linear-gradient(to left, #ffffff, #ffffff)";
+            projetil.style.backgroundImage = `url("assets/tiro-disparado.svg")`;
             projetil.style.width = "30px";
-        }, 800);
+        }, 350);
         setTimeout(() => {
             projetil.remove();
-        }, 900); 
+        }, 500);
         
     }
     requestAnimationFrame(moverProjetil);
-    progeteis
 }
 document.addEventListener("click", (event)=>{
     atirar(event);
 });
 
-const vidasJogador = localStorage.getItem("vidaPlayer");
-
-let coracoes = [];
-const campoCoracoes = document.querySelector("#coracoes");
-for(let i=0; i < vidasJogador; i++){
-    const novoCoracao = document.createElement("img");
-    coracoes.push(novoCoracao);
-    novoCoracao.classList.add("icone-coracao");
-    novoCoracao.src = "assets/heart-icon.svg";
-    campoCoracoes.appendChild(novoCoracao);
-}

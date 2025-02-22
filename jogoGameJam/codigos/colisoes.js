@@ -34,7 +34,6 @@ function detectaColisaoVetor(playerEl, blocos) {
             playerhit.top < blocohit.bottom &&
             playerhit.bottom > blocohit.top
         ) {
-            console.log("Colisão detectada com:", bloco);
             return true;
         }
     }

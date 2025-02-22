@@ -5,7 +5,6 @@ const barreiraXR = document.querySelector("#barreira-direita");
 const barreiraXL = document.querySelector("#barreira-esquerda");
 const barreiraYU = document.querySelector("#barreira-cima");
 const barreiraYD = document.querySelector("#barreira-baixo");
-const abrirMenuEl = document.querySelector("#abrirStatus");
 const menuStatusEl = document.querySelector("#container");
 const pilarEl = document.querySelector("#pilar");
 const hitBoxEl = document.querySelector("#hit-box");
@@ -17,11 +16,11 @@ const somTiro = document.getElementById("tiro-effect");
 const somResetar = document.getElementById("reset-sound");
 const somDano = document.getElementById("damage-sound");
 function tocarMusica() {
-    trilhaSonora.volume = 0.6;
+    trilhaSonora.volume = 0.9;
     trilhaSonora.play();
 }
 function somReset() {
-    somResetar.volume = 0.7;
+    somResetar.volume = 0.2;
     somResetar.play();
 }
 function somTomarDano() {
@@ -39,15 +38,6 @@ function atualizarProgresso(soma) {
         document.getElementById("progresso").style.width = progresso + "px";
     }
 }
-
-abrirMenuEl.addEventListener('click', function(){
-
-    if (menuStatusEl.style.visibility === "hidden") {
-        menuStatusEl.style.visibility = "visible";
-    } else {
-        menuStatusEl.style.visibility = "hidden";
-    }
-})
 
 let posX = 0;
 let posY = 0;
@@ -94,8 +84,12 @@ let protagonistaDownRun = [
     "assets/protagonista-base2.svg",
 ];
 let inimigosRun = [
-    "assets/ant-enados1.png",
-    "assets/ant-enados2.png",
+    "assets/patrol-frente1.svg",
+    "assets/patrol-frente2.svg",
+];
+let inimigosIvertedRun = [
+    "assets/patrol-atras1.svg",
+    "assets/patrol-atras2.svg",
 ];
 
 
@@ -188,11 +182,13 @@ let bausBrisa = [];
 let quantBrisasColetadas = 0;
 let salaAtual = 1;
 
-for(let i=0; i<6; i++){
+const vidasJogador = localStorage.getItem("vidaPlayer");
+
+for(let i=0; i< vidasJogador; i++){
     const novoCoracao = document.createElement("img");
     coracoes.push(novoCoracao);
     novoCoracao.classList.add("icone-coracao");
-    novoCoracao.src = "assets/heart-icon.png";
+    novoCoracao.src = "assets/heart-icon.svg";
     campoCoracoes.appendChild(novoCoracao);
 }
 
@@ -254,7 +250,6 @@ function atirar(evento) {
         }
 
         setTimeout(() => {
-            projetil.style.backgroundImage = `url("assets/tiro-disparado.svg")`;
             projetil.style.width = "30px";
         }, 350);
         setTimeout(() => {
@@ -303,12 +298,13 @@ function gerarCoisas() {
         itensExistentes.push(novoBau);
     }
 
-    // Gera barreiras
+    // Gera ARMADILHAS
     for (let i = 0; i < limiteBarreiras; i++) {
         const novaBarreira = document.createElement("img");
         novaBarreira.classList.add("armadilha");
-        novaBarreira.src = 'assets/armadilha-dirty-boots.png';
+        novaBarreira.src = 'assets/armadilha-dirty-boots.svg';
         novaBarreira.style.position = 'absolute';
+        let armadilhaDirecao = Math.floor(Math.random() *2);
 
         // Encontra posição livre para a barreira
         let posicaoValida = false;
@@ -318,7 +314,12 @@ function gerarCoisas() {
             y = Math.random() * (window.innerHeight - 2 * margem - itemHeight) + margem;
             posicaoValida = verificaPosicaoLivre(x, y, itensExistentes);
         }
-
+        if(armadilhaDirecao == 0){
+            novaBarreira.style.transform = 'scaleX(1)';
+        }
+        if(armadilhaDirecao == 1){
+            novaBarreira.style.transform = 'scaleX(-1)';
+        }
         novaBarreira.style.top = `${y}px`;
         novaBarreira.style.left = `${x}px`;
         campoGararBarreiras.appendChild(novaBarreira);
@@ -376,13 +377,14 @@ function gerarCoisas() {
             }  
         });
     }
-
+    //GERA PEDRAS/SUJEIRAS
     for (let i = 0; i < limiteSujeira; i++) {
         const novaSujeira = document.createElement("img");
         novaSujeira.classList.add("sujeira");
         vetorSujeiras.push(novaSujeira);
         novaSujeira.src = 'assets/pedras-dirty-boots.svg';
         novaSujeira.style.position = 'absolute';
+        let pedraDirecao = Math.floor(Math.random() *2);
 
         // Encontra posição livre para a barreira
         let posicaoValida = false;
@@ -393,6 +395,13 @@ function gerarCoisas() {
             posicaoValida = verificaPosicaoLivre(x, y, itensExistentes);
         }
 
+        if(pedraDirecao == 0){
+            novaSujeira.style.transform = 'scaleX(1)';
+        }
+        if(pedraDirecao == 1){
+            novaSujeira.style.transform = 'scaleX(-1)';
+            novaSujeira.style.filter = 'brightness(50%)';
+        }
         novaSujeira.style.top = `${y}px`;
         novaSujeira.style.left = `${x}px`;
         campoGararPedras.appendChild(novaSujeira);
@@ -470,12 +479,12 @@ setInterval(() => {
     if (colisaoComBarreiraSuperior) {
         direcaoInimigos = 8;
         inimigos.forEach((inimigo) => {
-            inimigo.style.transform = "scaleY(1)";
+            inimigo.style.transform = "scaleX(1)";
         });
     } else if (colisaoComBarreiraInferior) {
         direcaoInimigos = -8;
         inimigos.forEach((inimigo) => {
-            inimigo.style.transform = "scaleY(-1)";
+            inimigo.style.transform = "scaleX(-1)";
         });
     }
 
@@ -516,7 +525,7 @@ setInterval(() => {
     // Checa colisão com baús
     baus.forEach((bau, i) => {
         if (detectaColisaoUnica(bau, playerEl)) {
-            spriteplayerEl.src = "assets/protagonista-brisa.svg";
+
             bau.src = 'assets/bau-aberto-dirty.svg';  
             atualizarProgresso(bausBrisa[i]);
             bausBrisa[i] = 0;
@@ -552,12 +561,20 @@ setInterval(() => {
 
 let indAnimEn = 0;
 setInterval(() => {
-    inimigos.forEach((inimigo) => {
-        inimigo.src = inimigosRun[indAnimEn];
-    });
+
+    if(direcaoInimigos == 8){
+        inimigos.forEach((inimigo) => {
+            inimigo.src = inimigosRun[indAnimEn];
+        });
+    }
+    if(direcaoInimigos == -8){
+        inimigos.forEach((inimigo) => {
+            inimigo.src = inimigosIvertedRun[indAnimEn];
+        });
+    }
 
     indAnimEn = indAnimEn === 0 ? 1 : 0; 
-}, 250);
+}, 150);
 
 // Gera os elementos iniciais
 gerarCoisas();
@@ -582,8 +599,8 @@ function criarBolha() {
     });
   }
 
-  // Criar bolhas periodicamente
   setInterval(criarBolha, 500);
+
 
 
 
