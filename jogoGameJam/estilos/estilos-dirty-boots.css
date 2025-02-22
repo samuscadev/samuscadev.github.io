@@ -14,7 +14,7 @@ body {
     margin: 0;
     position: absolute;
     transition: all 50ms ease-in-out;
-    z-index: 6;
+    z-index: 10;
     top: 31px; left: 31px;
 }
 #hit-box{
@@ -185,12 +185,15 @@ body {
     background-image: linear-gradient(to left, #48c1d6, #12a0bd);
     transition: all 0.2s ease-in-out;
 }
+
 .projetil {
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 3px solid;
     z-index: 4;
     position: absolute;
     width: 20px;
     height: 20px;
-    background-image: url("../assets/tiro.svg");
     transition: all 50ms ease-in-out;
 }
 #icon-brisas{
@@ -227,7 +230,8 @@ body {
       bottom: -50px;
       width: 20px;
       height: 20px;
-      background: rgba(24, 71, 18, 0.623);
+      background: rgba(36, 116, 25, 0.486);
+      filter: blur(2px);
       border-radius: 50%;
       animation: subir 5s linear forwards;
       pointer-events: none;

@@ -1,8 +1,19 @@
 html, body{
     overflow: hidden;
 }
-body{
-    background-color: rgb(22, 15, 15);
+*{
+    margin: 0;
+}
+
+#fundao{
+    margin: 0px;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100vw; height: 100vh;
+    background-image: url("../assets/arac-wall.svg");
+    background-repeat: repeat;
+    filter: brightness(70%) blur(2px);
+    z-index: -10;
 }
 ::selection {
     background: transparent; /* Remove a cor azul */
@@ -23,9 +34,9 @@ body{
     top: 0px; left: 30vh;
     transition: all 50ms ease-in-out;
     z-index: 1;
+    filter: brightness(60%) blur(1px);
 }
 #boss-hit-box{
-    border: 2px solid rgb(255, 255, 255);
     width: 160px; height: 100px;
     position: absolute;
     top:0px; left:310px;
@@ -41,17 +52,17 @@ body{
 }
 .bola{
     background-image: url("../assets/happy-bugs.svg");
-    width: 70px; height: 70px;
+    width: 85px; height: 85px;
     position: absolute;
     z-index: 3;
     transition: all ease-in-out 250ms;
 }
 #nome-boss{
     position: absolute;
-    bottom: 0px; left: 0px;
+    top: 30vh; left: 0px;
     width: 100%;
     color: rgb(255, 255, 255);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.514), rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.575));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.911), rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.877));
     text-align: center;
     font-family: "Snowburst One", serif;
     font-style: normal;
@@ -62,8 +73,10 @@ body{
     transition: all 500ms ease-in-out;
 }
 #piso{
-    background-image: url("../assets/arac-floor.svg");
+    background-image: url("../assets/arac-floor-off.svg");
     position: absolute;
+    filter: brightness(70%);
+    border-top: 2px rgba(0, 0, 0, 0.466) solid;
     width: 100%; height: 25%;
     bottom: 0px;
     z-index: 1;
@@ -78,8 +91,8 @@ body{
     z-index: 100;
 }
 #hit-box{
-    border: 2px solid red;
-    width: 80px; height: 110px;
+    
+    width: 50px; height: 70px;
     position: relative;
     top:-130px; left:15px;
 }
@@ -104,13 +117,72 @@ body{
 }
 .rola{
     background-image: url("../assets/arac-atck2.svg");
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     position: absolute;
     bottom: 20vh;
-    left: 10px;
+    left: 100px;
     transform-origin: center;
-    border-radius: 50%;
-    z-index: 4;
+    z-index: 5;
     transition: all 100ms ease-in-out;
+}
+#cannon{
+    display: none;
+    position: absolute;
+    left:0px; bottom: 18vh;
+    z-index: 4;
+}
+.piscando{
+    animation: piscar 0.2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+.arac-Minion{
+    position: absolute;
+    width: 160px; height: 300px;
+    bottom: 20vh;
+    z-index: 4;
+    display: none;
+    transition: all 100ms ease-in-out;
+}
+#minionEsq{
+    left:0px;
+}
+#minionDir{
+    right:0px;
+}
+
+.quadrado {
+    position: absolute;
+    bottom: 20vh;
+    width: 150px;
+    height: 150px;
+    background-image: url(../assets/arac-teia.svg);
+    transition: background-color 1s ease-in-out;
+    z-index: 4;
+  }
+  
+  .quadrado.vermelho {
+    background-image: url(../assets/arac-teia-infectada.svg);
+  }
+  
+  .quadrado.sair {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  #vida-boss{
+    color: white;
+    font-size: 20pt;
+    position: absolute;
+    top: 10px; left: 10px;
+  }
+  .specialcursor{
+    cursor: pointer;
 }
