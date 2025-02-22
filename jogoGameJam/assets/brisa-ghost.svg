@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 170" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="55.704" y1="6.604" x2="55.704" y2="161.844" id="gradient-0" gradientTransform="matrix(0.959798, 0, 0, 1.053093, 0.03194, -3.422698)">
+      <stop offset="0" style="stop-color: rgb(0% 91.765% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 53.338% 59.28%)"/>
+    </linearGradient>
+    <filter id="gaussian-blur-filter-0" bx:preset="gaussian-blur 1 5" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5 5" edgeMode="none"/>
+    </filter>
+    <filter id="filter-1" bx:preset="gaussian-blur 1 5" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5 5" edgeMode="none"/>
+    </filter>
+  </defs>
+  <ellipse style="fill: rgb(255, 255, 255); stroke: rgb(185, 185, 185); transform-origin: 55.576px 78.535px;" cx="55.576" cy="78.535" rx="57.37" ry="19.752" transform="matrix(-0.861901, 0.507077, 0.507077, 0.861901, 0.219874, -2.431335)"/>
+  <ellipse style="fill: rgb(255, 255, 255); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(185, 185, 185);" cx="55.576" cy="78.535" rx="57.37" ry="19.752" transform="matrix(0.898941, 0.438069, -0.438069, 0.898941, -0.780067, -1.431256)"/>
+  <path d="M 95.122 85.273 C 95.122 104.695 91.672 122.536 85.911 136.561 C 85.911 136.497 85.911 136.432 85.911 136.368 C 85.911 121.066 82.653 108.66 78.634 108.66 C 74.616 108.66 71.358 121.066 71.358 136.368 C 71.358 144.429 72.263 151.687 73.706 156.751 C 71.044 159.659 68.202 162.011 65.223 163.725 C 66.597 158.685 67.452 151.606 67.452 143.768 C 67.452 128.466 64.194 116.06 60.176 116.06 C 56.157 116.06 52.899 128.466 52.899 143.768 C 52.899 153.401 54.191 161.886 56.15 166.851 C 55.272 166.959 54.387 167.014 53.496 167.014 C 50.621 167.014 47.815 166.441 45.103 165.351 C 46.618 160.274 47.573 152.835 47.573 144.547 C 47.573 129.245 44.316 116.84 40.297 116.84 C 36.279 116.84 33.021 129.245 33.021 144.547 C 33.021 149.164 33.318 153.518 33.842 157.347 C 31.591 154.973 29.463 152.206 27.484 149.09 C 28.07 145.096 28.405 140.492 28.405 135.59 C 28.405 120.287 25.147 107.882 21.128 107.882 C 18.818 107.882 16.759 111.983 15.426 118.377 C 13.141 108.257 11.871 97.056 11.871 85.273 C 11.871 40.129 30.507 3.532 53.496 3.532 C 76.485 3.532 95.122 40.129 95.122 85.273 Z" style="fill: url(&quot;#gradient-0&quot;); stroke: rgb(112, 205, 241);"/>
+  <path d="M 79.857 42.763 C 79.857 37.073 78.68 31.722 76.612 27.061 C 71.133 30.615 63.304 32.84 54.612 32.84 C 44.849 32.84 36.176 30.034 30.7 25.69 C 28.232 30.661 26.81 36.507 26.81 42.763 C 26.81 60.84 38.685 75.494 53.333 75.494 C 67.982 75.494 79.857 60.84 79.857 42.763 Z" style="fill: rgb(255, 255, 255); stroke: rgb(20, 121, 130);"/>
+  <ellipse style="stroke: rgb(0, 0, 0);" cx="41.589" cy="46.491" rx="7.952" ry="12.39"/>
+  <ellipse style="stroke: rgb(0, 0, 0);" cx="63.451" cy="46.751" rx="7.952" ry="12.39"/>
+  <ellipse style="filter: url(&quot;#gaussian-blur-filter-0&quot;); transform-box: fill-box; transform-origin: 50% 50%; fill: rgba(158, 22, 255, 0.37);" cx="52.78" cy="50.062" rx="22.201" ry="46.148" transform="matrix(0.927393, 0.374088, -0.374088, 0.927393, -7.196384, -4.796512)"/>
+  <ellipse style="filter: url(&quot;#filter-1&quot;); fill: rgba(43, 204, 230, 0.318); transform-origin: 52.78px 50.062px;" cx="52.78" cy="50.062" rx="30.827" ry="52.424" transform="matrix(0.927393, 0.374088, -0.374088, 0.927393, 9.5162, 67.740706)"/>
+</svg>

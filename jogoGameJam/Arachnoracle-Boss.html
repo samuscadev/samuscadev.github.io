@@ -13,26 +13,36 @@
 </head>
 <body>
     
+    <div id="fundao"></div>
     <div id="progeteis"></div>
     <div id="bloco">
-        <img src="assets/protagonista.png">
+        <img src="assets/protagonista-comtemplativo.svg">
         <div id="hit-box"></div>
     </div>
     <div id="container">   
         <div id="coracoes"></div>
     </div>
 
+    <p id="vida-boss">150</p>
+
+    <img id="cannon" src="assets/super-spider-cannon.svg">
     <div id="rolantes"></div>
     <div id="bolas"></div>
-    <p id="nome-boss">Arachnoracle</p>
+    <p id="nome-boss">ARACHNORACLE</p>
     <div id="piso"></div>
 
     <div id="boss">
         <img src="assets/arac-base.svg">
         <div id="boss-hit-box"></div>
     </div>
-    <script src="codigos/movimentacao-bosses.js"></script>
+
+    <img src="assets/arac-minion.svg" class="arac-Minion" id="minionEsq">
+    <img src="assets/arac-minion.svg" class="arac-Minion" id="minionDir">
+
+    <audio id="soundtrack" src="sounds/Railroad Wrath - Kristofer Maddigan (1).mp3" loop></audio>
+    <script src="codigos/localStorage.js"></script>
     <script src="codigos/colisoes.js"></script>
+    <script src="codigos/movimentacao-bosses.js"></script>
     <script src="codigos/Arachnoracle.js"></script>
 </body>
 </html>
