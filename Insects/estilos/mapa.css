@@ -1,0 +1,18 @@
+
+*{
+    margin-left: 10px;
+    color: white;
+}
+html, body{
+    overflow: hidden;
+    background-color: rgb(17, 58, 51);
+}
+a{
+    color: yellow;
+    display: block;
+    font-weight: bolder;
+}
+
+a, h1, h2{
+    font-family: "Snowburst One", serif;
+}

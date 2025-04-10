@@ -1,0 +1,345 @@
+html, body{
+    overflow: hidden;
+}
+::selection {
+    background: transparent;
+    color: inherit;
+}
+body {
+    background-image: url("../assets/dirty-boots-floor.svg");
+    transition: all 250ms ease-in-out;
+}
+
+#player{
+    width: 110px; height: 180px;
+    margin: 0;
+    position: absolute;
+    transition: all 50ms ease-in-out;
+    z-index: 10;
+    top: 31px; left: 31px;
+}
+#hit-box{
+    width: 60px; height: 110px;
+    position: relative;
+    top:-130px; left:18px;
+}
+#area-Ataque{
+    width: 300px; height: 540px;
+    margin: 0;
+    position: absolute;
+    transition: all 50ms ease-in-out;
+    z-index: 1;
+    top: -130px; left: -60px;
+}
+
+#background{
+    border: 3px solid rgb(36, 26, 21);
+    display: inline;
+    position: absolute;
+    width: 700px; height: 600px;
+    top: 10px; left: 10px;
+    z-index: 1;
+}
+.bau{
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 2;
+}
+#big-bau{
+    width: 140px; height: 100px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    z-index: 3;
+}
+.armadilha{
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 2;
+}
+.sujeira{
+    filter: drop-shadow(-1px 15px 10px #00000046);
+    width: 100px; height: 80px;
+    position: absolute;
+    z-index: 1;
+}
+.inimigo{
+    width: 90px; height: 115px;
+    position: absolute;
+    z-index: 6;
+    transition: all 50ms ease-in-out;
+    cursor: default;
+}
+
+.specialcursor{
+    cursor: pointer;
+}
+
+#abrirStatus img{
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    border-radius: 50%;
+    width: 80px; height: 80px;
+    background-color: none;
+    border: none;
+    transition: all 100ms ease-in-out;
+    z-index: 6;
+}
+#abrirStatus img:hover{
+    border: rgb(10, 17, 46) 2px solid;
+    width: 85px; height: 85px;
+    bottom: 45px; left: 45px;
+}
+#IndicadorDeStatus{
+    text-align: right;
+    transition: all 100 ms ease-in-out;
+    border: rgb(10, 17, 46) 2px solid;
+    background-color: rgba(21, 42, 66, 0.815);
+    padding-left: 8px;
+    width: 25%;
+    border-radius: 10px;
+    z-index: 5;
+    display: inline;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-family: "Snowburst One", serif;
+    position: absolute;
+    bottom:40px; left: 35px;
+    visibility: hidden;
+}
+#coracoes{
+    position: relative;
+    z-index: 8;
+}
+.icone-coracao{
+    display: inline;
+    width: 50px; height: 50px;
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+}
+#barreira-esquerda, #barreira-direita, #barreira-baixo, #barreira-cima{
+    position: absolute;
+    z-index: 4;
+}
+
+#barreira-esquerda, #barreira-direita{
+    background-image: linear-gradient(to right, #411c13, #29110b, #110805);
+    z-index: 4;
+    height: 100vh; width: 50px;
+}
+#barreira-cima, #barreira-baixo{
+    background-image: linear-gradient(#411c13, #29110b, #110805);
+    z-index: 5;
+    height: 50px; width: 100vw;
+}
+#barreira-esquerda{
+    top: 0; left: 0;
+}
+#barreira-direita{
+    transform: scaleX(-1);
+    top: 0; right: 0px;
+}
+#barreira-cima{
+    top: 0; left: 0;
+}
+#barreira-baixo{
+    transform: scale(-1);
+    bottom: 0; left: 0;
+}
+#pilar{
+    position: absolute;
+    top: 45vh; right: 70px;
+    width: 120px; height: 100px;
+    z-index: 6;
+}
+.piscando{
+    animation: piscar 0.2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+#container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40px; right: 55px;
+    z-index: 100;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 25px;
+    border: rgb(255, 255, 255) 2px solid;
+    background-image: linear-gradient(to left, #135b31, #0b3b1d);
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    z-index: 9;
+}
+
+.progress {
+    width: 0px;
+    height: 100%;
+    background-image: linear-gradient(to left, #71c8d8, #00d5ff);
+    transition: all 0.2s ease-in-out;
+}
+
+.projetil {
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 3px solid;
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: all 50ms ease-in-out;
+}
+#icon-brisas{
+    z-index: 10;
+    position: absolute;
+    top: 45px; left: -35px;
+    width: 50px; height: 50px;
+}
+#sombras{
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    width: 100vw; height: 100vh;
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.966));
+}
+
+#vida-inimigo{
+    z-index: 8;
+    position: absolute;
+    top: 50px; left: 100px;
+    display: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-image: linear-gradient(#9e0404 , #460a0a);
+    color: white;
+    font-weight: bolder;
+    font-family: "Snowburst One", serif;
+    font-size: 25px;
+    transition: all 50ms ease-in-out;
+}
+
+.bolha {
+      position: absolute;
+      bottom: -50px;
+      width: 20px;
+      height: 20px;
+      background-color: rgba(36, 116, 25, 0.486);
+      filter: blur(2px);
+      border-radius: 50%;
+      animation: subir 5s linear forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+@keyframes subir {
+    0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+50% {
+    opacity: 1;
+}
+70% {
+    opacity: 0.5;
+}
+100% {
+    transform: translateY(-120vh) scale(0.5);
+    opacity: 0;
+    }
+}
+
+#telaMorte {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#telaMorte p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 45pt; 
+}
+
+#telaMorte button, #telaVitoria button{
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 22px;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+
+#telaMorte button:hover, #telaVitoria button:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+
+#telaVitoria {
+    gap: 0px;
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0.562) 2px solid;
+    padding: 2%;
+    background-image: linear-gradient(to left, #135b31, #082e17);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms all ease-in-out;
+}
+#telaVitoria p{
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 14pt; 
+    transition: 100ms all ease-in-out;
+    border-radius: 25px;
+    padding: 2px;
+}
+#rank{
+    width: 100%;
+    color:#082e17 !important;
+    background-image: linear-gradient(to left, #00ffdc, #bdfdf4);
+    padding: 5px;
+    border-radius: 25px;
+}

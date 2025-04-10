@@ -1,0 +1,168 @@
+html, body{
+    overflow: hidden;
+}
+::selection {
+    background: transparent;
+    color: inherit;
+}
+#titulo-Principal{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 0.75;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 450%;
+    transition: all 2s ease-in-out;
+}
+
+#coracoes{
+    display: none;
+    position: absolute;
+    right: 10px; top: 10px;
+    z-index: 8;
+}
+.icone-coracao{
+    display: inline;
+    width: 50px; height: 50px;
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+}
+
+aside{
+    position: absolute;
+    top: 10vh; left: 10vw;
+    width: 70%; height: 70%;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(rgb(13, 80, 50), rgb(11, 54, 35));
+    border: 2px solid rgba(0, 0, 0, 0.418);
+    border-radius: 10px;
+    z-index: 100;
+    transition: 150ms all ease-in-out;
+}
+aside h1{
+    font-size: 20pt;
+    line-height: 0.75;
+    color: rgb(255, 255, 255);
+    font-family: "Snowburst One", serif;
+}
+aside button{
+    background-color: white;
+    color: rgb(13, 80, 50);
+    border-radius: 25px;
+    width: 100%; text-align: center;
+    font-family: "Snowburst One", serif;
+    font-size: 20pt;
+    background-image: none;
+    cursor: pointer;
+    border: none;
+    transition: 90ms all ease-in-out;
+}
+
+
+aside:hover{
+    top: 8vh;
+    padding: 1.5rem 1rem;
+}
+aside button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(255, 255, 255);
+}
+aside p{
+    color: rgb(255, 255, 255);
+    font-size: 18pt;
+    color: rgb(255, 255, 255);
+    font-family: "Alegreya", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#conteudo-pagina-principal{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50vh; left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+#botao-start{
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 22px;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+#botao-start:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+#player-tutorial{
+    position: absolute;
+    width: 100px; height: 100px;
+    margin: 0;
+    display: none;
+    bottom: 30vh; left: 0px;
+}
+#alcance{
+    position: absolute;
+    bottom: -10vh; left: -80px;
+    height: 100vh; width: 300px;
+}
+#portal-tutorial{
+    background-image: url("../assets/portal-tutorial.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    border: none;
+    width: 200px; height: 300px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 50vh; left: 50vw;
+    transform: translate(-50%, -50%);
+    transition: all 100ms ease-in-out;
+}
+#inimigo-tutorial{
+    z-index: 10;
+    width: 110px; height: 140px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    bottom: 30vh; right: 15px;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+
+#esqueleto{
+    z-index: -2;
+    filter: brightness(70%) blur(2px);
+    top:12vh; left: 18vw;
+    position: absolute;
+    width: 70%; height: 70%;
+}
+.projetil {
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 3px solid;
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: all 50ms ease-in-out;
+}
+.piscando{
+    animation: piscar 0.2s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,289 @@
+html, body{
+    overflow: hidden;
+}
+*{
+    margin: 0;
+}
+
+#fundao{
+    margin: 0px;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100vw; height: 100vh;
+    background-image: url("../assets/Arac-Boss/arac-wall.svg");
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    filter: brightness(60%) blur(3px);
+    z-index: -10;
+}
+::selection {
+    background: transparent; /* Remove a cor azul */
+    color: inherit; /* Mantém a cor original do texto */
+}
+#bloco{
+    width: 110px; height: 180px;
+    position: absolute;
+    bottom: 20vh; left: 0px;
+    z-index: 3;
+}
+#boss{
+    width: 800px; height: 500px;
+    margin: 0;
+    display: inline;
+    position: absolute;
+    top: 0px; left: 30vh;
+    z-index: 1;
+}
+#boss img{
+    transition: all 100ms ease-in-out;
+}
+#boss-hit-box{
+    width: 160px; height: 100px;
+    position: absolute;
+    top:0px; left:310px;
+}
+.progetil{
+    background-image: url("../assets/Arac-Boss/arac-atck1.svg");
+    width: 15px; height: 80px;
+    display: inline;
+    position: absolute;
+    z-index: 3;
+    margin-right: 0;
+    transition: all 50ms ease-in-out;
+}
+.bola{
+    background-image: url("../assets/Arac-Boss/happy-bugs.svg");
+    width: 85px; height: 85px;
+    position: absolute;
+    z-index: 3;
+    transition: all ease-in-out 250ms;
+}
+#nome-boss{
+    position: absolute;
+    top: 30vh; left: 0px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.911), rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.877));
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 450%;
+    z-index: 10;
+    opacity: 0;
+    display: block;
+    transition: all 500ms ease-in-out;
+}
+#piso{
+    background-image: url("../assets/Arac-Boss/arac-floor-off.svg");
+    position: absolute;
+    filter: brightness(70%);
+    border-top: 2px rgba(0, 0, 0, 0.822) solid;
+    width: 100%; height: 25%;
+    bottom: 0px;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+#container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20px; right: 20px;
+    z-index: 100;
+}
+#hit-box{
+    width: 50px; height: 70px;
+    position: relative;
+    top:-130px; left:15px;
+}
+#coracoes{
+    position: relative;
+    z-index: 8;
+}
+.icone-coracao{
+    display: inline;
+    width: 50px; height: 50px;
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+}
+.projetil {
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 1px solid;
+    transition: all 50ms ease-in-out;
+}
+.rola{
+    background-image: url("../assets/Arac-Boss/arac-atck2.svg");
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    bottom: 20vh;
+    left: 100px;
+    transform-origin: center;
+    z-index: 5;
+    transition: all 100ms ease-in-out;
+}
+#cannon{
+    display: none;
+    position: absolute;
+    left:0px; bottom: 18vh;
+    z-index: 4;
+}
+.piscando{
+    animation: piscar 0.4s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+.arac-Minion{
+    position: absolute;
+    width: 160px; height: 300px;
+    bottom: 20vh;
+    z-index: 4;
+    display: none;
+    transition: all 100ms ease-in-out;
+}
+#minionEsq{
+    left:0px;
+}
+#minionDir{
+    transform: scaleX(-1);
+    right:0px;
+}
+
+.quadrado{
+    position: absolute;
+    bottom: 20vh;
+    width: 150px;
+    height: 150px;
+    background-image: url("../assets/Arac-Boss/arac-teia.svg");
+    transition: background-color 1s ease-in-out;
+    z-index: 4;
+}
+  
+.quadrado.vermelho {
+    background-image: url("../assets/Arac-Boss/arac-teia-infectada.svg");
+}
+  
+.quadrado.sair {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.specialcursor{
+    cursor: pointer;
+}
+
+#telaMorte {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#telaMorte p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 45pt; 
+}
+
+#telaMorte button{
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 22px;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+
+#telaMorte button:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+#telaVitoria{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100vw; height: 100vh;
+    z-index: 999;
+    transition: all 100ms ease-in-out;
+}
+
+#telaVitoria h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-size: 50pt;
+}
+#telaVitoria p{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    color: rgb(15, 46, 41);
+    font-size: 20pt;
+}
+#telaVitoria img{
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+#telaVitoria button{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    padding: 1rem 1rem;
+    font-size: 18pt;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+#telaVitoria button:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+#telaBranca{
+    position: absolute;
+    width: 100vw; height: 100vh;
+    background-color: rgb(255, 255, 255);
+    transition: all 150ms ease-in-out;
+}

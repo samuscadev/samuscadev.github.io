@@ -1,0 +1,275 @@
+html, body{
+    overflow: hidden;
+}
+*{
+    margin: 0;
+}
+
+#fundao{
+    margin: 0px;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100vw; height: 100vh;
+    background-image: url("../assets/Mantis-Boss/mantis-walls.svg");
+    background-size: 400px 400px;
+    background-repeat: repeat;
+    filter: brightness(60%) blur(1px);
+    z-index: -10;
+}
+::selection {
+    background: transparent; /* Remove a cor azul */
+    color: inherit; /* Mantém a cor original do texto */
+}
+#bloco{
+    width: 110px; height: 180px;
+    position: absolute;
+    bottom: 20vh; left: 0px;
+    z-index: 3;
+}
+#boss{
+    width: 800px; height: 500px;
+    margin: 0;
+    display: inline;
+    position: absolute;
+    bottom: 21vh; left: 30vh;
+    z-index: 1;
+}
+#boss img{
+    transition: all 100ms ease-in-out;
+}
+#boss-hit-box{
+    display: block;
+    width: 160px; height: 400px;
+    position: absolute;
+    top:0px; left:38%;
+    z-index: 999;
+}
+
+#nome-boss{
+    position: absolute;
+    top: 30vh; left: 0px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.911), rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.877));
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 450%;
+    z-index: 10;
+    opacity: 0;
+    display: block;
+    transition: all 500ms ease-in-out;
+}
+#piso{
+    background-image: url("../assets/Mantis-Boss/mantis-floor.svg");
+    position: absolute;
+    filter: brightness(70%);
+    border-top: 2px rgba(0, 0, 0, 0.822) solid;
+    width: 100%; height: 25%;
+    bottom: 0px;
+    z-index: 1;
+    transition: all 250ms ease-in-out;
+}
+#container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 20px; right: 20px;
+    z-index: 100;
+}
+#hit-box{
+    width: 50px; height: 70px;
+    position: relative;
+    top:-130px; left:15px;
+}
+#coracoes{
+    position: relative;
+    z-index: 8;
+}
+.icone-coracao{
+    display: inline;
+    width: 50px; height: 50px;
+    filter: drop-shadow(-7px 5px 10px #0000003d);
+}
+.projetil {
+    z-index: 4;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(to left, #48c1d6, #12a0bd);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.466), 1px solid;
+    transition: all 50ms ease-in-out;
+}
+
+.piscando{
+    animation: piscar 0.4s infinite;
+}
+.bola-de-energia {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(168, 249, 255, 0.521);
+    border: rgb(7, 135, 255) 3px solid;
+    z-index: 5;
+    border-radius: 50%;
+    box-shadow: 0 0 70px rgb(6, 44, 100);
+}
+
+@keyframes piscar {
+    0%, 100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+.specialcursor{
+    cursor: pointer;
+}
+
+#telaMorte {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#telaMorte p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    font-size: 45pt; 
+}
+
+#telaMorte button{
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 22px;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-style: normal;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+
+#telaMorte button:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+#telaVitoria{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100vw; height: 100vh;
+    z-index: 999;
+    transition: all 100ms ease-in-out;
+}
+
+#telaVitoria h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    font-size: 50pt;
+}
+#telaVitoria p{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    color: rgb(15, 46, 41);
+    font-size: 20pt;
+}
+#telaVitoria img{
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+#telaVitoria button{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    padding: 1rem 1rem;
+    font-size: 18pt;
+    border: none;
+    font-weight: bold;
+    border: 3px solid rgb(0, 78, 61);
+    background-image: linear-gradient(white, white, white);
+    color: rgb(15, 46, 41);
+    font-family: "Snowburst One", serif;
+    border-radius: 70px;
+    transition: all 250ms ease-in-out;
+}
+#telaVitoria button:hover{
+    color: white;
+    background-image: linear-gradient(to right, rgb(0, 132, 255), rgb(110, 32, 255));
+    border: 3px solid white;
+}
+#telaBranca{
+    position: absolute;
+    width: 100vw; height: 100vh;
+    background-color: rgb(255, 255, 255);
+    transition: all 150ms ease-in-out;
+}
+
+.sabios{
+    position: absolute;
+    display: none;
+    width: 120px; height: 220px;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+#sabio1, #sabio2{
+    top: 10vh;
+}
+#sabio1, #sabio3{
+    transform: scaleX(-1);
+    left: 10vh;
+}
+#sabio2, #sabio4{
+    right: 10vh;cursor: pointer;
+}
+#sabio3, #sabio4{
+    bottom: 22vh;
+}
+#rei{
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    width: 300px; height: 480px;
+    bottom: 21vh; left: 10vh;
+    z-index: 3;
+    transform: scaleX(-1);
+}
+.ataque-do-rei {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    border: 3px solid white;
+    background-color: red;
+    transition: transform 0.1s linear;
+    z-index: 4;
+}
