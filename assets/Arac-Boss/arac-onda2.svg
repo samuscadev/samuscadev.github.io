@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="point-light-filter-0" bx:preset="point-light 1 0.5 0.5 0.5 15 1 0.2 0 #ffffff" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feSpecularLighting result="specular-lighting" lighting-color="#ffffff" specularConstant="1" specularExponent="15">
+        <fePointLight x="0.5" y="0.5" z="0.5"/>
+      </feSpecularLighting>
+      <feDiffuseLighting result="diffuse-lighting" lighting-color="#ffffff" diffuseConstant="0.2">
+        <fePointLight x="0.5" y="0.5" z="0.5"/>
+      </feDiffuseLighting>
+      <feMerge result="lighting">
+        <feMergeNode in="diffuse-lighting"/>
+        <feMergeNode in="specular-lighting"/>
+      </feMerge>
+      <feComposite in="SourceGraphic" in2="lighting" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-50" gradientTransform="matrix(1, 0, 0, 1, -0.000004, -0.000009)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-51" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -97.458371, -69.439229)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-52" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-53" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-54" gradientTransform="matrix(1, 0, 0, 1, -0.000083, -0.000123)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-55" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-56" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-57" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-58" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-59" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-60" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-18" gradientTransform="matrix(1, 0, 0, 1, -0.000004, -0.000009)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-19" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -97.458371, -69.439229)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-20" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-21" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-22" gradientTransform="matrix(1, 0, 0, 1, -0.000083, -0.000123)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-23" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-24" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-25" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-26" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-27" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-28" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="393.634" cy="36.419" r="69.159" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, -10.321575, 0.876772)">
+      <stop offset="0" style="stop-color: rgb(29.412% 37.647% 36.078%)"/>
+      <stop offset="1" style="stop-color: rgb(15.584% 23.359% 21.958%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="395.243" y1="15.498" x2="395.243" y2="69.992" id="gradient-31" gradientTransform="matrix(1, 0, 0, 1, -9.723546, 0.278742)">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <filter id="outline-filter-1" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-1" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-2" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-3" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-4" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-1" gradientTransform="matrix(1, 0, 0, 1, -144.695289, -43.064027)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-36" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -242.153702, -112.503277)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-38" gradientTransform="matrix(1, 0, 0, 1, 0.000148, 0.00014)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-37" gradientTransform="matrix(1, 0, 0, 1, 0.000148, 0.00014)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-3" gradientTransform="matrix(1, 0, 0, 1, -0.000504, -0.000713)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-11" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04419, 82.470817)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-12" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04419, 82.470817)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-13" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044178, 82.470862)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-14" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044178, 82.470862)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-39" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04414, 82.470832)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-40" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04414, 82.470832)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <filter id="filter-5" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-6" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-7" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-8" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-9" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="396.452" cy="352.252" r="92.975" id="gradient-32" gradientTransform="matrix(1, 0, 0, 1, -11.360035, 41.225239)">
+      <stop offset="0" style="stop-color: rgb(34.902% 56.471% 15.294%)"/>
+      <stop offset="1" style="stop-color: rgb(11.994% 34.781% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="396.452" y1="255.769" x2="396.452" y2="448.735" id="gradient-35" gradientTransform="matrix(1, 0, 0, 1, -11.360035, 41.225239)">
+      <stop offset="0" style="stop-color: rgb(8.2353% 16.471% 7.0588%)"/>
+      <stop offset="1" style="stop-color: rgb(3.4705% 11.71% 0%)"/>
+    </linearGradient>
+    <filter id="filter-10" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-11" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-12" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-13" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-14" bx:preset="outline 1 1 #fff0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+      <feFlood flood-color="#fff0" result="flood"/>
+      <feComposite in="flood" in2="dilated" operator="in" result="outline"/>
+      <feMerge>
+        <feMergeNode in="outline"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="filter-15" bx:preset="point-light 1 0.5 0.5 0.5 15 1 0.2 0 #ffffff" primitiveUnits="objectBoundingBox" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feSpecularLighting result="specular-lighting" lighting-color="#ffffff" specularConstant="1" specularExponent="15">
+        <fePointLight x="0.5" y="0.5" z="0.5"/>
+      </feSpecularLighting>
+      <feDiffuseLighting result="diffuse-lighting" lighting-color="#ffffff" diffuseConstant="0.2">
+        <fePointLight x="0.5" y="0.5" z="0.5"/>
+      </feDiffuseLighting>
+      <feMerge result="lighting">
+        <feMergeNode in="diffuse-lighting"/>
+        <feMergeNode in="specular-lighting"/>
+      </feMerge>
+      <feComposite in="SourceGraphic" in2="lighting" operator="arithmetic" k1="1" k2="0" k3="0" k4="0"/>
+    </filter>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-29" gradientTransform="matrix(1, 0, 0, 1, -0.000004, -0.000009)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-30" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -97.458371, -69.439229)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-41" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-42" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-43" gradientTransform="matrix(1, 0, 0, 1, -0.000083, -0.000123)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-44" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-45" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-46" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-47" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-48" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-49" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-61" gradientTransform="matrix(1, 0, 0, 1, -0.000004, -0.000009)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-62" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -97.458371, -69.439229)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-63" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-64" gradientTransform="matrix(1, 0, 0, 1, 0.000052, 0.000044)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-65" gradientTransform="matrix(1, 0, 0, 1, -0.000083, -0.000123)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-66" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-67" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044282, 82.470954)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-68" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-69" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044247, 82.470956)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-70" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-71" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044209, 82.470926)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="115.472" y1="203.48" x2="115.472" y2="344.208" id="gradient-76" gradientTransform="matrix(1, 0, 0, 1, -144.695289, -43.064027)">
+      <stop offset="0" style="stop-color: rgb(23.529% 45.882% 7.8431%)"/>
+      <stop offset="1" style="stop-color: rgb(3.5223% 28.862% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="212.93" y1="272.919" x2="212.93" y2="413.647" id="gradient-77" gradientTransform="matrix(1.000001, 0, 0, 1.000001, -242.153702, -112.503277)">
+      <stop offset="0" style="stop-color: rgb(10.98% 20.392% 9.4118%)"/>
+      <stop offset="1" style="stop-color: rgb(5.0191% 13.903% 1.8617%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-78" gradientTransform="matrix(1, 0, 0, 1, 0.000148, 0.00014)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-79" gradientTransform="matrix(1, 0, 0, 1, 0.000148, 0.00014)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.068" cy="256.853" r="9.507" id="gradient-80" gradientTransform="matrix(1, 0, 0, 1, -0.000504, -0.000713)">
+      <stop offset="0" style="stop-color: rgb(36.863% 63.529% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.1671% 38.901% 0%)"/>
+    </radialGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-81" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04419, 82.470817)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-82" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04419, 82.470817)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-83" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044178, 82.470862)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-84" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.044178, 82.470862)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-85" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04414, 82.470832)">
+      <stop offset="0" style="stop-color: rgb(3.9216% 99.608% 81.176%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 57.742% 44.855%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="192.003" y1="148.167" x2="192.003" y2="163.207" id="gradient-86" gradientTransform="matrix(0.369571, 0, 0, 0.470277, 121.04414, 82.470832)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="324.363" cy="301.098" r="12.347" id="gradient-2">
+      <stop offset="0" style="stop-color: rgb(16.078% 14.51% 14.118%)"/>
+      <stop offset="1" style="stop-color: rgb(11.191% 9.7123% 9.3428%)"/>
+    </radialGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="324.363" cy="-103.05" r="12.347" id="gradient-4">
+      <stop offset="0" style="stop-color: rgb(16.078% 14.51% 14.118%)"/>
+      <stop offset="1" style="stop-color: rgb(11.191% 9.7123% 9.3428%)"/>
+    </radialGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="383.88" cy="271.078" r="87.079" id="gradient-5">
+      <stop offset="0" style="stop-color: rgb(13.725% 13.725% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(9.3965% 9.3965% 9.3965%)"/>
+    </radialGradient>
+  </defs>
+  <g style="" transform="matrix(-1, 0, 0, 1, 1216.594116, -4.703357)">
+    <g transform="matrix(0.964645, -0.263552, 0.263552, 0.964645, 639.145325, -33.904026)" style="filter: url(&quot;#filter-15&quot;); transform-origin: 115.472px 273.844px;">
+      <path d="M 83.402 203.484 C 85.192 203.534 86.889 204.042 88.42 204.92 C 88.867 205.069 89.307 205.263 89.739 205.503 C 90.777 206.081 91.695 206.886 92.476 207.867 L 153.327 241.7 C 154.409 241.769 155.481 242.077 156.508 242.649 C 161.887 245.639 163.971 254.714 161.159 262.916 C 158.347 271.118 151.704 275.341 146.324 272.35 C 146.167 272.263 146.016 272.171 145.865 272.075 L 94.837 243.703 L 93.471 323.842 C 93.828 325.368 94.009 326.988 93.98 328.662 C 93.83 337.439 88.013 344.399 80.986 344.204 C 73.96 344.009 68.385 336.735 68.535 327.959 C 68.539 327.704 68.548 327.452 68.562 327.201 L 70.421 218.232 L 70.436 218.232 C 70.912 209.832 76.588 203.295 83.402 203.484 Z" style="stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-29&quot;); stroke: url(&quot;#gradient-30&quot;);" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000004, -0.000002)"/>
+      <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -76.628825, 49.617584)"/>
+      <path d="M 83.497 264.695 L 85.582 264.695 L 85.582 247.98 L 90.382 247.98 L 90.382 264.149 L 93.137 264.149 L 93.137 256.034 L 101.936 255.792 L 102.013 264.164 L 103.501 264.123 L 103.422 255.752 L 103.459 255.751 L 103.427 252.159 L 93.137 252.441 L 93.137 236.816 L 96.104 236.816 L 96.104 236.911 L 97.721 236.911 L 97.721 208.037 L 96.104 208.037 L 96.104 232.99 L 93.137 232.99 L 93.137 232.824 L 90.382 232.824 L 90.382 232.924 L 83.96 232.924 L 83.96 237.077 L 90.382 237.077 L 90.382 245.417 L 85.582 245.417 L 85.582 245.354 L 83.497 245.354 L 83.497 264.695 Z" style="fill: rgb(39, 59, 31); transform-origin: 93.499px 236.366px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, 0.000002, -0.000002)"/>
+      <ellipse style="fill: url(&quot;#gradient-41&quot;); stroke: url(&quot;#gradient-42&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -75.415119, 50.982985)"/>
+      <ellipse style="stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%; fill: url(&quot;#gradient-43&quot;);" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -85.222109, 49.190762)"/>
+      <ellipse style="transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-44&quot;); stroke: url(&quot;#gradient-45&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -116.458461, 106.109)"/>
+      <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-46&quot;); stroke: url(&quot;#gradient-47&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -109.490239, 105.884186)"/>
+      <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-48&quot;); stroke: url(&quot;#gradient-49&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -100.049481, 109.25589)"/>
+    </g>
+    <g transform="matrix(0.94375, -0.330662, 0.330662, 0.94375, 609.128906, -19.885586)" style="transform-origin: 115.472px 273.844px;">
+      <path d="M 83.402 203.484 C 85.192 203.534 86.889 204.042 88.42 204.92 C 88.867 205.069 89.307 205.263 89.739 205.503 C 90.777 206.081 91.695 206.886 92.476 207.867 L 153.327 241.7 C 154.409 241.769 155.481 242.077 156.508 242.649 C 161.887 245.639 163.971 254.714 161.159 262.916 C 158.347 271.118 151.704 275.341 146.324 272.35 C 146.167 272.263 146.016 272.171 145.865 272.075 L 94.837 243.703 L 93.471 323.842 C 93.828 325.368 94.009 326.988 93.98 328.662 C 93.83 337.439 88.013 344.399 80.986 344.204 C 73.96 344.009 68.385 336.735 68.535 327.959 C 68.539 327.704 68.548 327.452 68.562 327.201 L 70.421 218.232 L 70.436 218.232 C 70.912 209.832 76.588 203.295 83.402 203.484 Z" style="stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-61&quot;); stroke: url(&quot;#gradient-62&quot;);" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000004, -0.000002)"/>
+      <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -76.628825, 49.617584)"/>
+      <path d="M 83.497 264.695 L 85.582 264.695 L 85.582 247.98 L 90.382 247.98 L 90.382 264.149 L 93.137 264.149 L 93.137 256.034 L 101.936 255.792 L 102.013 264.164 L 103.501 264.123 L 103.422 255.752 L 103.459 255.751 L 103.427 252.159 L 93.137 252.441 L 93.137 236.816 L 96.104 236.816 L 96.104 236.911 L 97.721 236.911 L 97.721 208.037 L 96.104 208.037 L 96.104 232.99 L 93.137 232.99 L 93.137 232.824 L 90.382 232.824 L 90.382 232.924 L 83.96 232.924 L 83.96 237.077 L 90.382 237.077 L 90.382 245.417 L 85.582 245.417 L 85.582 245.354 L 83.497 245.354 L 83.497 264.695 Z" style="fill: rgb(39, 59, 31); transform-origin: 93.499px 236.366px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, 0.000002, -0.000002)"/>
+      <ellipse style="fill: url(&quot;#gradient-63&quot;); stroke: url(&quot;#gradient-64&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -75.415119, 50.982985)"/>
+      <ellipse style="stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%; fill: url(&quot;#gradient-65&quot;);" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -85.222109, 49.190762)"/>
+      <ellipse style="transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-66&quot;); stroke: url(&quot;#gradient-67&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -116.458461, 106.109)"/>
+      <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-68&quot;); stroke: url(&quot;#gradient-69&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -109.490239, 105.884186)"/>
+      <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-70&quot;); stroke: url(&quot;#gradient-71&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -100.049481, 109.25589)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 620.100952, 40.467033)">
+      <g transform="matrix(0.928339, -0.371735, 0.371735, 0.928339, 152.450455, 64.727577)" style="transform-origin: -29.2234px 230.78px;">
+        <path d="M -61.293 160.42 C -59.503 160.47 -57.806 160.978 -56.275 161.856 C -55.828 162.005 -55.388 162.199 -54.956 162.439 C -53.918 163.017 -53 163.822 -52.219 164.803 L 8.632 198.636 C 9.714 198.705 10.786 199.013 11.813 199.585 C 17.192 202.575 19.276 211.65 16.464 219.852 C 13.652 228.054 7.009 232.277 1.629 229.286 C 1.472 229.199 1.321 229.107 1.17 229.011 L -49.858 200.639 L -51.224 280.778 C -50.867 282.304 -50.686 283.924 -50.715 285.598 C -50.865 294.375 -56.682 301.335 -63.709 301.14 C -70.735 300.945 -76.31 293.671 -76.16 284.895 C -76.156 284.64 -76.147 284.388 -76.133 284.137 L -74.274 175.168 L -74.259 175.168 C -73.783 166.768 -68.107 160.231 -61.293 160.42 Z" style="stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-76&quot;); stroke: url(&quot;#gradient-77&quot;);" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000006, -0.000001)"/>
+        <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -221.185427, 7.706635)"/>
+        <path d="M -61.06 222.784 L -58.975 222.784 L -58.975 206.069 L -54.175 206.069 L -54.175 222.238 L -51.42 222.238 L -51.42 214.123 L -42.621 213.881 L -42.544 222.253 L -41.056 222.212 L -41.135 213.841 L -41.098 213.84 L -41.13 210.248 L -51.42 210.53 L -51.42 194.905 L -48.453 194.905 L -48.453 195 L -46.836 195 L -46.836 166.126 L -48.453 166.126 L -48.453 191.079 L -51.42 191.079 L -51.42 190.913 L -54.175 190.913 L -54.175 191.013 L -60.597 191.013 L -60.597 195.166 L -54.175 195.166 L -54.175 203.506 L -58.975 203.506 L -58.975 203.443 L -61.06 203.443 L -61.06 222.784 Z" style="fill: rgb(39, 59, 31); transform-origin: -51.058px 194.455px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, -0.000002, 0)"/>
+        <ellipse style="fill: url(&quot;#gradient-78&quot;); stroke: url(&quot;#gradient-79&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -219.971729, 9.072033)"/>
+        <ellipse style="stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%; fill: url(&quot;#gradient-80&quot;);" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -229.778449, 7.280503)"/>
+        <ellipse style="transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-81&quot;); stroke: url(&quot;#gradient-82&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -261.014991, 64.198295)"/>
+        <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-83&quot;); stroke: url(&quot;#gradient-84&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -254.046731, 63.973427)"/>
+        <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-85&quot;); stroke: url(&quot;#gradient-86&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -244.605981, 67.345131)"/>
+      </g>
+    </g>
+  </g>
+  <rect x="357.157" y="0.1" width="59.972" height="213.28" style="stroke-width: 5px; fill: rgba(255, 255, 255, 0.56); stroke: rgb(23, 23, 23);"/>
+  <g style="" transform="matrix(1, 0, 0, 0.488849, 61.511612, 5.683953)">
+    <rect x="312.016" y="201.098" width="24.695" height="200" style="fill: url(&quot;#gradient-2&quot;);"/>
+    <rect x="312.016" y="-203.05" width="24.695" height="200" style="fill: url(&quot;#gradient-4&quot;);" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  </g>
+  <g transform="matrix(0.544556, 0.270106, -0.245062, 0.494065, 91.656021, -113.207054)" style="transform-origin: 293.59px 150.599px;">
+    <ellipse style="stroke: rgb(21, 84, 4); fill: rgb(255, 255, 255); stroke-width: 3px;" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%;" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.896806, 0, 0, 0.626253, 111.160965, 5.125573)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(-0.66978, 0, 0, 0.682315, 598.937927, -14.94152)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 0.797034, 85.272995, 13.85566)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.979279, 0, 0, 0.88743, 108.720963, 19.019279)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.668467, 0, 0, 0.77486, 184.006851, 78.418449)" style="">
+    <ellipse style="stroke: rgb(21, 84, 4); fill: rgb(255, 255, 255); stroke-width: 3px;" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%;" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 261.402893, 25.608955)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 292.928528, 48.222694)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 287.77887, 21.802681)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 287.77887, 21.802681)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 284.375122, 4.562493)" style="">
+    <ellipse style="stroke: rgb(21, 84, 4); fill: rgb(255, 255, 255); stroke-width: 3px;" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%;" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.364874, 0, 0, 0.353146, 280.121033, 56.283028)" style="">
+    <ellipse style="fill: rgb(255, 255, 255); stroke-width: 3px; stroke: rgb(23, 23, 23);" cx="293.647" cy="150.599" rx="9.489" ry="10.543"/>
+    <ellipse style="fill: rgb(174, 174, 174); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(23, 23, 23);" cx="293.862" cy="150.461" rx="4.399" ry="6.598" transform="matrix(0.953797, 0.300451, -0.300451, 0.953797, -3.640189, -1.516827)"/>
+  </g>
+  <g transform="matrix(0.964645, -0.263552, 0.263552, 0.964645, 188.607346, -36.459061)" style="filter: url(&quot;#point-light-filter-0&quot;); transform-origin: 115.472px 273.844px;">
+    <path d="M 83.402 203.484 C 85.192 203.534 86.889 204.042 88.42 204.92 C 88.867 205.069 89.307 205.263 89.739 205.503 C 90.777 206.081 91.695 206.886 92.476 207.867 L 153.327 241.7 C 154.409 241.769 155.481 242.077 156.508 242.649 C 161.887 245.639 163.971 254.714 161.159 262.916 C 158.347 271.118 151.704 275.341 146.324 272.35 C 146.167 272.263 146.016 272.171 145.865 272.075 L 94.837 243.703 L 93.471 323.842 C 93.828 325.368 94.009 326.988 93.98 328.662 C 93.83 337.439 88.013 344.399 80.986 344.204 C 73.96 344.009 68.385 336.735 68.535 327.959 C 68.539 327.704 68.548 327.452 68.562 327.201 L 70.421 218.232 L 70.436 218.232 C 70.912 209.832 76.588 203.295 83.402 203.484 Z" style="stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-50&quot;); stroke: url(&quot;#gradient-51&quot;);" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000004, -0.000002)"/>
+    <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -76.628825, 49.617584)"/>
+    <path d="M 83.497 264.695 L 85.582 264.695 L 85.582 247.98 L 90.382 247.98 L 90.382 264.149 L 93.137 264.149 L 93.137 256.034 L 101.936 255.792 L 102.013 264.164 L 103.501 264.123 L 103.422 255.752 L 103.459 255.751 L 103.427 252.159 L 93.137 252.441 L 93.137 236.816 L 96.104 236.816 L 96.104 236.911 L 97.721 236.911 L 97.721 208.037 L 96.104 208.037 L 96.104 232.99 L 93.137 232.99 L 93.137 232.824 L 90.382 232.824 L 90.382 232.924 L 83.96 232.924 L 83.96 237.077 L 90.382 237.077 L 90.382 245.417 L 85.582 245.417 L 85.582 245.354 L 83.497 245.354 L 83.497 264.695 Z" style="fill: rgb(39, 59, 31); transform-origin: 93.499px 236.366px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, 0.000002, -0.000002)"/>
+    <ellipse style="fill: url(&quot;#gradient-52&quot;); stroke: url(&quot;#gradient-53&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -75.415119, 50.982985)"/>
+    <ellipse style="stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%; fill: url(&quot;#gradient-54&quot;);" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -85.222109, 49.190762)"/>
+    <ellipse style="transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-55&quot;); stroke: url(&quot;#gradient-56&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -116.458461, 106.109)"/>
+    <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-57&quot;); stroke: url(&quot;#gradient-58&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -109.490239, 105.884186)"/>
+    <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-59&quot;); stroke: url(&quot;#gradient-60&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -100.049481, 109.25589)"/>
+  </g>
+  <g transform="matrix(-0.834127, 0.551573, 0.551573, 0.834127, 373.79541, -22.440441)" style="transform-origin: 115.472px 273.844px;"/>
+  <g transform="matrix(0.94375, -0.330662, 0.330662, 0.94375, 158.590912, -22.440641)" style="transform-origin: 115.472px 273.844px;">
+    <path d="M 83.402 203.484 C 85.192 203.534 86.889 204.042 88.42 204.92 C 88.867 205.069 89.307 205.263 89.739 205.503 C 90.777 206.081 91.695 206.886 92.476 207.867 L 153.327 241.7 C 154.409 241.769 155.481 242.077 156.508 242.649 C 161.887 245.639 163.971 254.714 161.159 262.916 C 158.347 271.118 151.704 275.341 146.324 272.35 C 146.167 272.263 146.016 272.171 145.865 272.075 L 94.837 243.703 L 93.471 323.842 C 93.828 325.368 94.009 326.988 93.98 328.662 C 93.83 337.439 88.013 344.399 80.986 344.204 C 73.96 344.009 68.385 336.735 68.535 327.959 C 68.539 327.704 68.548 327.452 68.562 327.201 L 70.421 218.232 L 70.436 218.232 C 70.912 209.832 76.588 203.295 83.402 203.484 Z" style="stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-18&quot;); stroke: url(&quot;#gradient-19&quot;);" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000004, -0.000002)"/>
+    <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -76.628825, 49.617584)"/>
+    <path d="M 83.497 264.695 L 85.582 264.695 L 85.582 247.98 L 90.382 247.98 L 90.382 264.149 L 93.137 264.149 L 93.137 256.034 L 101.936 255.792 L 102.013 264.164 L 103.501 264.123 L 103.422 255.752 L 103.459 255.751 L 103.427 252.159 L 93.137 252.441 L 93.137 236.816 L 96.104 236.816 L 96.104 236.911 L 97.721 236.911 L 97.721 208.037 L 96.104 208.037 L 96.104 232.99 L 93.137 232.99 L 93.137 232.824 L 90.382 232.824 L 90.382 232.924 L 83.96 232.924 L 83.96 237.077 L 90.382 237.077 L 90.382 245.417 L 85.582 245.417 L 85.582 245.354 L 83.497 245.354 L 83.497 264.695 Z" style="fill: rgb(39, 59, 31); transform-origin: 93.499px 236.366px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, 0.000002, -0.000002)"/>
+    <ellipse style="fill: url(&quot;#gradient-20&quot;); stroke: url(&quot;#gradient-21&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -75.415119, 50.982985)"/>
+    <ellipse style="stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%; fill: url(&quot;#gradient-22&quot;);" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -85.222109, 49.190762)"/>
+    <ellipse style="transform-box: fill-box; transform-origin: 50% 50%; fill: url(&quot;#gradient-23&quot;); stroke: url(&quot;#gradient-24&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -116.458461, 106.109)"/>
+    <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-25&quot;); stroke: url(&quot;#gradient-26&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -109.490239, 105.884186)"/>
+    <ellipse style="transform-origin: 192.003px 155.687px; fill: url(&quot;#gradient-27&quot;); stroke: url(&quot;#gradient-28&quot;);" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -100.049481, 109.25589)"/>
+  </g>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(26, 26, 26);" cx="385.82" cy="191.43" rx="22.538" ry="13.161"/>
+  <rect x="339.109" y="32.971" width="92.695" height="46.048" rx="2" ry="2" style="fill: rgba(131, 179, 171, 0.75); stroke: rgb(43, 129, 137);"/>
+  <path d="M 452.471 7.894 C 452.471 44.779 421.507 74.68 383.312 74.68 C 345.117 74.68 314.153 44.779 314.153 7.894 C 314.153 5.193 314.319 2.53 314.642 -0.087 L 451.982 -0.087 C 452.305 2.53 452.471 5.193 452.471 7.894 Z" style="fill-rule: nonzero; fill: url(&quot;#gradient-0&quot;); filter: none; stroke-width: 3px; stroke: rgb(12, 30, 26);"/>
+  <path d="M 401.088 -0.311 L 404.897 -0.311 L 404.897 17.41 L 413.669 17.41 L 413.669 0.267 L 418.705 0.267 L 418.705 8.871 L 434.785 9.127 L 434.926 0.251 L 437.644 0.294 L 437.502 9.17 L 437.568 9.171 L 437.508 12.979 L 418.705 12.68 L 418.705 29.246 L 424.126 29.246 L 424.126 29.146 L 427.081 29.146 L 427.081 59.758 L 424.126 59.758 L 424.126 33.303 L 418.705 33.303 L 418.705 33.479 L 413.669 33.479 L 413.669 33.372 L 401.934 33.372 L 401.934 28.97 L 413.669 28.97 L 413.669 20.128 L 404.897 20.128 L 404.897 20.194 L 401.088 20.194 L 401.088 -0.311 Z" style="fill: rgb(78, 255, 0); stroke: rgb(49, 204, 30); transform-origin: 419.366px 29.723px;"/>
+  <path d="M 327.972 59.078 L 331.781 59.078 L 331.781 41.357 L 340.553 41.357 L 340.553 58.5 L 345.589 58.5 L 345.589 49.896 L 361.669 49.64 L 361.81 58.516 L 364.528 58.473 L 364.386 49.597 L 364.452 49.596 L 364.392 45.788 L 345.589 46.087 L 345.589 29.521 L 351.01 29.521 L 351.01 29.621 L 353.965 29.621 L 353.965 -0.991 L 351.01 -0.991 L 351.01 25.464 L 345.589 25.464 L 345.589 25.288 L 340.553 25.288 L 340.553 25.395 L 328.818 25.395 L 328.818 29.797 L 340.553 29.797 L 340.553 38.639 L 331.781 38.639 L 331.781 38.573 L 327.972 38.573 L 327.972 59.078 Z" style="transform-origin: 346.25px 29.044px; fill: rgb(78, 255, 0); stroke: rgb(49, 204, 30);" transform="matrix(-1, 0, 0, -1, -0.000028, 0.000013)"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#outline-filter-1&quot;); fill: rgb(24, 24, 24); stroke: url(&quot;#gradient-31&quot;);" cx="385.519" cy="43.024" rx="27.597" ry="27.247"/>
+  <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; filter: url(&quot;#filter-1&quot;); fill: rgb(12, 221, 255);" cx="385.422" cy="43.095" rx="23.03" ry="22.622"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-2&quot;); fill: rgb(70, 229, 255);" cx="383.609" cy="40.458" rx="18.909" ry="18.337"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-3&quot;); fill: rgb(119, 236, 255);" cx="379.653" cy="38.645" rx="14.953" ry="15.205"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-4&quot;); fill: rgb(213, 249, 255);" cx="376.19" cy="34.029" rx="8.853" ry="8.941"/>
+  <g transform="matrix(1, 0, 0, 1, 169.563461, 37.911743)">
+    <g transform="matrix(0.928339, -0.371735, 0.371735, 0.928339, 152.450455, 64.727577)" style="transform-origin: -29.2234px 230.78px;">
+      <path d="M -61.293 160.42 C -59.503 160.47 -57.806 160.978 -56.275 161.856 C -55.828 162.005 -55.388 162.199 -54.956 162.439 C -53.918 163.017 -53 163.822 -52.219 164.803 L 8.632 198.636 C 9.714 198.705 10.786 199.013 11.813 199.585 C 17.192 202.575 19.276 211.65 16.464 219.852 C 13.652 228.054 7.009 232.277 1.629 229.286 C 1.472 229.199 1.321 229.107 1.17 229.011 L -49.858 200.639 L -51.224 280.778 C -50.867 282.304 -50.686 283.924 -50.715 285.598 C -50.865 294.375 -56.682 301.335 -63.709 301.14 C -70.735 300.945 -76.31 293.671 -76.16 284.895 C -76.156 284.64 -76.147 284.388 -76.133 284.137 L -74.274 175.168 L -74.259 175.168 C -73.783 166.768 -68.107 160.231 -61.293 160.42 Z" style="stroke-width: 2px; stroke: url(&quot;#gradient-36&quot;); fill: url(&quot;#gradient-1&quot;); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.948153, 0.317813, -0.317813, 0.948153, 0.000006, -0.000001)"/>
+      <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(75, 66, 66);" cx="181.58" cy="147.629" rx="2.44" ry="2.44" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -221.185427, 7.706635)"/>
+      <path d="M -61.06 222.784 L -58.975 222.784 L -58.975 206.069 L -54.175 206.069 L -54.175 222.238 L -51.42 222.238 L -51.42 214.123 L -42.621 213.881 L -42.544 222.253 L -41.056 222.212 L -41.135 213.841 L -41.098 213.84 L -41.13 210.248 L -51.42 210.53 L -51.42 194.905 L -48.453 194.905 L -48.453 195 L -46.836 195 L -46.836 166.126 L -48.453 166.126 L -48.453 191.079 L -51.42 191.079 L -51.42 190.913 L -54.175 190.913 L -54.175 191.013 L -60.597 191.013 L -60.597 195.166 L -54.175 195.166 L -54.175 203.506 L -58.975 203.506 L -58.975 203.443 L -61.06 203.443 L -61.06 222.784 Z" style="fill: rgb(39, 59, 31); transform-origin: -51.058px 194.455px;" transform="matrix(0.941752, 0.336307, -0.336307, 0.941752, -0.000002, 0)"/>
+      <ellipse style="stroke: url(&quot;#gradient-37&quot;); fill: url(&quot;#gradient-38&quot;);" cx="192.003" cy="155.687" rx="7.04" ry="7.52" transform="matrix(0.999001, 0.044685, -0.044685, 0.999001, -219.971729, 9.072033)"/>
+      <ellipse style="fill: url(&quot;#gradient-3&quot;); stroke: rgba(255, 255, 255, 0.882); stroke-dasharray: 20; transform-box: fill-box; transform-origin: 52.8881% 51.7807%;" cx="153.068" cy="256.853" rx="9.507" ry="20.077" transform="matrix(0.95815, 0.286267, -0.286267, 0.95815, -229.778449, 7.280503)"/>
+      <ellipse style="fill: url(&quot;#gradient-11&quot;); stroke: url(&quot;#gradient-12&quot;); transform-box: fill-box; transform-origin: 50% 50%;" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -261.014991, 64.198295)"/>
+      <ellipse style="fill: url(&quot;#gradient-13&quot;); stroke: url(&quot;#gradient-14&quot;); transform-origin: 192.003px 155.687px;" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -254.046731, 63.973427)"/>
+      <ellipse style="fill: url(&quot;#gradient-39&quot;); stroke: url(&quot;#gradient-40&quot;); transform-origin: 192.003px 155.687px;" cx="192.003" cy="155.687" rx="2.602" ry="3.536" transform="matrix(0.925549, 0.378628, -0.378628, 0.925549, -244.605981, 67.345131)"/>
+    </g>
+  </g>
+  <ellipse style="stroke-width: 6px; fill: url(&quot;#gradient-5&quot;); stroke: rgb(0, 0, 0);" cx="383.88" cy="271.078" rx="87.079" ry="83.451"/>
+  <path d="M 394.933 195.598 L 398.07 195.598 L 398.07 214.136 L 405.292 214.136 L 405.292 196.203 L 409.439 196.203 L 409.439 205.204 L 422.679 205.471 L 422.795 196.187 L 425.034 196.232 L 424.916 205.517 L 424.971 205.518 L 424.922 209.501 L 409.439 209.189 L 409.439 226.517 L 413.903 226.517 L 413.903 226.412 L 416.336 226.412 L 416.336 258.435 L 413.903 258.435 L 413.903 230.761 L 409.439 230.761 L 409.439 230.945 L 405.292 230.945 L 405.292 230.834 L 395.63 230.834 L 395.63 226.228 L 405.292 226.228 L 405.292 216.979 L 398.07 216.979 L 398.07 217.049 L 394.933 217.049 L 394.933 195.598 Z" style="transform-origin: 409.983px 227.016px; fill: rgb(70, 255, 0);"/>
+  <path d="M 370.339 281.156 L 373.082 281.156 L 373.082 263.133 L 379.398 263.133 L 379.398 280.568 L 383.024 280.568 L 383.024 271.817 L 394.603 271.557 L 394.704 280.584 L 396.662 280.54 L 396.559 271.513 L 396.607 271.512 L 396.564 267.639 L 383.024 267.943 L 383.024 251.095 L 386.928 251.095 L 386.928 251.197 L 389.056 251.197 L 389.056 220.063 L 386.928 220.063 L 386.928 246.969 L 383.024 246.969 L 383.024 246.79 L 379.398 246.79 L 379.398 246.898 L 370.948 246.898 L 370.948 251.376 L 379.398 251.376 L 379.398 260.369 L 373.082 260.369 L 373.082 260.301 L 370.339 260.301 L 370.339 281.156 Z" style="transform-origin: 383.5px 250.61px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, 0.000015, -0.000003)"/>
+  <path d="M 341.6 258.871 L 344.676 258.871 L 344.676 240.934 L 351.759 240.934 L 351.759 258.286 L 355.826 258.286 L 355.826 249.576 L 368.811 249.318 L 368.924 258.302 L 371.12 258.258 L 371.004 249.274 L 371.058 249.273 L 371.01 245.418 L 355.826 245.721 L 355.826 228.953 L 360.204 228.953 L 360.204 229.055 L 362.59 229.055 L 362.59 198.069 L 360.204 198.069 L 360.204 224.847 L 355.826 224.847 L 355.826 224.668 L 351.759 224.668 L 351.759 224.776 L 342.283 224.776 L 342.283 229.233 L 351.759 229.233 L 351.759 238.183 L 344.676 238.183 L 344.676 238.115 L 341.6 238.115 L 341.6 258.871 Z" style="transform-origin: 356.359px 228.47px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, -0.000016, -0.000009)"/>
+  <g transform="matrix(1, 0, 0, 1, -11.359545, 41.224743)">
+    <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; fill: rgb(24, 24, 24); filter: url(&quot;#filter-5&quot;);" cx="396.122" cy="168.427" rx="18.233" ry="17.883"/>
+    <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; filter: url(&quot;#filter-6&quot;); fill: rgb(255, 12, 12);" cx="396.058" cy="168.473" rx="15.215" ry="14.847"/>
+    <ellipse style="paint-order: fill; filter: url(&quot;#filter-7&quot;); fill: rgb(255, 70, 70);" cx="394.86" cy="166.743" rx="12.493" ry="12.035"/>
+    <ellipse style="paint-order: fill; filter: url(&quot;#filter-8&quot;); fill: rgb(255, 119, 119);" cx="392.246" cy="165.553" rx="9.879" ry="9.979"/>
+    <ellipse style="paint-order: fill; filter: url(&quot;#filter-9&quot;); fill: rgb(255, 213, 213);" cx="389.958" cy="162.523" rx="5.849" ry="5.868"/>
+  </g>
+  <path d="M 478.067 387.248 C 478.067 409.879 469.486 430.565 455.31 446.407 L 466.118 489.53 L 430.673 465.93 C 417.205 473.298 401.654 477.502 385.092 477.502 C 366.98 477.502 350.078 472.475 335.785 463.779 L 298.958 489.96 L 309.816 440.232 C 298.683 425.353 292.117 407.045 292.117 387.248 C 292.117 337.402 333.743 296.994 385.092 296.994 C 436.441 296.994 478.067 337.402 478.067 387.248 Z" style="fill: url(&quot;#gradient-32&quot;); stroke: url(&quot;#gradient-35&quot;); stroke-width: 5px;"/>
+  <path d="M 470.419 355.253 C 461.004 365.582 453.734 485.846 385.048 421.06 C 316.361 356.274 288.553 372.294 294.502 357.868 C 300.451 343.442 335.041 294.676 385.048 294.676 C 435.054 294.676 479.833 344.924 470.419 355.253 Z" style="fill: rgb(27, 27, 27); stroke-width: 3px; stroke: rgb(0, 0, 0);"/>
+  <ellipse style="stroke-width: 4.79662px; fill: rgb(32, 35, 29); stroke: rgb(18, 18, 18);" cx="383.88" cy="396.293" rx="37.7" ry="42.109"/>
+  <ellipse style="fill: rgb(19, 19, 19); stroke-width: 4.79662px;" cx="383.366" cy="400.642" rx="26.561" ry="29.827"/>
+  <ellipse style="stroke-width: 4.79662px; fill: rgb(70, 255, 0); stroke: rgb(27, 80, 19);" cx="383.366" cy="404.358" rx="15.251" ry="17.896"/>
+  <ellipse style="stroke-width: 4.79662px; fill: rgb(171, 255, 66);" cx="378.961" cy="402.31" rx="8.045" ry="14.653"/>
+  <ellipse style="stroke-width: 4.79662px; fill: rgb(216, 255, 137);" cx="376.739" cy="398.099" rx="4.55" ry="8.84"/>
+  <path d="M 405.331 379.944 L 408.407 379.944 L 408.407 358.969 L 415.49 358.969 L 415.49 379.259 L 419.557 379.259 L 419.557 369.075 L 432.542 368.773 L 432.655 379.278 L 434.851 379.226 L 434.735 368.721 L 434.789 368.72 L 434.741 364.212 L 419.557 364.567 L 419.557 344.96 L 423.935 344.96 L 423.935 345.078 L 426.321 345.078 L 426.321 308.846 L 423.935 308.846 L 423.935 340.159 L 419.557 340.159 L 419.557 339.948 L 415.49 339.948 L 415.49 340.075 L 406.014 340.075 L 406.014 345.287 L 415.49 345.287 L 415.49 355.752 L 408.407 355.752 L 408.407 355.673 L 405.331 355.673 L 405.331 379.944 Z" style="fill: rgb(70, 255, 0); transform-origin: 420.09px 344.395px;" transform="matrix(-1, 0, 0, -1, 0.000029, 0.000027)"/>
+  <path d="M 383.751 354.324 C 402.365 354.324 417.828 369.725 420.897 389.974 L 346.604 389.974 C 349.673 369.725 365.136 354.324 383.751 354.324 Z" style="fill: rgb(51, 58, 46); stroke-width: 4.79662px; stroke: rgb(26, 26, 26);"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(106, 101, 101);" cx="356.585" cy="381.421" rx="3.224" ry="3.648"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(106, 101, 101);" cx="384.413" cy="361.963" rx="3.224" ry="3.648"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(106, 101, 101);" cx="413.26" cy="384.2" rx="3.224" ry="3.648"/>
+  <path d="M 331.953 378.865 L 335.029 378.865 L 335.029 357.89 L 342.112 357.89 L 342.112 378.18 L 346.179 378.18 L 346.179 367.996 L 359.164 367.694 L 359.277 378.199 L 361.473 378.147 L 361.357 367.642 L 361.411 367.641 L 361.363 363.133 L 346.179 363.488 L 346.179 343.881 L 350.557 343.881 L 350.557 343.999 L 352.943 343.999 L 352.943 307.767 L 350.557 307.767 L 350.557 339.08 L 346.179 339.08 L 346.179 338.869 L 342.112 338.869 L 342.112 338.996 L 332.636 338.996 L 332.636 344.208 L 342.112 344.208 L 342.112 354.673 L 335.029 354.673 L 335.029 354.594 L 331.953 354.594 L 331.953 378.865 Z" style="fill: rgb(70, 255, 0); transform-origin: 346.712px 343.316px;" transform="matrix(-1, 0, 0, -1, -0.000009, -0.000029)"/>
+  <path d="M 323.32 311.422 L 326.396 311.422 L 326.396 292.676 L 333.479 292.676 L 333.479 310.81 L 337.546 310.81 L 337.546 301.708 L 350.531 301.438 L 350.644 310.827 L 352.84 310.781 L 352.724 301.392 L 352.778 301.391 L 352.73 297.362 L 337.546 297.679 L 337.546 280.155 L 341.924 280.155 L 341.924 280.261 L 344.31 280.261 L 344.31 247.878 L 341.924 247.878 L 341.924 275.864 L 337.546 275.864 L 337.546 275.676 L 333.479 275.676 L 333.479 275.789 L 324.003 275.789 L 324.003 280.447 L 333.479 280.447 L 333.479 289.801 L 326.396 289.801 L 326.396 289.73 L 323.32 289.73 L 323.32 311.422 Z" style="transform-origin: 338.079px 279.65px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, -0.000041, -0.000006)"/>
+  <path d="M 413.343 245.765 L 416.419 245.765 L 416.419 264.511 L 423.502 264.511 L 423.502 246.377 L 427.569 246.377 L 427.569 255.479 L 440.554 255.749 L 440.667 246.36 L 442.863 246.406 L 442.747 255.795 L 442.801 255.796 L 442.753 259.825 L 427.569 259.508 L 427.569 277.032 L 431.947 277.032 L 431.947 276.926 L 434.333 276.926 L 434.333 309.309 L 431.947 309.309 L 431.947 281.323 L 427.569 281.323 L 427.569 281.511 L 423.502 281.511 L 423.502 281.398 L 414.026 281.398 L 414.026 276.74 L 423.502 276.74 L 423.502 267.386 L 416.419 267.386 L 416.419 267.457 L 413.343 267.457 L 413.343 245.765 Z" style="transform-origin: 428.102px 277.537px; fill: rgb(70, 255, 0);"/>
+  <path d="M 356.345 230.892 L 358.707 230.892 L 358.707 242.797 L 364.146 242.797 L 364.146 231.28 L 367.268 231.28 L 367.268 237.061 L 377.239 237.233 L 377.326 231.271 L 379.012 231.299 L 378.923 237.262 L 378.965 237.262 L 378.928 239.821 L 367.268 239.62 L 367.268 250.748 L 370.63 250.748 L 370.63 250.681 L 372.463 250.681 L 372.463 271.246 L 370.63 271.246 L 370.63 253.474 L 367.268 253.474 L 367.268 253.592 L 364.146 253.592 L 364.146 253.52 L 356.869 253.52 L 356.869 250.562 L 364.146 250.562 L 364.146 244.623 L 358.707 244.623 L 358.707 244.667 L 356.345 244.667 L 356.345 230.892 Z" style="transform-origin: 367.678px 251.069px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, -0.000031, -0.000033)"/>
+  <path d="M 387.419 253.74 L 389.781 253.74 L 389.781 265.645 L 395.22 265.645 L 395.22 254.128 L 398.342 254.128 L 398.342 259.909 L 408.313 260.081 L 408.4 254.119 L 410.086 254.147 L 409.997 260.11 L 410.039 260.11 L 410.002 262.669 L 398.342 262.468 L 398.342 273.596 L 401.704 273.596 L 401.704 273.529 L 403.537 273.529 L 403.537 294.094 L 401.704 294.094 L 401.704 276.322 L 398.342 276.322 L 398.342 276.44 L 395.22 276.44 L 395.22 276.368 L 387.943 276.368 L 387.943 273.41 L 395.22 273.41 L 395.22 267.471 L 389.781 267.471 L 389.781 267.515 L 387.419 267.515 L 387.419 253.74 Z" style="transform-origin: 398.752px 273.917px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, -0.00004, 0.000042)"/>
+  <path d="M 316.009 208.149 L 318.751 208.149 L 318.751 220.948 L 325.067 220.948 L 325.067 208.567 L 328.693 208.567 L 328.693 214.781 L 340.271 214.965 L 340.372 208.555 L 342.33 208.587 L 342.227 214.997 L 342.275 214.997 L 342.232 217.749 L 328.693 217.532 L 328.693 229.497 L 332.597 229.497 L 332.597 229.424 L 334.724 229.424 L 334.724 251.534 L 332.597 251.534 L 332.597 232.427 L 328.693 232.427 L 328.693 232.555 L 325.067 232.555 L 325.067 232.477 L 316.618 232.477 L 316.618 229.297 L 325.067 229.297 L 325.067 222.911 L 318.751 222.911 L 318.751 222.959 L 316.009 222.959 L 316.009 208.149 Z" style="transform-origin: 329.168px 229.841px; fill: rgb(70, 255, 0);" transform="matrix(-1, 0, 0, -1, 0.00003, -0.000012)"/>
+  <path d="M 426.42 247.643 L 428.587 247.643 L 428.587 236.13 L 433.578 236.13 L 433.578 247.267 L 436.444 247.267 L 436.444 241.677 L 445.594 241.511 L 445.675 247.277 L 447.223 247.25 L 447.14 241.483 L 447.179 241.483 L 447.144 239.008 L 436.444 239.204 L 436.444 228.44 L 439.53 228.44 L 439.53 228.506 L 441.212 228.506 L 441.212 208.618 L 439.53 208.618 L 439.53 225.806 L 436.444 225.806 L 436.444 225.69 L 433.578 225.69 L 433.578 225.759 L 426.902 225.759 L 426.902 228.62 L 433.578 228.62 L 433.578 234.365 L 428.587 234.365 L 428.587 234.321 L 426.42 234.321 L 426.42 247.643 Z" style="transform-origin: 436.821px 228.131px; fill: rgb(70, 255, 0);"/>
+  <g transform="matrix(0.68486, 0, 0, 0.722023, 42.160366, 64.012978)" style="">
+    <path d="M 575.338 388.497 L 588.689 388.497 C 589.207 388.497 589.627 389.117 589.627 389.885 L 589.627 407.207 L 594.781 407.207 L 594.781 399.933 C 594.781 399.165 595.201 398.545 595.719 398.545 L 604.854 398.545 C 605.372 398.545 605.792 399.165 605.792 399.933 L 605.792 418.987 C 605.792 419.753 605.372 420.373 604.854 420.373 L 597.827 420.373 L 597.827 447.051 C 597.827 447.818 597.407 448.438 596.888 448.438 L 581.194 448.438 C 580.676 448.438 580.256 447.818 580.256 447.051 L 580.256 418.641 L 575.338 418.641 C 574.819 418.641 574.399 418.021 574.399 417.253 L 574.399 389.885 C 574.399 389.117 574.819 388.497 575.338 388.497 Z" style="fill: rgb(18, 34, 12); stroke: rgb(80, 133, 42);"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.456" cy="391.449" rx="1.675" ry="1.779"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="595.249" cy="443.993" rx="1.256" ry="1.361"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.246" cy="415.837" rx="1.047" ry="1.256"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="602.681" cy="415.418" rx="1.779" ry="1.884"/>
+  </g>
+  <g transform="matrix(-0.621911, -0.28681, -0.302374, 0.655658, -246.667786, -76.457123)" style="transform-origin: 590.095px 418.467px;">
+    <path d="M 575.338 388.497 L 588.689 388.497 C 589.207 388.497 589.627 389.117 589.627 389.885 L 589.627 407.207 L 594.781 407.207 L 594.781 399.933 C 594.781 399.165 595.201 398.545 595.719 398.545 L 604.854 398.545 C 605.372 398.545 605.792 399.165 605.792 399.933 L 605.792 418.987 C 605.792 419.753 605.372 420.373 604.854 420.373 L 597.827 420.373 L 597.827 447.051 C 597.827 447.818 597.407 448.438 596.888 448.438 L 581.194 448.438 C 580.676 448.438 580.256 447.818 580.256 447.051 L 580.256 418.641 L 575.338 418.641 C 574.819 418.641 574.399 418.021 574.399 417.253 L 574.399 389.885 C 574.399 389.117 574.819 388.497 575.338 388.497 Z" style="fill: rgb(18, 34, 12); stroke: rgb(80, 133, 42);"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.456" cy="391.449" rx="1.675" ry="1.779"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="595.249" cy="443.993" rx="1.256" ry="1.361"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.246" cy="415.837" rx="1.047" ry="1.256"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="602.681" cy="415.418" rx="1.779" ry="1.884"/>
+  </g>
+  <g transform="matrix(0.621911, -0.28681, 0.302374, 0.655658, -270.81369, -6.660389)" style="transform-origin: 590.095px 418.467px;">
+    <path d="M 575.338 388.497 L 588.689 388.497 C 589.207 388.497 589.627 389.117 589.627 389.885 L 589.627 407.207 L 594.781 407.207 L 594.781 399.933 C 594.781 399.165 595.201 398.545 595.719 398.545 L 604.854 398.545 C 605.372 398.545 605.792 399.165 605.792 399.933 L 605.792 418.987 C 605.792 419.753 605.372 420.373 604.854 420.373 L 597.827 420.373 L 597.827 447.051 C 597.827 447.818 597.407 448.438 596.888 448.438 L 581.194 448.438 C 580.676 448.438 580.256 447.818 580.256 447.051 L 580.256 418.641 L 575.338 418.641 C 574.819 418.641 574.399 418.021 574.399 417.253 L 574.399 389.885 C 574.399 389.117 574.819 388.497 575.338 388.497 Z" style="fill: rgb(18, 34, 12); stroke: rgb(80, 133, 42);"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.456" cy="391.449" rx="1.675" ry="1.779"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="595.249" cy="443.993" rx="1.256" ry="1.361"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.246" cy="415.837" rx="1.047" ry="1.256"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="602.681" cy="415.418" rx="1.779" ry="1.884"/>
+  </g>
+  <g transform="matrix(0.418994, 0.264772, -0.269129, 0.425886, -159.704712, 18.806087)" style="transform-origin: 590.095px 418.467px;">
+    <path d="M 575.338 388.497 L 588.689 388.497 C 589.207 388.497 589.627 389.117 589.627 389.885 L 589.627 407.207 L 594.781 407.207 L 594.781 399.933 C 594.781 399.165 595.201 398.545 595.719 398.545 L 604.854 398.545 C 605.372 398.545 605.792 399.165 605.792 399.933 L 605.792 418.987 C 605.792 419.753 605.372 420.373 604.854 420.373 L 597.827 420.373 L 597.827 447.051 C 597.827 447.818 597.407 448.438 596.888 448.438 L 581.194 448.438 C 580.676 448.438 580.256 447.818 580.256 447.051 L 580.256 418.641 L 575.338 418.641 C 574.819 418.641 574.399 418.021 574.399 417.253 L 574.399 389.885 C 574.399 389.117 574.819 388.497 575.338 388.497 Z" style="fill: rgb(18, 34, 12); stroke: rgb(80, 133, 42);"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.456" cy="391.449" rx="1.675" ry="1.779"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="595.249" cy="443.993" rx="1.256" ry="1.361"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="577.246" cy="415.837" rx="1.047" ry="1.256"/>
+    <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="602.681" cy="415.418" rx="1.779" ry="1.884"/>
+  </g>
+  <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; fill: rgb(24, 24, 24); filter: url(&quot;#filter-10&quot;);" cx="387.643" cy="313.821" rx="15.024" ry="15.181"/>
+  <ellipse style="stroke: rgb(0, 0, 0); paint-order: fill; filter: url(&quot;#filter-11&quot;); fill: rgb(80, 255, 12);" cx="387.59" cy="313.86" rx="12.537" ry="12.604"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-12&quot;); fill: rgb(142, 255, 70);" cx="386.603" cy="312.391" rx="10.294" ry="10.217"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-13&quot;); fill: rgb(119, 255, 127);" cx="384.449" cy="311.381" rx="8.14" ry="8.471"/>
+  <ellipse style="paint-order: fill; filter: url(&quot;#filter-14&quot;); fill: rgb(228, 255, 213);" cx="382.564" cy="308.809" rx="4.82" ry="4.981"/>
+</svg>
