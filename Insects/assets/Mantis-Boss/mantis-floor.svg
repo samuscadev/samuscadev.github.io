@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400px" height="150px">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, -4, 0)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-1" gradientTransform="matrix(1, 0, 0, 1, -4, 0)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-2" gradientTransform="matrix(1, 0, 0, 1, -4, 0)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-3" gradientTransform="matrix(1, 0, 0, 1, 50.3101, -150.201)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-4" gradientTransform="matrix(1, 0, 0, 1, 50.3101, -150.202)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-5" gradientTransform="matrix(0.999909, 0.013516, -0.018526, 1.370527, 52.137075, -187.067816)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-6" gradientTransform="matrix(1, 0, 0, 1, 97.761, -0.97184)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-7" gradientTransform="matrix(1, 0, 0, 1, 97.761, -0.97184)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-8" gradientTransform="matrix(1, 0, 0, 1, 97.761, -0.97184)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-9" gradientTransform="matrix(1, 0, 0, 1, 144.493, -150.201)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-10" gradientTransform="matrix(1, 0, 0, 1, 144.493, -150.202)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-11" gradientTransform="matrix(1, 0, 0, 1, 144.493, -150.201)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-12" gradientTransform="matrix(1, 0, 0, 1, 295.607, -0.85918)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-13" gradientTransform="matrix(1, 0, 0, 1, 295.607, -0.85918)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-14" gradientTransform="matrix(1, 0, 0, 1, 295.607, -0.85918)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-15" gradientTransform="matrix(1, 0, 0, 1, 347.917, -150.341)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-16" gradientTransform="matrix(1, 0, 0, 1, 347.917, -150.342)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-17" gradientTransform="matrix(1, 0, 0, 1, 347.917, -150.341)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-18" gradientTransform="matrix(1, 0, 0, 1, 196.254, -0.71835)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-19" gradientTransform="matrix(1, 0, 0, 1, 196.254, -0.71835)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-20" gradientTransform="matrix(1, 0, 0, 1, 196.254, -0.71835)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.304" y1="0.351" x2="28.304" y2="52.808" id="gradient-21" gradientTransform="matrix(1, 0, 0, 1, 246.564, -151.313)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.214" y1="52.152" x2="28.214" y2="104.609" id="gradient-22" gradientTransform="matrix(1, 0, 0, 1, 246.564, -151.314)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="28.001" y1="98.477" x2="28.001" y2="150.934" id="gradient-23" gradientTransform="matrix(1, 0, 0, 1, 246.564, -151.313)">
+      <stop offset="0" style="stop-color: rgb(100% 100% 100%)"/>
+      <stop offset="1" style="stop-color: rgb(56.687% 56.687% 56.687%)"/>
+    </linearGradient>
+  </defs>
+  <rect x="-3.581" y="0.351" width="55.77" height="52.457" style="fill: url(&quot;#gradient-0&quot;); stroke: rgb(125, 125, 125); stroke-width: 2px;"/>
+  <rect x="-3.671" y="52.152" width="55.77" height="52.457" style="fill: url(&quot;#gradient-1&quot;); stroke: rgb(125, 125, 125); stroke-width: 2px;"/>
+  <rect x="-3.884" y="98.477" width="55.77" height="52.457" style="fill: url(&quot;#gradient-2&quot;); stroke: rgb(125, 125, 125); stroke-width: 2px;"/>
+  <rect x="50.729" y="-149.85" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-3&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="50.639" y="-98.05" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-4&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="50.426" y="-51.724" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-5&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="98.18" y="-0.621" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-6&quot;); stroke-width: 2px;"/>
+  <rect x="98.09" y="51.18" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-7&quot;); stroke-width: 2px;"/>
+  <rect x="97.877" y="97.505" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-8&quot;); stroke-width: 2px;"/>
+  <rect x="144.913" y="-149.85" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-9&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="144.822" y="-98.05" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-10&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="144.609" y="-51.724" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-11&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="296.026" y="-0.509" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-12&quot;); stroke-width: 2px;"/>
+  <rect x="295.936" y="51.292" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-13&quot;); stroke-width: 2px;"/>
+  <rect x="295.724" y="97.617" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-14&quot;); stroke-width: 2px;"/>
+  <rect x="348.337" y="-149.99" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-15&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="348.247" y="-98.19" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-16&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="348.033" y="-51.864" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-17&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="246.984" y="-150.96" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-21&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="246.894" y="-99.16" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-22&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="246.68" y="-52.836" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-23&quot;); stroke-width: 2px;" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <rect x="196.673" y="-0.368" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-18&quot;); stroke-width: 2px;"/>
+  <rect x="196.583" y="51.433" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-19&quot;); stroke-width: 2px;"/>
+  <rect x="196.371" y="97.758" width="55.77" height="52.457" style="stroke: rgb(125, 125, 125); fill: url(&quot;#gradient-20&quot;); stroke-width: 2px;"/>
+</svg>
