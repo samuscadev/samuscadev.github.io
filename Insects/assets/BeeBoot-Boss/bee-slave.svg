@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px; transform-origin: 84.186px 23.722px;" cx="84.186" cy="23.722" rx="31.837" ry="15.625" transform="matrix(-0.828088, -0.560598, -0.560598, 0.828088, -41.797271, 1.5626)"/>
+  <rect x="0.224" y="35.441" width="21.68" height="4.297" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%;" cx="88.797" cy="42.884" rx="25.196" ry="22.07" transform="matrix(0.682073, 0.731284, -0.731284, 0.682073, -5.273545, 3.711042)"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px;" cx="57.722" cy="39.587" rx="27.247" ry="21.289"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px;" cx="32.623" cy="36.073" rx="22.852" ry="24.219"/>
+  <rect x="60.162" y="43.449" width="3.32" height="32.227" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"/>
+  <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); stroke-width: 2px; transform-box: fill-box; transform-origin: 50% 50%;" cx="84.186" cy="23.722" rx="31.837" ry="15.625" transform="matrix(0.941522, -0.336953, 0.336953, 0.941522, 3.515766, -3.90634)"/>
+  <rect x="76.764" y="45.207" width="3.32" height="32.227" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.956747, 0.290922, -0.290922, 0.956747, 7.81264, 0.390569)"/>
+  <rect x="75.165" y="21.982" width="3.251" height="15.67" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 76.791px 29.817px;" transform="matrix(0.956747, 0.290921, -0.290921, 0.956747, -6.83951, 38.24204)"/>
+  <rect x="76.764" y="45.207" width="3.32" height="32.227" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0); transform-origin: 78.424px 61.321px;" transform="matrix(0.956747, 0.290922, -0.290922, 0.956747, 20.094099, 1.781251)"/>
+</svg>
