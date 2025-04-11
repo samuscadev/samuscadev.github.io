@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="74.933" cy="92.016" r="72.743" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1.083221, 0, -23.33452)">
+      <stop offset="0" style="stop-color: rgb(32.549% 7.451% 63.529%)"/>
+      <stop offset="1" style="stop-color: rgb(20.819% 0% 52.716%)"/>
+    </radialGradient>
+    <filter id="warp-filter-0" bx:preset="warp 1 50 0.1" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0.5"/>
+      </feComponentTransfer>
+      <feMerge result="a">
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warp"/>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="50" in="a" in2="warp"/>
+    </filter>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="74.43" y1="24.07" x2="74.43" y2="57.164" id="gradient-1" gradientTransform="matrix(1, 0, 0, 1, 0, -11)">
+      <stop offset="0" style="stop-color: rgb(28.627% 13.725% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(21.404% 7.3113% 7.6507%)"/>
+    </linearGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="88.855" cy="116.526" r="4.35" id="gradient-2" gradientTransform="matrix(1, 0, 0, 1, 0, -11)">
+      <stop offset="0" style="stop-color: rgb(28.627% 13.725% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(21.404% 7.3113% 7.6507%)"/>
+    </radialGradient>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="211.992" cy="34.061" r="29.907" id="gradient-3">
+      <stop offset="0" style="stop-color: rgb(28.627% 13.725% 13.725%)"/>
+      <stop offset="1" style="stop-color: rgb(21.404% 7.3113% 7.6507%)"/>
+    </radialGradient>
+    <filter id="warp-filter-1" bx:preset="warp 1 50 0.1" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0.5"/>
+      </feComponentTransfer>
+      <feMerge result="a">
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warp"/>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="50" in="a" in2="warp"/>
+    </filter>
+    <filter id="filter-1" bx:preset="warp 1 50 0.1" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0.5"/>
+      </feComponentTransfer>
+      <feMerge result="a">
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="warp"/>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="50" in="a" in2="warp"/>
+    </filter>
+  </defs>
+  <rect x="1.384" y="27.05" width="147.654" height="121.75" style="stroke-width: 3px; fill: rgba(0, 0, 0, 0.47);" rx="18.056" ry="18.056"/>
+  <rect x="2.19" y="15.464" width="145.487" height="121.75" style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: url(&quot;#gradient-0&quot;);" rx="18.056" ry="18.056"/>
+  <rect x="2.77" y="13.07" width="143.321" height="33.094" style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: url(&quot;#gradient-1&quot;);" rx="8.793" ry="8.793"/>
+  <rect x="2.278" y="10.87" width="145.487" height="25.956" style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: rgb(33, 6, 69);" rx="2.296" ry="2.296"/>
+  <rect x="51.017" y="71.287" width="45.07" height="65.248" style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: rgb(73, 35, 35);" rx="2.293" ry="2.293"/>
+  <rect x="110.272" y="59.432" width="28.063" height="28.309" style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: rgb(27, 22, 22);" rx="5.06" ry="5.06"/>
+  <rect x="115.812" y="60.911" width="20.914" height="22.565" style="stroke-width: 3px; fill: rgb(50, 42, 42);" rx="2.339" ry="2.339"/>
+  <g transform="matrix(1, 0, 0, 0.865527, -137.373703, 1.258965)" style="">
+    <ellipse style="stroke: rgb(0, 0, 0); stroke-width: 3px; fill: url(&quot;#gradient-3&quot;);" cx="211.992" cy="34.061" rx="29.907" ry="30.891"/>
+    <path d="M 237.799 42.263 C 237.799 55.193 227.074 61.611 215.255 61.611 C 203.436 61.611 193.397 47.783 193.397 34.854 C 193.397 21.924 203.436 14.789 215.255 14.789 C 227.074 14.789 237.799 29.334 237.799 42.263 Z" style="stroke-width: 3px; fill: rgb(0, 99, 255); filter: url(&quot;#warp-filter-0&quot;);"/>
+    <path d="M 203.15 15.218 L 205.19 20.668 L 210.363 22.817 L 205.19 24.966 L 203.15 30.416 L 201.11 24.966 L 195.937 22.817 L 201.11 20.668 Z" bx:shape="star 203.15 22.817 7.213 7.599 0.4 4 1@ed4cdc44" style="fill: rgb(255, 255, 255);"/>
+    <path d="M 227.864 21.24 L 229.904 26.69 L 235.077 28.839 L 229.904 30.988 L 227.864 36.438 L 225.824 30.988 L 220.651 28.839 L 225.824 26.69 Z" bx:shape="star 227.864 28.839 7.213 7.599 0.4 4 1@58bdb225" style="fill: rgb(255, 255, 255);"/>
+    <path d="M 203.903 40.685 L 205.943 46.135 L 211.116 48.284 L 205.943 50.433 L 203.903 55.883 L 201.863 50.433 L 196.69 48.284 L 201.863 46.135 Z" bx:shape="star 203.903 48.284 7.213 7.599 0.4 4 1@66ccc841" style="fill: rgb(255, 255, 255);"/>
+    <path d="M 212.873 30.523 L 214.186 33.948 L 217.514 35.299 L 214.186 36.65 L 212.873 40.075 L 211.56 36.65 L 208.232 35.299 L 211.56 33.948 Z" bx:shape="star 212.873 35.299 4.641 4.776 0.4 4 1@168ede7e" style="fill: rgb(255, 255, 255);"/>
+    <path d="M 224.916 44.574 L 226.229 47.999 L 229.557 49.35 L 226.229 50.701 L 224.916 54.126 L 223.603 50.701 L 220.275 49.35 L 223.603 47.999 Z" bx:shape="star 224.916 49.35 4.641 4.776 0.4 4 1@1d8c10c4" style="fill: rgb(255, 255, 255);"/>
+  </g>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 82.527 75.155 L 82.861 134.476 L 84.532 134.81 L 84.365 75.657 L 85.869 75.824 L 86.203 134.141"/>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 89.211 75.322 L 89.545 134.643 L 91.216 134.977 L 91.049 75.824 L 92.553 75.991 L 92.887 134.308"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: url(&quot;#gradient-2&quot;);" cx="88.855" cy="105.526" rx="4.35" ry="4.543"/>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 54.623 74.322 L 54.957 133.643 L 56.628 133.977 L 56.461 74.824 L 57.965 74.991 L 58.299 133.308"/>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 61.139 73.988 L 61.473 133.309 L 63.144 133.643 L 62.977 74.49 L 64.481 74.657 L 64.815 132.974"/>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 67.99 74.489 L 68.324 133.81 L 69.995 134.144 L 69.828 74.991 L 71.332 75.158 L 71.666 133.475"/>
+  <path style="fill: none; stroke: rgb(55, 23, 23);" d="M 75.175 74.489 L 75.509 133.81 L 77.18 134.144 L 77.013 74.991 L 78.517 75.158 L 78.851 133.475"/>
+  <g style="transform-origin: 23.5315px 73.9065px;" transform="matrix(-1.058946, 0.155288, -0.163114, -1.112315, 9.159812, -12.414337)">
+    <rect x="-36.564" y="60.258" width="26.065" height="27.297" style="stroke: rgb(0, 0, 0); fill: rgb(238, 160, 62); filter: url(&quot;#warp-filter-1&quot;);" transform="matrix(-1, 0, 0, 1, 0, 0)"/>
+    <rect x="-34.306" y="61.489" width="22.986" height="24.834" style="filter: url(&quot;#filter-1&quot;); fill: rgb(170, 108, 31);" transform="matrix(-1, 0, 0, 1, 0, 0)"/>
+  </g>
+</svg>
