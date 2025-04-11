@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:export>
+      <bx:file format="svg" path="Sem título.svg"/>
+    </bx:export>
+    <filter id="motion-blur-filter-0" bx:preset="motion-blur 1 22 horizontal" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22 0" edgeMode="none"/>
+    </filter>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-1">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-2">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-3">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-4">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-5">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-6">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-7">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-10" gradientTransform="matrix(1, 0, 0, 1, 226.156998, 21.163401)">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.26" y1="132.445" x2="113.26" y2="155.154" id="gradient-11" gradientTransform="matrix(1, 0, 0, 1, 226.156998, 21.163401)">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-8" gradientTransform="matrix(1, 0, 0, 1, -36.432617, 105.9243)">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-9" gradientTransform="matrix(1, 0, 0, 1, -36.432617, 105.9243)">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-12" gradientTransform="matrix(1, 0, 0, 1, -85.683621, 128.18903)">
+      <stop offset="0" style="stop-color: rgb(27.059% 27.059% 27.059%)"/>
+      <stop offset="1" style="stop-color: rgb(16.896% 16.896% 16.896%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="73.26" y1="112.723" x2="73.26" y2="135.432" id="gradient-13" gradientTransform="matrix(1, 0, 0, 1, -85.683621, 128.18903)">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"/>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"/>
+    </linearGradient>
+  </defs>
+  <rect x="-0.892" y="-3.405" width="407.497" height="405.758" style="fill: rgb(16, 16, 16);"/>
+  <g>
+    <rect x="48.823" y="112.723" width="48.874" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-0&quot;); stroke: url(&quot;#gradient-2&quot;);" rx="6.418" ry="6.418"/>
+    <rect x="95.735" y="132.445" width="35.051" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-1&quot;); stroke: url(&quot;#gradient-3&quot;);" rx="2.491" ry="2.491"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 223.883, 62.0921)">
+    <rect x="48.823" y="112.723" width="48.874" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-4&quot;); stroke: url(&quot;#gradient-5&quot;);" rx="6.418" ry="6.418"/>
+    <rect x="95.735" y="132.445" width="35.051" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-6&quot;); stroke: url(&quot;#gradient-7&quot;);" rx="2.491" ry="2.491"/>
+    <rect x="12.39" y="218.647" width="48.874" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-8&quot;); stroke: url(&quot;#gradient-9&quot;);" rx="6.418" ry="6.418"/>
+    <rect x="-36.857" y="240.912" width="48.874" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-12&quot;); stroke: url(&quot;#gradient-13&quot;);" rx="6.418" ry="6.418"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1.3937, -14.506, -264.996)" style="">
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="46.559" cy="205.712" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="47.118" cy="241.517" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="46.938" cy="279.868" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="47.497" cy="315.673" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="46.559" cy="351.888" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="47.118" cy="387.693" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="46.938" cy="426.044" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(255, 255, 255, 0.208);" cx="47.497" cy="461.849" rx="5.392" ry="17.762"/>
+  </g>
+  <rect x="321.892" y="153.608" width="35.051" height="22.709" style="stroke-width: 3px; fill: url(&quot;#gradient-10&quot;); stroke: url(&quot;#gradient-11&quot;);" rx="4.515" ry="4.515"/>
+  <g transform="matrix(1, 0, 0, 1.3937, 268.899, -266.133)" style="">
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="46.559" cy="205.712" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="47.118" cy="241.517" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="46.938" cy="279.868" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="47.497" cy="315.673" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="46.559" cy="351.888" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="47.118" cy="387.693" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="46.938" cy="426.044" rx="5.392" ry="17.762"/>
+    <ellipse style="fill: none; stroke-width: 4px; stroke: rgba(0, 0, 0, 0.208);" cx="47.497" cy="461.849" rx="5.392" ry="17.762"/>
+  </g>
+  <rect x="118.141" y="-22.173" width="181.708" height="456.142" style="fill: rgba(255, 255, 255, 0.094); filter: url(&quot;#motion-blur-filter-0&quot;);"/>
+  <ellipse style="fill: rgb(86, 86, 86);" cx="143.066" cy="89.016" rx="6.644" ry="6.04"/>
+  <ellipse style="fill: rgb(86, 86, 86);" cx="317.622" cy="-125.26" rx="6.644" ry="6.644" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <ellipse style="fill: rgb(86, 86, 86);" cx="101.39" cy="-293.78" rx="6.644" ry="6.644" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+  <ellipse style="fill: rgb(86, 86, 86);" cx="316.414" cy="-360.22" rx="6.644" ry="6.644" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+</svg>
