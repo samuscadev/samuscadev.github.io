@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 500" width="50px" height="500px">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="252.093" y1="-4.656" x2="252.093" y2="33.143" id="gradient-0" gradientTransform="matrix(0.988183, 0, 0.000003, 1.46428, 1.912489, 7.053113)">
+      <stop offset="0" style="stop-color: rgb(30.588% 16.078% 12.549%)"/>
+      <stop offset="1" style="stop-color: rgb(22.435% 8.8919% 5.39%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-23" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 237.858345, 1.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-24" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 246.858337, 11.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-1" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 237.858345, 1.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-2" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 246.858337, 11.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-5" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 237.858345, 1.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-6" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 246.858337, 11.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-7" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 237.858345, 1.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-8" gradientTransform="matrix(0.525378, 0, 0, 0.541337, 246.858337, 11.045259)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-4" gradientTransform="matrix(0.495034, 0, 0, 1.353782, 10.19046, -8.221902)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-3" gradientTransform="matrix(0.557152, 0, 0, 1.175461, -2.82316, -8.292867)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-9" gradientTransform="matrix(0.495034, 0, 0, 1.353782, 10.19046, -8.221902)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="113.598" y1="9.148" x2="113.598" y2="25.851" id="gradient-10" gradientTransform="matrix(0.557152, 0, 0, 1.175461, -2.82316, -8.292867)">
+      <stop offset="0" style="stop-color: rgb(22.353% 34.902% 17.647%)"/>
+      <stop offset="1" style="stop-color: rgb(9.886% 22.27% 5.9031%)"/>
+    </linearGradient>
+  </defs>
+  <rect x="-0.859" y="0.235" width="503.772" height="55.349" style="fill: url(&quot;#gradient-0&quot;); transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.004057, 0.999992, -0.999992, 0.004057, -224.07506, 220.792319)"/>
+  <g transform="matrix(-0.35145, 1.938285, 1.67857, 0.304358, -261.937012, 437.95932)" style="transform-origin: 290.691px 14.5541px;">
+    <g transform="matrix(1, 0, 0, 1, 275.65863, 0.945062)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 264.681641, 6.433685)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g>
+      <g transform="matrix(1, 0, 0, 1, 275.220276, 6.653547)">
+        <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+        <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+        <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 284.660553, 11.923138)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 297.545 15.039 C 296.912 15.039 296.354 14.221 296.032 12.985 L 297.197 12.985 L 297.197 11.705 L 295.804 11.705 C 295.762 11.326 295.74 10.929 295.74 10.518 C 295.74 9.959 295.781 9.426 295.855 8.933 L 296.9 8.933 L 296.9 7.014 L 296.406 7.014 C 296.717 6.377 297.113 5.997 297.545 5.997 C 298.321 5.997 298.982 7.218 299.238 8.933 L 298.291 8.933 L 298.291 11.065 L 299.339 11.065 C 299.298 11.92 299.162 12.7 298.957 13.34 L 297.942 13.34 L 297.942 14.929 C 297.814 15.001 297.683 15.039 297.545 15.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-23&quot;);"/>
+    <path d="M 306.545 25.039 C 305.912 25.039 305.354 24.221 305.032 22.985 L 306.197 22.985 L 306.197 21.705 L 304.804 21.705 C 304.762 21.326 304.74 20.929 304.74 20.518 C 304.74 19.959 304.781 19.426 304.855 18.933 L 305.9 18.933 L 305.9 17.014 L 305.406 17.014 C 305.717 16.377 306.113 15.997 306.545 15.997 C 307.321 15.997 307.982 17.218 308.238 18.933 L 307.291 18.933 L 307.291 21.065 L 308.339 21.065 C 308.298 21.92 308.162 22.7 307.957 23.34 L 306.942 23.34 L 306.942 24.929 C 306.814 25.001 306.683 25.039 306.545 25.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-24&quot;);"/>
+  </g>
+  <g transform="matrix(-0.35145, 1.938285, 1.67857, 0.304358, -264.00058, 329.634796)" style="transform-origin: 290.691px 14.554px;">
+    <g transform="matrix(1, 0, 0, 1, 275.65863, 0.945062)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 264.681641, 6.433685)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g>
+      <g transform="matrix(1, 0, 0, 1, 275.220276, 6.653547)">
+        <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+        <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+        <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 284.660553, 11.923138)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 297.545 15.039 C 296.912 15.039 296.354 14.221 296.032 12.985 L 297.197 12.985 L 297.197 11.705 L 295.804 11.705 C 295.762 11.326 295.74 10.929 295.74 10.518 C 295.74 9.959 295.781 9.426 295.855 8.933 L 296.9 8.933 L 296.9 7.014 L 296.406 7.014 C 296.717 6.377 297.113 5.997 297.545 5.997 C 298.321 5.997 298.982 7.218 299.238 8.933 L 298.291 8.933 L 298.291 11.065 L 299.339 11.065 C 299.298 11.92 299.162 12.7 298.957 13.34 L 297.942 13.34 L 297.942 14.929 C 297.814 15.001 297.683 15.039 297.545 15.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-1&quot;);"/>
+    <path d="M 306.545 25.039 C 305.912 25.039 305.354 24.221 305.032 22.985 L 306.197 22.985 L 306.197 21.705 L 304.804 21.705 C 304.762 21.326 304.74 20.929 304.74 20.518 C 304.74 19.959 304.781 19.426 304.855 18.933 L 305.9 18.933 L 305.9 17.014 L 305.406 17.014 C 305.717 16.377 306.113 15.997 306.545 15.997 C 307.321 15.997 307.982 17.218 308.238 18.933 L 307.291 18.933 L 307.291 21.065 L 308.339 21.065 C 308.298 21.92 308.162 22.7 307.957 23.34 L 306.942 23.34 L 306.942 24.929 C 306.814 25.001 306.683 25.039 306.545 25.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-2&quot;);"/>
+  </g>
+  <g transform="matrix(-0.133978, 1.965328, 1.70199, 0.116026, -249.588882, 19.103334)" style="transform-origin: 290.691px 14.554px;">
+    <g transform="matrix(1, 0, 0, 1, 275.65863, 0.945062)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 264.681641, 6.433685)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g>
+      <g transform="matrix(1, 0, 0, 1, 275.220276, 6.653547)">
+        <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+        <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+        <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 284.660553, 11.923138)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 297.545 15.039 C 296.912 15.039 296.354 14.221 296.032 12.985 L 297.197 12.985 L 297.197 11.705 L 295.804 11.705 C 295.762 11.326 295.74 10.929 295.74 10.518 C 295.74 9.959 295.781 9.426 295.855 8.933 L 296.9 8.933 L 296.9 7.014 L 296.406 7.014 C 296.717 6.377 297.113 5.997 297.545 5.997 C 298.321 5.997 298.982 7.218 299.238 8.933 L 298.291 8.933 L 298.291 11.065 L 299.339 11.065 C 299.298 11.92 299.162 12.7 298.957 13.34 L 297.942 13.34 L 297.942 14.929 C 297.814 15.001 297.683 15.039 297.545 15.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-5&quot;);"/>
+    <path d="M 306.545 25.039 C 305.912 25.039 305.354 24.221 305.032 22.985 L 306.197 22.985 L 306.197 21.705 L 304.804 21.705 C 304.762 21.326 304.74 20.929 304.74 20.518 C 304.74 19.959 304.781 19.426 304.855 18.933 L 305.9 18.933 L 305.9 17.014 L 305.406 17.014 C 305.717 16.377 306.113 15.997 306.545 15.997 C 307.321 15.997 307.982 17.218 308.238 18.933 L 307.291 18.933 L 307.291 21.065 L 308.339 21.065 C 308.298 21.92 308.162 22.7 307.957 23.34 L 306.942 23.34 L 306.942 24.929 C 306.814 25.001 306.683 25.039 306.545 25.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-6&quot;);"/>
+  </g>
+  <g transform="matrix(-0.133978, 1.965328, 1.70199, 0.116026, -267.127197, 88.224953)" style="transform-origin: 290.691px 14.554px;">
+    <g transform="matrix(1, 0, 0, 1, 275.65863, 0.945062)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 264.681641, 6.433685)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <g>
+      <g transform="matrix(1, 0, 0, 1, 275.220276, 6.653547)">
+        <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+        <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+        <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 284.660553, 11.923138)">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 297.545 15.039 C 296.912 15.039 296.354 14.221 296.032 12.985 L 297.197 12.985 L 297.197 11.705 L 295.804 11.705 C 295.762 11.326 295.74 10.929 295.74 10.518 C 295.74 9.959 295.781 9.426 295.855 8.933 L 296.9 8.933 L 296.9 7.014 L 296.406 7.014 C 296.717 6.377 297.113 5.997 297.545 5.997 C 298.321 5.997 298.982 7.218 299.238 8.933 L 298.291 8.933 L 298.291 11.065 L 299.339 11.065 C 299.298 11.92 299.162 12.7 298.957 13.34 L 297.942 13.34 L 297.942 14.929 C 297.814 15.001 297.683 15.039 297.545 15.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-7&quot;);"/>
+    <path d="M 306.545 25.039 C 305.912 25.039 305.354 24.221 305.032 22.985 L 306.197 22.985 L 306.197 21.705 L 304.804 21.705 C 304.762 21.326 304.74 20.929 304.74 20.518 C 304.74 19.959 304.781 19.426 304.855 18.933 L 305.9 18.933 L 305.9 17.014 L 305.406 17.014 C 305.717 16.377 306.113 15.997 306.545 15.997 C 307.321 15.997 307.982 17.218 308.238 18.933 L 307.291 18.933 L 307.291 21.065 L 308.339 21.065 C 308.298 21.92 308.162 22.7 307.957 23.34 L 306.942 23.34 L 306.942 24.929 C 306.814 25.001 306.683 25.039 306.545 25.039 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-8&quot;);"/>
+  </g>
+  <g transform="matrix(0.020226, -2.012729, 2.230335, 0.022413, -27.55743, 139.199326)" style="transform-origin: 60.5109px 14.6165px;">
+    <g transform="matrix(1, 0, 0, 0.780624, 44.540752, 2.771425)" style="">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 66.43 26.774 C 65.833 26.774 65.308 24.728 65.004 21.635 L 66.101 21.635 L 66.101 18.435 L 64.789 18.435 C 64.75 17.489 64.729 16.494 64.729 15.467 C 64.729 14.071 64.767 12.737 64.837 11.504 L 65.822 11.504 L 65.822 6.704 L 65.356 6.704 C 65.649 5.112 66.023 4.161 66.43 4.161 C 67.161 4.161 67.783 7.215 68.025 11.504 L 67.132 11.504 L 67.132 16.836 L 68.12 16.836 C 68.081 18.973 67.953 20.925 67.76 22.526 L 66.804 22.526 L 66.804 26.499 C 66.684 26.679 66.56 26.774 66.43 26.774 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-4&quot;);"/>
+    <path d="M 60.473 22.093 C 59.802 22.093 59.211 20.317 58.869 17.631 L 60.103 17.631 L 60.103 14.853 L 58.627 14.853 C 58.583 14.031 58.559 13.167 58.559 12.276 C 58.559 11.064 58.602 9.905 58.681 8.835 L 59.789 8.835 L 59.789 4.667 L 59.265 4.667 C 59.594 3.285 60.015 2.459 60.473 2.459 C 61.296 2.459 61.996 5.111 62.269 8.835 L 61.264 8.835 L 61.264 13.464 L 62.376 13.464 C 62.332 15.32 62.188 17.015 61.97 18.405 L 60.894 18.405 L 60.894 21.855 C 60.759 22.011 60.62 22.093 60.473 22.093 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-3&quot;);"/>
+  </g>
+  <g transform="matrix(0.017494, -1.74091, 2.230335, 0.022413, -29.758326, 377.509155)" style="transform-origin: 60.511px 14.617px;">
+    <g transform="matrix(1, 0, 0, 0.780624, 44.540752, 2.771425)" style="">
+      <ellipse style="fill: rgb(176, 71, 45);" cx="15.427" cy="8.12" rx="7.066" ry="5.101"/>
+      <ellipse style="fill: rgb(221, 93, 60);" cx="14.876" cy="7.058" rx="5.623" ry="3.387"/>
+      <ellipse style="fill: rgb(176, 71, 45); transform-box: fill-box; transform-origin: 50% 50%;" cx="15.275" cy="8.188" rx="5.623" ry="3.387" transform="matrix(0.981654, -0.190669, -0.321641, 1.081162, -0.195166, 0.133142)"/>
+    </g>
+    <path d="M 66.43 26.774 C 65.833 26.774 65.308 24.728 65.004 21.635 L 66.101 21.635 L 66.101 18.435 L 64.789 18.435 C 64.75 17.489 64.729 16.494 64.729 15.467 C 64.729 14.071 64.767 12.737 64.837 11.504 L 65.822 11.504 L 65.822 6.704 L 65.356 6.704 C 65.649 5.112 66.023 4.161 66.43 4.161 C 67.161 4.161 67.783 7.215 68.025 11.504 L 67.132 11.504 L 67.132 16.836 L 68.12 16.836 C 68.081 18.973 67.953 20.925 67.76 22.526 L 66.804 22.526 L 66.804 26.499 C 66.684 26.679 66.56 26.774 66.43 26.774 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-9&quot;);"/>
+    <path d="M 60.473 22.093 C 59.802 22.093 59.211 20.317 58.869 17.631 L 60.103 17.631 L 60.103 14.853 L 58.627 14.853 C 58.583 14.031 58.559 13.167 58.559 12.276 C 58.559 11.064 58.602 9.905 58.681 8.835 L 59.789 8.835 L 59.789 4.667 L 59.265 4.667 C 59.594 3.285 60.015 2.459 60.473 2.459 C 61.296 2.459 61.996 5.111 62.269 8.835 L 61.264 8.835 L 61.264 13.464 L 62.376 13.464 C 62.332 15.32 62.188 17.015 61.97 18.405 L 60.894 18.405 L 60.894 21.855 C 60.759 22.011 60.62 22.093 60.473 22.093 Z" style="stroke: rgb(0, 0, 0); stroke-opacity: 0.42; fill: url(&quot;#gradient-10&quot;);"/>
+  </g>
+</svg>
