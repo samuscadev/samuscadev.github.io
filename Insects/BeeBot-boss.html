@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeBot</title>
+    <link rel="stylesheet" href="estilos/BeeBot.css">
+
+        <!--Fontes:-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="fundao"></div>
+    <div id="progeteis"></div>
+    <div id="bloco">
+        <img src="assets/Protagonista/protagonista-comtemplativo.svg">
+        <div id="hit-box"></div>
+    </div>
+    <div id="container">   
+        <div id="coracoes"></div>
+    </div>
+
+    <!--Ataques/Inimigos-->
+    <img src="assets/BeeBoot-Boss/Bee-Drone.svg" class="drone" id="drone1"></img>
+    <img src="assets/BeeBoot-Boss/Bee-Drone.svg" class="drone" id="drone2"></img>
+    <img src="assets/BeeBoot-Boss/Bee-Drone.svg" class="drone" id="drone3"></img>
+    <div id="tiros-dos-drones"></div>
+
+    <img src="assets/BeeBoot-Boss/bee-slave.svg" class="abeia" id="abeia1"></img>
+    <img src="assets/BeeBoot-Boss/bee-slave.svg" class="abeia" id="abeia2"></img>
+
+    <img src="assets/BeeBoot-Boss/bee-solder.svg" id="solder1"></img>
+    <img src="assets/BeeBoot-Boss/bee-solder.svg" id="solder2"></img>
+
+    <img src="assets/BeeBoot-Boss/bee-sound.svg" id="nota-musical"></img>
+    <img src="assets/BeeBoot-Boss/bee-sound.svg" id="nota-musical2"></img>
+    <img src="assets/BeeBoot-Boss/bee-sound.svg" id="nota-musical3"></img>
+
+    <p id="nome-boss">BEEBOOT</p>
+    <div id="piso"></div>
+
+    <div id="boss">
+        <img src="assets/BeeBoot-Boss/BeeBoot-base.svg">
+        <div id="boss-hit-box"></div>
+    </div>
+
+    <div id="telaMorte"> 
+        <p>Você Morreu!</p>
+        <button>Voltar</button>
+    </div>
+    <div id="telaVitoria">
+        <div id="telaBranca"></div>
+        <img src="assets/brisa-dirty.svg"></img>
+        <h1>Doce Vitória!</h1>
+        <p>Você derrotou O robô construido como Insurgência pelas abelhas: BEEBOT e coletou a Brisa das Abelhas (não sabe o que é Insurgência? pesquise depois) </p>
+        <button>Prosseguir</button>
+    </div>
+    
+    <audio id="soundtrack" src="sounds/rushe.mp3" loop></audio>
+    <audio id="soundwin" src="sounds/vitoria.mp3" loop></audio>
+
+    <script src="codigos/localStorage.js"></script>
+    <script src="codigos/vetores-protagonista.js"></script>
+    <script src="codigos/colisoes.js"></script>
+    <script src="codigos/movimentacao-bosses.js"></script>
+    <script src="codigos/BeeBoot.js"></script>
+    <script src="codigos/BeeBot-anim.js"></script>
+</body>
+</html>
