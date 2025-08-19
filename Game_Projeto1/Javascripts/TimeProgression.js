@@ -8,7 +8,11 @@ function atualizarStatus(elemento, dias) {
     dados.receita += dados.salario;
     dados.dias += 1;
   }
-  
+  let forcaTotal = 0;
+  for (let chave of Object.keys(dados.qntEquipamentos)) {
+      forcaTotal += getForca(chave) * dados.qntEquipamentos[chave];
+  }
+  dados.forca = forcaTotal;
   salvarDados(dados);
 
   elemento.innerHTML = `

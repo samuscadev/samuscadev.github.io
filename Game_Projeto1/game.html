@@ -12,9 +12,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
     
         <!--Importações: -->
+        
         <link rel="Stylesheet" href="Css/basic.css">
-        <link rel="Stylesheet" href="Css/responsive.css">
         <link rel="Stylesheet" href="Css/game.css">
+        <link rel="Stylesheet" href="Css/responsive.css">
 </head>
 <body>
     <header>
@@ -35,16 +36,10 @@
 
     <section id="sec2"></section>
 
-    <section id="sec3">
-        <h1>Batalhas</h1>
-        <h2>Suas Batalhas</h2>
-        <h2>Seus Status</h2>
-    </section>
+    <section id="sec3"></section>
 
     <section id="sec4">
         <h1>Batalhas</h1>
-        <h2>Suas Batalhas</h2>
-        <h2>Seus Status</h2>
     </section>
 
     <section id="sec5"></section>
@@ -56,7 +51,7 @@
 
     <div id="mensagem">
         <h1>Mensagem</h1>
-        <p>o que raios aconeceu </p>
+        <p>o que raios aconeceu</p>
         <button>Fechar</button>
     </div>
 
@@ -65,19 +60,23 @@
         <button onclick="mostrarSecao(0, SECOES)">Equipamentos</button>
         <button onclick="mostrarSecao(1, SECOES)">Recursos</button>
         <button onclick="mostrarSecao(4, SECOES)">Compras</button>
-        <button onclick="mostrarSecao(2, SECOES)">Batalhas</button>
+        <button onclick="mostrarSecao(2, SECOES)">Exploração Espacial</button>
         <button onclick="mostrarSecao(3, SECOES)">Pesquisas</button>
         <button onclick="resetarDados()">Resetar</button>
+        <button onclick="quebrarDados()">Quebrar o Jogo</button>
     </div>
     
     <!--Os Um zilhão de JavaScripts de cria! :) -->
+    
     <script src="Javascripts/GeneratePlanet.js"></script>
+    <script src="Javascripts/Exploration.js"></script>
 
     <script src="Javascripts/constValues.js"></script>
     <script src="Javascripts/constSprites.js"></script>
     <script src="Javascripts/constCraftings.js"></script>
     <script src="Javascripts/MensagerControl.js"></script>
     <script src="Javascripts/ShoppingControl.js"></script>
+    <script src="Javascripts/Crafiting.js"></script>
     
 
     <script src="Javascripts/localStorageSetup.js"></script>

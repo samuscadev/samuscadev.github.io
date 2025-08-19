@@ -1,33 +1,51 @@
 const PRECOS_TABELADOS = {
     madeira: 100,
     pedra: 200,
-    cobre: 300,
+    tungstenio: 300,
     ferro: 400,
-    vemelhita: 500,
+    vermelhita: 500,
     diamante: 600
 }
 
-function getPreco(valor){
+const NOMES_COISAS = {
+    madeira: "Madeira Refinada",
+    pedra: "Pedra Espacial",
+    tungstenio: "Tungstênio",
+    ferro: "Ferro Espacial",
+    vermelhita: "Vermelhita",
+    diamante: "Diamante",
 
-    if(valor == "madeira"){
-        return PRECOS_TABELADOS.madeira;
-    }
-    if(valor == "pedra"){
-        return PRECOS_TABELADOS.pedra;
-    }
-    if(valor == "cobre"){
-        return PRECOS_TABELADOS.cobre;
-    }
-    if(valor == "ferro"){
-        return PRECOS_TABELADOS.ferro;
-    }
-    if(valor == "vemelhita"){
-        return PRECOS_TABELADOS.vemelhita;
-    }
-    if(valor == "diamante"){
-        return PRECOS_TABELADOS.diamante;
-    }
-    else{
-        window.alert("Erro ao Capturar Preco! error in constValues.js");
-    }
+    shipWar: "Nave De Guerra",
+    shipTravel: "Nave Rápida",
+    shipSpy: "Nave Espiã",
+    shipDestroyer: "Destruidora de Mundos",
+    shipBus: "Ônibus Espacial",
+    shipAngular: "Nave Ângular"
+}
+
+const FORCA_EQUIPAMENTOS = {
+    shipWar: 100,
+    shipTravel: 0,
+    shipSpy: 20,
+    shipDestroyer: 250,
+    shipBus: 0,
+    shipAngular: 500
+}
+
+function getForca(valor){
+    return FORCA_EQUIPAMENTOS[valor]
+}
+
+function getNome(valor){
+    return NOMES_COISAS[valor] || (
+        window.alert(`Erro ao Capturar Nome de ${valor}! error in constValues.js`),
+        null
+    );
+}
+
+function getPreco(valor){
+    return PRECOS_TABELADOS[valor] || (
+        window.alert(`Erro ao Capturar Preço de ${valor}! error in constValues.js`),
+        null
+    );
 }

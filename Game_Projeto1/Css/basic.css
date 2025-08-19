@@ -8,13 +8,14 @@
 body{
     
     /* Cores: */
-    background-color: rgb(21, 6, 51);
+    background-color: rgb(14, 14, 56);
 }
 
 header{
     
     /* Cores: */
-    background-color: rgb(89, 0, 255);
+    background-image: linear-gradient(rgb(13, 23, 116), rgb(9, 16, 77), rgb(6, 9, 34));
+
 
     /*Margens: */
     margin: 0px;
@@ -60,7 +61,7 @@ button{
     
     /* Cores: */
     color: rgb(255, 255, 255);
-    background-color: rgb(89, 0, 255);
+    background-color: rgb(9, 95, 255);
 
     /* Bordas: */
     border: none;
@@ -79,7 +80,7 @@ button:hover{
     font-size: 14pt;
 
     /* Cores: */
-    color: rgb(89, 0, 255);
+    color: rgb(9, 95, 255);
     background-color: rgb(255, 255, 255);
 }
 
@@ -109,7 +110,9 @@ button:hover{
 }
 #mensagem{
     /* Cores: */
-    background-color: rgb(177, 41, 255);
+    background-image: linear-gradient(rgb(13, 23, 116), rgb(9, 16, 77), rgb(6, 9, 34));
+    border: 2px solid white;
+    border-radius: 8px;
 
     padding: 10px;
     
@@ -121,4 +124,16 @@ button:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media (max-width: 850px) {
+    #mensagem{
+    /*Flex: */
+    width: 95vw;
+    position: absolute;
+    top: 0%;
+    margin: 5px;
+    left: 0%;
+    transform: none;
+    }
 }

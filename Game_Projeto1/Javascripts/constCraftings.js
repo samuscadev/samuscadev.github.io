@@ -1,101 +1,56 @@
 const RECEITAS = {
-    espadaMadeira: {
-      madeira: 100,
-      pedra: 50,
-      cobre: 0,
-      ferro: 0,
-      vemelhita: 0,
-      diamante: 0
-    },
-    espadaPedra: {
-      madeira: 100,
-      pedra: 200,
-      cobre: 0,
-      ferro: 0,
-      vemelhita: 0,
-      diamante: 0
-    },
-    espadaCobre: {
-      madeira: 200,
-      pedra: 50,
-      cobre: 200,
-      ferro: 0,
-      vemelhita: 0,
-      diamante: 0
-    },
-    espadaFerro: {
-      madeira: 200,
-      pedra: 50,
-      cobre: 20,
-      ferro: 200,
-      vemelhita: 0,
-      diamante: 0
-    },
-    espadaVemelhita: {
-      madeira: 200,
-      pedra: 100,
-      cobre: 50,
-      ferro: 50,
-      vemelhita: 200,
-      diamante: 0
-    },
-    espadaDiamante: {
-      madeira: 400,
-      pedra: 200,
-      cobre: 100,
-      ferro: 100,
-      vemelhita: 100,
-      diamante: 250
+    shipWar: {
+      madeira: 1500,
+      pedra: 500,
+      tungstenio: 2800,
+      ferro: 2800,
+      vermelhita: 150,
+      diamante: 50
     },
 
-    /*Escudos*/
-    escudoMadeira: {
-      madeira: 500,
+    shipTravel: {
+      madeira: 11000,
+      pedra: 1500,
+      tungstenio: 2775,
+      ferro: 3000,
+      vermelhita: 150,
+      diamante: 50
+    },
+
+    shipSpy: {
+      madeira: 1500,
       pedra: 0,
-      cobre: 0,
-      ferro: 50,
-      vemelhita: 0,
-      diamante: 0
+      tungstenio: 2440,
+      ferro: 3000,
+      vermelhita: 200,
+      diamante: 20
     },
-    escudoPedra: {
-      madeira: 500,
-      pedra: 500,
-      cobre: 0,
-      ferro: 50,
-      vemelhita: 0,
-      diamante: 0
+
+    shipDestroyer: {
+      madeira: 11000,
+      pedra: 5000,
+      tungstenio: 3000,
+      ferro: 3000,
+      vermelhita: 350,
+      diamante: 100
     },
-    escudoCobre: {
-      madeira: 400,
-      pedra: 100,
-      cobre: 500,
-      ferro: 50,
-      vemelhita: 0,
-      diamante: 0
+
+    shipBus: {
+      madeira: 8000,
+      pedra: 2500,
+      tungstenio: 3000,
+      ferro: 4000,
+      vermelhita: 200,
+      diamante: 10
     },
-    escudoFerro: {
-      madeira: 400,
-      pedra: 100,
-      cobre: 50,
-      ferro: 1000,
-      vemelhita: 0,
-      diamante: 0
-    },
-    escudoVemelhita: {
-      madeira: 500,
-      pedra: 50,
-      cobre: 50,
-      ferro: 500,
-      vemelhita: 500,
-      diamante: 0
-    },
-    escudoDiamante: {
-      madeira: 500,
-      pedra: 500,
-      cobre: 250,
-      ferro: 500,
-      vemelhita: 25,
-      diamante: 1200
+
+    shipAngular: {
+      madeira: 1570,
+      pedra: 26,
+      tungstenio: 1500,
+      ferro: 1500,
+      vermelhita: 500,
+      diamante: 200
     }
 }
 

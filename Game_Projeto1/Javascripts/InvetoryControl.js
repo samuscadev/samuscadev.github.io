@@ -1,5 +1,6 @@
 const SECAO_UM = document.getElementById("sec1");
 const SECAO_DOIS = document.getElementById("sec2");
+const SECAO_EXPLORA = document.getElementById("sec3");
 const SECAO_COMPRA = document.getElementById("sec5");
 const SECAO_CONSTRUCAO = document.getElementById("sec6");
 
@@ -10,6 +11,9 @@ function preencherInventario(dadosJogador, secao){
     else if(secao == 1){
         precRecursos(dadosJogador);
     }
+    else if(secao == 2){
+        precExploracao(dadosJogador);
+    }
     else if(secao == 4){
         precLoja(dadosJogador);
     }
@@ -19,16 +23,27 @@ function preencherInventario(dadosJogador, secao){
     
 }
 
+function precExploracao(dadosJogador){
+    let htmlString = `  <h1>Exploração Espacial</h1>
+                        <h2>Buscar Planeta</h2>
+                        <button onclick="buscarPlaneta()">Buscar</button>
+                        `;
+
+    htmlString += "</div>";
+    SECAO_EXPLORA.innerHTML = htmlString;
+}
+
 function precLoja(dadosJogador){
     let htmlString = `  <h1>Compras</h1>
                         <h2>Recursos</h2>
                         <div class="inventario">`;
     
     for (let chave of Object.keys(dadosJogador.recursos || {})) { 
+        let nome = getNome(chave)
         let sprite = getSprites(chave);
         let preco = getPreco(chave) * dadosJogador.perDesconto;
         htmlString += ` <div class="carta">
-                            <h3>${chave}</h3>
+                            <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
                             <h3>$${preco}</h3>
                             <h3>100 unidades</h3>
@@ -47,12 +62,13 @@ function precConstruir(dadosJogador){
     
     for (let chave of Object.keys(dadosJogador.qntEquipamentos || {})) { 
         let sprite = getSpritesEquipamentos(chave);
+        let nome = getNome(chave)
 
         htmlString += ` <div class="carta">
-                            <h3>${chave}</h3>
+                            <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
                             <h3>Uma Unidade</h3>
-                            <button>Construir</button>
+                            <button onclick="construirItem('${chave}')">Construir</button>
                         </div>`;
     }
     
@@ -70,8 +86,9 @@ function precRecursos(dadosJogador){
         if(valor > 0){
             estaVazio = false;
             let sprite = getSprites(chave);
+            let nome = getNome(chave)
             htmlString += ` <div class="carta">
-                                <h3>${chave}</h3>
+                                <h3>${nome}</h3>
                                 <img src="${sprite}" h="64px" height="64px">
                                 <h3>${valor}</h3>
                             </div>`
@@ -97,8 +114,9 @@ function precEquipamentos(dadosJogador){
         if(valor > 0){
             estaVazio = false;
             let sprite = getSpritesEquipamentos(chave);
+            let nome = getNome(chave)
             htmlString += ` <div class="carta">
-                                <h3>${chave}</h3>
+                                <h3>${nome}</h3>
                                 <img src="${sprite}" h="64px" height="64px">
                                 <h3>${valor}</h3>
                             </div>`
