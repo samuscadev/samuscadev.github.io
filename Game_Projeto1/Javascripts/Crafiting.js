@@ -15,7 +15,10 @@ function construirItem(item){
                             <h3>Estoque: ${estoque}</h3>
                         </div>`;
     }
-    sHtml += "</div>";
+    let tempo = dadosJogador.tempTrabalho
+
+    sHtml += `</div>
+              <h3> Tempo necessário: ${tempo} dias</h3>`;
     mostrarMensagem(1, sHtml, item)
 }
 
@@ -50,7 +53,14 @@ function construir(item){
     for (let chave of Object.keys(RECEITA)) { 
         dadosJogador.recursos[chave] = dadosJogador.recursos[chave] - RECEITA[chave];            
     }
-    dadosJogador.qntEquipamentos[item] += 1;
 
-    salvarDados(dadosJogador)
+    let msPerDia = 5000;
+    let tempoConstrucao = dadosJogador.tempTrabalho * msPerDia
+
+    setTimeout(()=>{
+        dadosJogador = carregarDados() || {};
+        dadosJogador.qntEquipamentos[item] += 1;
+        salvarDados(dadosJogador)
+        precEquipamentos(dadosJogador);
+    }, tempoConstrucao)    
 }

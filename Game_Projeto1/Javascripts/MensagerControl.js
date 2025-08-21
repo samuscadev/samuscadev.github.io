@@ -1,6 +1,8 @@
 const TELA_DE_MENSAGEM = document.getElementById("mensagem");
 
 function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
+    pararPassagemTempo();
+
     let stringHtml = `  <h1>Mensagem de Erro</h1>
                         <p>Não foi possivel mostrar a mensagem o id: em MensagerControl.js está errado!</p>
                         <button onclick="fecharMensagem()">Fechar</button>`;
@@ -36,4 +38,5 @@ function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
 
 function fecharMensagem(){
     TELA_DE_MENSAGEM.style.display = "none";
+    ativarPassagemTempo();
 }

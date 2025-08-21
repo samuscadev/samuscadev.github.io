@@ -22,15 +22,7 @@
         <h1>Space Expansion</h1>
     </header>
 
-    <div id="Painel-Status">
-        <h1>Status:</h1>
-        <div id="status">
-            <p id="nome">Nome_do_jogador:</p>
-            <p id="dias" class="atributo">Dias Jogados: 0</p>
-            <p id="valor" class="atributo">Receita: $0</p>
-            <p id="forca" class="atributo">Força = 10</p>
-        </div>     
-    </div>
+    <div id="Painel-Status"></div>
 
     <section id="sec1"></section>
 
@@ -55,16 +47,39 @@
         <button>Fechar</button>
     </div>
 
+    <h1>Gerenciar:</h1>
     <div id="menu">
-        <h1>Gerenciar:</h1>
-        <button onclick="mostrarSecao(0, SECOES)">Equipamentos</button>
-        <button onclick="mostrarSecao(1, SECOES)">Recursos</button>
-        <button onclick="mostrarSecao(4, SECOES)">Compras</button>
-        <button onclick="mostrarSecao(2, SECOES)">Exploração Espacial</button>
-        <button onclick="mostrarSecao(3, SECOES)">Pesquisas</button>
-        <button onclick="resetarDados()">Resetar</button>
-        <button onclick="quebrarDados()">Quebrar o Jogo</button>
+        
+        <button onclick="mostrarSecao(0, SECOES)">
+            <img src="Sprites/itens/Ships/ship_Destroyer.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(1, SECOES)">
+            <img src="Sprites/itens/Bars/bar_Madeira.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(4, SECOES)">
+            <img src="Sprites/IU/shop.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(2, SECOES)">
+            <img src="Sprites/planets/planet_1.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(3, SECOES)">
+            <img src="Sprites/IU/search.png" width="54px" height="54px">
+        </button>
+        <button onclick="pararPassagemTempo()">
+            <img src="Sprites/IU/pause.png" width="54px" height="54px">
+        </button>
+        <button onclick="ativarPassagemTempo()">
+            <img src="Sprites/IU/play.png" width="54px" height="54px">
+        </button>        
     </div>
+
+    <h1>Ferramentas de Desenvolvedor:</h1>
+    <div id="sec-Dev-Tools">
+        <input type="text" id="dev-pass">
+        <button onclick="VmUXv9h4I6Rk()">Autenticar</button>  
+    </div>
+    
+    
     
     <!--Os Um zilhão de JavaScripts de cria! :) -->
     
@@ -85,6 +100,7 @@
 
     <script src="Javascripts/InvetoryControl.js"></script>
     <script src="Javascripts/SectionControl.js"></script>
+    <script src="Javascripts/703P=N8JWwt.js"></script>
     
 
     

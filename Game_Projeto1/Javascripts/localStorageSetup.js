@@ -6,6 +6,8 @@ if (!localStorage.getItem("dados")) {
     receita: 1000,
     forca: 0,
     perDesconto: 1,
+    tempTrabalho: 15,
+    tempPesquisa: 20,
     
     recursos: {
       madeira: 0,
@@ -36,6 +38,8 @@ function resetarDados() {
     receita: 1000,
     forca: 0,
     perDesconto: 1,
+    tempTrabalho: 15,
+    tempPesquisa: 20,
     
     recursos: {
       madeira: 0,
@@ -67,6 +71,8 @@ function quebrarDados() {
     receita: 0,
     forca: 0,
     perDesconto: 0.1,
+    tempTrabalho: 5,
+    tempPesquisa: 5,
     
     recursos: {
       madeira: 100000,

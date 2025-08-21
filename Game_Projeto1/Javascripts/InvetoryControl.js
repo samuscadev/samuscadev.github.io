@@ -8,7 +8,7 @@ function preencherInventario(dadosJogador, secao){
     if(secao == 0){
         precEquipamentos(dadosJogador);
     }
-    else if(secao == 1){
+    if(secao == 1){
         precRecursos(dadosJogador);
     }
     else if(secao == 2){

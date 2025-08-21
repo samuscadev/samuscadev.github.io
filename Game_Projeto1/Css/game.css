@@ -4,14 +4,22 @@
 }
 #Painel-Status{
     /*Flex: */
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     gap: 8px;
+    align-items: center;
 
     /*Tamanho: */
     width: 90vw;
     
     /*Margens: */
     margin: 10px auto;
+}
+@media (max-width: 500px) {
+    #Painel-Status{
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 section{
@@ -80,19 +88,18 @@ section{
     
     /*Flex: */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 2px;
 
     /*Margens: */
     margin-left: auto;
     margin-right: auto;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     #menu{
     /*Flex: */
-     width: 90%;
+     width: 80%;
     }
 }
 
@@ -100,17 +107,29 @@ section{
     text-align: center;
 }
 
+#menu button{
+    flex: 1 1 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0px;
+    margin-top: 0px;
+}
+
+#menu button:nth-child(even){
+    background-color: rgb(54, 125, 255);
+}
+#menu button:nth-child(even):hover{
+    background-color: rgb(255, 255, 255);
+}
+
 #status{
     /*Flex: */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
-
-    /*Margens: */
-    margin-left: auto;
-    margin-right: auto;
 }
+
 .atributo{
     /* Cores: */
     background-color: rgb(9, 95, 255);
@@ -127,5 +146,12 @@ section{
     
     /*Margens: */
     padding: 4px 7px;
-    border-radius: 12px;
+}
+
+.iconStatus{
+    width: 54px;
+    height: 54x;
+    background-color: rgb(54, 125, 255);
+
+    padding: 3px;
 }
