@@ -13,7 +13,7 @@
     width: 90vw;
     
     /*Margens: */
-    margin: 10px auto;
+    margin: 2%;
 }
 @media (max-width: 500px) {
     #Painel-Status{
@@ -35,7 +35,7 @@ section{
     width: 90vw;
     
     /*Margens: */
-    margin: 10px auto;
+    margin: 10px 2%;
 }
 
 .inventario{
@@ -56,6 +56,8 @@ section{
     
     /*Margens: */
     padding: 4px 4px;
+
+    text-align: center;
 }
 
 .carta{
@@ -83,8 +85,8 @@ section{
     }
 }
 
-#menu{
-    width: 30%;
+.menu{
+    width: 80%;
     
     /*Flex: */
     display: flex;
@@ -93,21 +95,21 @@ section{
     flex-wrap: wrap;
 
     /*Margens: */
-    margin-left: auto;
+    margin-left: 2%;
     margin-right: auto;
 }
 @media (max-width: 500px) {
-    #menu{
+    .menu{
     /*Flex: */
-     width: 80%;
+     width: 90%;
     }
 }
 
-#menu h1{
+.menu h1{
     text-align: center;
 }
 
-#menu button{
+.menu button{
     flex: 1 1 70px;
     display: flex;
     flex-direction: row;
@@ -116,14 +118,14 @@ section{
     margin-top: 0px;
 }
 
-#menu button:nth-child(even){
+.menu button:nth-child(even){
     background-color: rgb(54, 125, 255);
 }
-#menu button:nth-child(even):hover{
+.menu button:nth-child(even):hover{
     background-color: rgb(255, 255, 255);
 }
 
-#status{
+.status{
     /*Flex: */
     display: flex;
     flex-direction: row;
@@ -148,10 +150,57 @@ section{
     padding: 4px 7px;
 }
 
+.green-atributo{
+    /* Cores: */
+    background-color: rgb(20, 66, 39);
+    
+    /*Tamanho: */
+    width: auto;
+
+    /*Flex: */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    /*Margens: */
+    padding: 4px 7px;
+}
+
+.red-atributo{
+    /* Cores: */
+    background-color: rgb(255, 21, 21);
+    
+    /*Tamanho: */
+    width: auto;
+
+    /*Flex: */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    /*Margens: */
+    padding: 4px 7px;
+}
+
+.redIconStatus{
+    width: 54px;
+    height: 54x;
+    background-color: rgb(255, 54, 54);
+
+    padding: 3px;
+}
 .iconStatus{
     width: 54px;
     height: 54x;
     background-color: rgb(54, 125, 255);
 
     padding: 3px;
+}
+
+#gerenciar, #ferramentas, #sec-Dev-Tools{
+    margin-left: 2%;
 }

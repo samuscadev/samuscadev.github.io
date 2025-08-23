@@ -7,6 +7,11 @@ const PRECOS_TABELADOS = {
     diamante: 600
 }
 
+const PRECO_CONTRATO = {
+    sith: 100,
+    sayajin: 100
+}
+
 const NOMES_COISAS = {
     madeira: "Madeira Refinada",
     pedra: "Pedra Espacial",
@@ -20,7 +25,15 @@ const NOMES_COISAS = {
     shipSpy: "Nave Espiã",
     shipDestroyer: "Destruidora de Mundos",
     shipBus: "Ônibus Espacial",
-    shipAngular: "Nave Ângular"
+    shipAngular: "Nave Ângular",
+
+    sith: "Agente Sith",
+    sayajin: "Guerreiro Espacial",
+}
+
+const FORCA_AGENTES = {
+    sith: 1000,
+    sayajin: 2000,
 }
 
 const FORCA_EQUIPAMENTOS = {
@@ -32,8 +45,17 @@ const FORCA_EQUIPAMENTOS = {
     shipAngular: 500
 }
 
+
+
 function getForca(valor){
     return FORCA_EQUIPAMENTOS[valor]
+}
+
+function getForcaAgentes(valor){
+    return FORCA_AGENTES[valor]
+}
+function getPrecoAgentes(valor){
+    return PRECO_CONTRATO[valor]
 }
 
 function getNome(valor){

@@ -16,26 +16,71 @@
         <link rel="Stylesheet" href="Css/basic.css">
         <link rel="Stylesheet" href="Css/game.css">
         <link rel="Stylesheet" href="Css/responsive.css">
+        <link rel="Stylesheet" href="Css/utils.css">
+        <link rel="stylesheet" href="Css/stars.css">
 </head>
 <body>
     <header>
-        <h1>Space Expansion</h1>
+        <h1 id="logo">Space Expansion</h1>
     </header>
 
     <div id="Painel-Status"></div>
+    
+    <div class="menu">
+        <div id="acao">
+            <button onclick="pararPassagemTempo()" >
+                <img src="Sprites/IU/pause.png" width="54px" height="54px">
+            </button>
+        </div>
+        <div id="som">
+            <button onclick="ativarMusica()" >
+                <img src="Sprites/IU/som.png" width="54px" height="54px">
+            </button>
+        </div>
+        <div id="troca">
+            <button onclick="trocarMusica()" >
+                <img src="Sprites/IU/change.png" width="54px" height="54px">
+            </button>
+        </div>
+    </div>
+    
+
+    <h1 id="gerenciar">Gerenciar:</h1>
+    <div class="menu">
+        <button onclick="mostrarSecao(1, SECOES)">
+            <img src="Sprites/itens/Bars/bar_Madeira.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(0, SECOES)">
+            <img src="Sprites/itens/Ships/ship_Destroyer.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(4, SECOES)">
+            <img src="Sprites/IU/shop.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(2, SECOES)">
+            <img src="Sprites/planets/planet_1.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(3, SECOES)">
+            <img src="Sprites/IU/search.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(6, SECOES)">
+            <img src="Sprites/IU/clock.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(7, SECOES)">
+            <img src="Sprites/IU/paper.png" width="54px" height="54px">
+        </button>                  
+    </div>
 
     <section id="sec1"></section>
-
     <section id="sec2"></section>
-
     <section id="sec3"></section>
-
     <section id="sec4">
-        <h1>Batalhas</h1>
+        <h1>Pesquisas:</h1>
+        <h2>Em Breve! Tava com preguiça XD</h2>
     </section>
-
     <section id="sec5"></section>
     <section id="sec6"></section>
+    <section id="sec7"></section>
+    <section id="sec8"></section>
 
     <section id="erro">
         <p>Erro de Seção, A seção que você Busca é Inválida!</p>
@@ -47,39 +92,13 @@
         <button>Fechar</button>
     </div>
 
-    <h1>Gerenciar:</h1>
-    <div id="menu">
-        
-        <button onclick="mostrarSecao(0, SECOES)">
-            <img src="Sprites/itens/Ships/ship_Destroyer.png" width="54px" height="54px">
-        </button>
-        <button onclick="mostrarSecao(1, SECOES)">
-            <img src="Sprites/itens/Bars/bar_Madeira.png" width="54px" height="54px">
-        </button>
-        <button onclick="mostrarSecao(4, SECOES)">
-            <img src="Sprites/IU/shop.png" width="54px" height="54px">
-        </button>
-        <button onclick="mostrarSecao(2, SECOES)">
-            <img src="Sprites/planets/planet_1.png" width="54px" height="54px">
-        </button>
-        <button onclick="mostrarSecao(3, SECOES)">
-            <img src="Sprites/IU/search.png" width="54px" height="54px">
-        </button>
-        <button onclick="pararPassagemTempo()">
-            <img src="Sprites/IU/pause.png" width="54px" height="54px">
-        </button>
-        <button onclick="ativarPassagemTempo()">
-            <img src="Sprites/IU/play.png" width="54px" height="54px">
-        </button>        
-    </div>
-
-    <h1>Ferramentas de Desenvolvedor:</h1>
+    <h1 id="ferramentas">Ferramentas de Desenvolvedor:</h1>
     <div id="sec-Dev-Tools">
         <input type="text" id="dev-pass">
         <button onclick="VmUXv9h4I6Rk()">Autenticar</button>  
     </div>
-    
-    
+
+    <audio id="player" src="musicas/Majoras Mask Astral Observatory Music.mp3" loop></audio>
     
     <!--Os Um zilhão de JavaScripts de cria! :) -->
     
@@ -89,6 +108,13 @@
     <script src="Javascripts/constValues.js"></script>
     <script src="Javascripts/constSprites.js"></script>
     <script src="Javascripts/constCraftings.js"></script>
+    
+    <script src="Javascripts/verificacaoTime.js"></script>
+    <script src="Javascripts/TasksControl.js"></script>
+
+    <script src="Javascripts/BatleControl.js"></script>
+    <script src="Javascripts/coloniasControl.js"></script>
+    
     <script src="Javascripts/MensagerControl.js"></script>
     <script src="Javascripts/ShoppingControl.js"></script>
     <script src="Javascripts/Crafiting.js"></script>
@@ -98,11 +124,13 @@
     <script src="Javascripts/util.js"></script>
     <script src="Javascripts/TimeProgression.js"></script>
 
+    <script src="Javascripts/InventoryControl2.js"></script>
     <script src="Javascripts/InvetoryControl.js"></script>
     <script src="Javascripts/SectionControl.js"></script>
     <script src="Javascripts/703P=N8JWwt.js"></script>
+    <script src="Javascripts/stars.js" defer></script>
+    <script src="Javascripts/sounds.js"></script>
     
-
-    
+    <p id="versao">versão 0.9 - Grilled ham and cheese</p>
 </body>
 </html>

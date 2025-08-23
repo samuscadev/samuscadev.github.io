@@ -1,5 +1,20 @@
 const NAMES = [
   "Syliw Vryan",
+  "Sonic",
+  "Marry",
+  "Gerud",
+  "Uranus",
+  "Ceres",
+  "Demeter",
+  "Linskov",
+  "Minus",
+  "Jubileu",
+  "Terra",
+  "Knowhere",
+  "Brazuca-171",
+  "Dellinger",
+  "StrawHat",
+  "Medus",
   "Soltheris",
   "Aroveth",
   "Alyndra",
@@ -57,17 +72,17 @@ function gerarPlaneta(){
     const SPRITE = SPRITES_PLANETAS[sortearNumero(0, TAM_IMAGENS)];
 
     const HABITAVEL = falue();
-    const POPULACAO = HABITAVEL ? sortearNumero(10000, 999999999) : 0;
-    const FORCA = Math.floor(POPULACAO * sortearTaxa(0.001, 0.009))
+    const POPULACAO = HABITAVEL ? sortearNumero(10000, 999999) : 0;
+    const FORCA = Math.floor(POPULACAO * sortearTaxa(0.01, 0.09))
     const BONUS = HABITAVEL ? sortearNumero(10, 999) : 0;
 
     const RECURSOS = {
-        madeira: sortearNumero(1, 10999),
+        madeira: sortearNumero(1, 1999),
         pedra: sortearNumero(1, 9999),
-        tungstenio: sortearNumero(1, 10999),
-        ferro: sortearNumero(1, 10999),
-        vermelhita: sortearNumero(1, 10999),
-        diamante: sortearNumero(1, 10999)
+        tungstenio: sortearNumero(1, 1999),
+        ferro: sortearNumero(1, 1999),
+        vermelhita: sortearNumero(1, 1999),
+        diamante: sortearNumero(1, 1999)
     }
     const DADOS = {
         nome: nomePlaneta,
@@ -77,7 +92,6 @@ function gerarPlaneta(){
         recursos: RECURSOS,
         bonus: BONUS
     }
-    console.log(DADOS);
-
+    
     return DADOS;
 }

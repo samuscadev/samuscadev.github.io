@@ -5,13 +5,7 @@ function validar() {
                 return;
             }
             else{
-                salvarDadosSave(nome);
+                criarDados(nome);
                 window.location.replace("game.html");
             }
-}
-
-function salvarDadosSave(nome){
-    let dadosJogador = carregarDados() || {};
-    dadosJogador.nomeJogador = nome;
-    salvarDados(dadosJogador);
 }

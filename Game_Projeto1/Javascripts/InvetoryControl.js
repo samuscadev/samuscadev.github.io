@@ -12,7 +12,7 @@ function preencherInventario(dadosJogador, secao){
         precRecursos(dadosJogador);
     }
     else if(secao == 2){
-        precExploracao(dadosJogador);
+        precExploracao();
     }
     else if(secao == 4){
         precLoja(dadosJogador);
@@ -20,15 +20,43 @@ function preencherInventario(dadosJogador, secao){
     else if(secao == 5){
         precConstruir(dadosJogador);
     }
+    else if(secao == 6){
+        precTasks();
+    }
+    else if(secao == 7){
+        precContratos();
+    }
     
 }
 
-function precExploracao(dadosJogador){
+function precExploracao(){
+    let dadosJogador = carregarDados();
     let htmlString = `  <h1>Exploração Espacial</h1>
                         <h2>Buscar Planeta</h2>
                         <button onclick="buscarPlaneta()">Buscar</button>
                         `;
 
+    htmlString += "</div>";
+
+    if(dadosJogador.planetasConquistados.length > 0){
+        htmlString += `<h2>${dadosJogador.planetasConquistados.length} Planeta(s) Conquistados: </h2>
+        <div class="inventario">`;
+
+        dadosJogador.planetasConquistados.forEach(planeta => {
+            let nome = planeta.nome;
+            let sprite = planeta.sprite;
+            let bonus = planeta.bonus;
+
+            htmlString += ` <div class="carta">
+                                <img src="${sprite}" h="64px" height="64px">
+                                <h3>${nome}</h3>
+                                <div class="custo">
+                                    <img src="Sprites/IU/coin.png" class="iconStatus">
+                                    <p class="green-atributo">+${bonus}/por Dia</p>
+                                </div>
+                        </div>`;
+        });
+    }
     htmlString += "</div>";
     SECAO_EXPLORA.innerHTML = htmlString;
 }
@@ -45,8 +73,16 @@ function precLoja(dadosJogador){
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
-                            <h3>$${preco}</h3>
-                            <h3>100 unidades</h3>
+
+                            <div class="custo">
+                                <img src="Sprites/IU/coin.png" class="iconStatus">
+                                <p class="atributo">$${preco}</p>
+                            </div>
+                            <div class="custo">
+                                <img src="${sprite}" h="42px" height="42px" class="iconStatus">
+                                <p class="atributo">+100</p>
+                            </div>                              
+
                             <button onclick="comprar('${chave}', ${preco})">Comprar</button>
                         </div>`;
     }
@@ -115,10 +151,18 @@ function precEquipamentos(dadosJogador){
             estaVazio = false;
             let sprite = getSpritesEquipamentos(chave);
             let nome = getNome(chave)
+            let forca = getForca(chave)
             htmlString += ` <div class="carta">
                                 <h3>${nome}</h3>
                                 <img src="${sprite}" h="64px" height="64px">
-                                <h3>${valor}</h3>
+                                <div class="custo">
+                                    <img src="${sprite}" h="42px" height="42px" class="iconStatus">
+                                    <p class="atributo">${valor}</p>
+                                </div>  
+                                <div class="custo">
+                                    <img src="Sprites/IU/forca.png" class="iconStatus">
+                                    <p class="atributo">${forca}</p>
+                                </div>
                             </div>`
         }
     }

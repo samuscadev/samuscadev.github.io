@@ -11,3 +11,25 @@ function VmUXv9h4I6Rk(){
         <button onclick="quebrarDados()">Quebrar o Jogo</button>"`;
     }
 }
+
+const BOTAO_ACAO = document.getElementById("acao");
+let pausar = true;
+
+BOTAO_ACAO.addEventListener("click", ()=>{
+    if(pausar){
+        pausar = false;
+        BOTAO_ACAO.innerHTML = `
+        <button onclick="ativarPassagemTempo()">
+            <img src="Sprites/IU/play.png" width="54px" height="54px">
+        </button> 
+        `
+    }
+    else{
+        pausar = true;
+        BOTAO_ACAO.innerHTML = `
+            <button onclick="pararPassagemTempo()" >
+                <img src="Sprites/IU/pause.png" width="54px" height="54px">
+            </button>
+        `
+    }
+})

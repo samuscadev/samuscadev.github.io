@@ -1,6 +1,7 @@
-if (!localStorage.getItem("dados")) {
+
+function criarDados(nome){
   const dados = {
-    nomeJogador: 'player',
+    nomeJogador: nome,
     dias: 0,
     salario: 10,
     receita: 1000,
@@ -8,6 +9,7 @@ if (!localStorage.getItem("dados")) {
     perDesconto: 1,
     tempTrabalho: 15,
     tempPesquisa: 20,
+    aumentoForca :1,
     
     recursos: {
       madeira: 0,
@@ -25,7 +27,17 @@ if (!localStorage.getItem("dados")) {
       shipDestroyer: 0,
       shipBus: 0,
       shipAngular: 0
-    }
+    },
+
+    agentes: {
+      sith: 0,
+      sayajin: 0
+    },
+
+    listaAfazeres: [],
+    planetaAlvo: null,
+    planetasConquistados: [],
+    vitorias: [],
   };
   localStorage.setItem("dados", JSON.stringify(dados));
 }
@@ -40,6 +52,7 @@ function resetarDados() {
     perDesconto: 1,
     tempTrabalho: 15,
     tempPesquisa: 20,
+    aumentoForca :1,
     
     recursos: {
       madeira: 0,
@@ -57,7 +70,17 @@ function resetarDados() {
       shipDestroyer: 0,
       shipBus: 0,
       shipAngular: 0
-    }
+    },
+
+    agentes: {
+      sith: 0,
+      sayajin: 0
+    },
+
+    listaAfazeres: [],
+    planetaAlvo: null,
+    planetasConquistados: [],
+    vitorias: [],
   };
 
   localStorage.setItem("dados", JSON.stringify(dadosOriginais));
@@ -71,8 +94,9 @@ function quebrarDados() {
     receita: 0,
     forca: 0,
     perDesconto: 0.1,
-    tempTrabalho: 5,
+    tempTrabalho: 4,
     tempPesquisa: 5,
+    aumentoForca :1,
     
     recursos: {
       madeira: 100000,
@@ -90,8 +114,22 @@ function quebrarDados() {
       shipDestroyer: 100,
       shipBus: 100,
       shipAngular: 100
-    }
+    },
+    agentes: {
+      sith: 100,
+      sayajin: 100
+    }, 
+
+    listaAfazeres: [],
+    planetaAlvo: null,
+    planetasConquistados: [],
+    vitorias: [],
   };
 
   localStorage.setItem("dados", JSON.stringify(dadosQuebrados));
+}
+
+function deletarDados(){
+  localStorage.removeItem("dados");
+  location.reload();
 }

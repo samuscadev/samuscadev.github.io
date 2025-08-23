@@ -1,11 +1,11 @@
 const RECEITAS = {
     shipWar: {
-      madeira: 1500,
+      madeira: 500,
       pedra: 500,
-      tungstenio: 2800,
-      ferro: 2800,
-      vermelhita: 150,
-      diamante: 50
+      tungstenio: 200,
+      ferro: 200,
+      vermelhita: 50,
+      diamante: 0
     },
 
     shipTravel: {

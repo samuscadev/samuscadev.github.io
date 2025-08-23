@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic WorkShop</title>
+    <title>Space Expansion</title>
 
     <!--Fontes:-->
         <!--Barriecito Google_Fonts:-->
@@ -13,19 +13,26 @@
     
         <!--Importações: -->
         <link rel="Stylesheet" href="Css/basic.css">
+        <link rel="Stylesheet" href="Css/game.css">
         <link rel="Stylesheet" href="Css/responsive.css">
+        <link rel="stylesheet" href="Css/stars.css">
 </head>
 <body>
     <header>
-        <h1>Magic WorkShop</h1>
+        <h1>Space Expansion</h1>
     </header>
     
-    <div id="menu-inicial">
-        <img id="imagem-inicial" src="Sprites/prototipo.svg">
-        <p>Crie a sua oficina do Reino Mágico e lute por sua glória em torneios!</p>
-        <button onclick="window.location.href='criarJogo.html'"> Novo Jogo</button>
-    </div>
-    
 
+    <div id="menu-inicial">
+        <img id="imagem-inicial" src="Sprites/planets/planet_4.png">
+        <p>Crie seu Império Galático! Conquiste riquezas, crie seus exercitos e explore a galáxia em buscar de poder!</p>        
+    </div>
+    <div id="saves"></div>
+    
+    <script src="Javascripts/localStorageSetup.js"></script>
+    <script src="Javascripts/util.js"></script>
+    <script src="Javascripts/mainPage.js"></script>
+    <script src="Javascripts/stars.js" defer></script>
+    
 </body>
 </html>

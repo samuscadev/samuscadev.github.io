@@ -53,14 +53,11 @@ function construir(item){
     for (let chave of Object.keys(RECEITA)) { 
         dadosJogador.recursos[chave] = dadosJogador.recursos[chave] - RECEITA[chave];            
     }
+    salvarDados(dadosJogador)
 
-    let msPerDia = 5000;
-    let tempoConstrucao = dadosJogador.tempTrabalho * msPerDia
-
-    setTimeout(()=>{
-        dadosJogador = carregarDados() || {};
-        dadosJogador.qntEquipamentos[item] += 1;
-        salvarDados(dadosJogador)
-        precEquipamentos(dadosJogador);
-    }, tempoConstrucao)    
+    let chave = item;
+    let descricao = `Construção de ${item}`;
+    let dataConclusao = dadosJogador.dias + dadosJogador.tempTrabalho;
+    
+    adicionarTarefa(chave, descricao, dadosJogador.dias, dataConclusao);
 }

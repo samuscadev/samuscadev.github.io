@@ -13,6 +13,9 @@ function atualizarStatus(elemento, dias) {
   for (let chave of Object.keys(dados.qntEquipamentos)) {
       forcaTotal += getForca(chave) * dados.qntEquipamentos[chave];
   }
+  for (let chave of Object.keys(dados.agentes)) {
+      forcaTotal += getForcaAgentes(chave) * dados.agentes[chave];
+  }
   dados.forca = forcaTotal;
   salvarDados(dados);
 
@@ -20,17 +23,18 @@ function atualizarStatus(elemento, dias) {
     <h2>Status:</h2>
     <p id="nome">${dados.nomeJogador}</p>
 
-    <div id="status">
+    <div class="status">
         <img src="Sprites/IU/calendar.png" class="iconStatus">
         <p id="dias" class="atributo">${dados.dias}</p>
     </div>
-    <div id="status">
+    <div class="status">
         <img src="Sprites/IU/coin.png" class="iconStatus">
-        <p id="valor" class="atributo">$ ${dados.receita}</p>
+        <p id="valor" class="atributo">$ ${formatarNumero(dados.receita)}</p>
+        <p id="valor" class="green-atributo">+$${dados.salario}</p>
     </div>
-    <div id="status">
+    <div class="status">
         <img src="Sprites/IU/forca.png" class="iconStatus">
-        <p id="forca" class="atributo">${dados.forca}</p>
+        <p id="forca" class="atributo">${formatarNumero(dados.forca)}</p>
     </div>    
   `;
 }

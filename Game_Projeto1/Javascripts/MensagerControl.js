@@ -29,14 +29,29 @@ function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
     if(id == 3){
         stringHtml = `<h1>Planeta Encontrado!</h1>`;
         stringHtml += sHtml;                
-        stringHtml += `<button onclick="fecharMensagem()">Fechar</button>`;
+        stringHtml += `<button onclick="fecharMensagem(1)">Fechar</button>`;
+    }
+
+    if(id == 4){
+        stringHtml = `<h1>Batalha!</h1>`;
+        stringHtml += sHtml;                
+        stringHtml += `<button onclick="fecharMensagem(1)">Desistir</button>`;
+    }
+    if(id == 5){
+        stringHtml = sHtml;                
+        stringHtml += `<button onclick="fecharMensagem(1)">Fechar</button>`;
     }
 
     TELA_DE_MENSAGEM.innerHTML = stringHtml;
     TELA_DE_MENSAGEM.style.display = "flex";
 }
 
-function fecharMensagem(){
+function fecharMensagem(par = null){
+    if(par == 1){
+        let dadosJogador = carregarDados();
+        dadosJogador.planetaAlvo = null;
+        salvarDados(dadosJogador);
+    }
     TELA_DE_MENSAGEM.style.display = "none";
     ativarPassagemTempo();
 }

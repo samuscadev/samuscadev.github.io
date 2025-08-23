@@ -16,8 +16,20 @@ const SPRITES_EQUIPAMENTOS = {
       shipAngular: "Sprites/itens/Ships/ship_Angular.png"
 }
 
+const SPRITES_AGENTES = {
+    sith: "Sprites/IU/sith.png",
+    sayajin: "Sprites/IU/sayajin.ico",
+}
+
 function getSprites(valor){
     return SPRITES_RECURSOS[valor] || (
+        window.alert("Erro ao Capturar Sprite! error in constSprites.js"),
+        null
+    );
+}
+
+function getSpritesAgentes(valor){
+    return SPRITES_AGENTES[valor] || (
         window.alert("Erro ao Capturar Sprite! error in constSprites.js"),
         null
     );
