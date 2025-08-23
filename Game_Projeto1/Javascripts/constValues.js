@@ -8,8 +8,8 @@ const PRECOS_TABELADOS = {
 }
 
 const PRECO_CONTRATO = {
-    sith: 100,
-    sayajin: 500
+    sith: 1000,
+    sayajin: 2000
 }
 
 const NOMES_COISAS = {

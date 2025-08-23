@@ -3,7 +3,7 @@ function criarDados(nome){
   const dados = {
     nomeJogador: nome,
     dias: 0,
-    salario: 10,
+    salario: 50,
     receita: 1000,
     forca: 0,
     perDesconto: 1,
@@ -46,7 +46,7 @@ function resetarDados() {
   const dadosOriginais = {
     nomeJogador: 'player',
     dias: 0,
-    salario: 10,
+    salario: 50,
     receita: 1000,
     forca: 0,
     perDesconto: 1,

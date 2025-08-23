@@ -34,6 +34,8 @@ function precContratos(){
     let dadosJogador = carregarDados();
     let htmlString = `
         <h1>Agentes Disponiveis:</h1>
+        <h3>Os agentes se juntam a você após ${dadosJogador.tempTrabalho} dias de assinar o contrato, eles precisam viajar até chegar em seu planeta ;). Para ver quando um agente contratado chega, cheque a lista de tarefas:</h3>
+        <button onclick="mostrarSecao(6, SECOES)">Tarefas</button>
         <div class="inventario">
     `;
 
@@ -46,12 +48,12 @@ function precContratos(){
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
                             <div class="custo">
-                                <img src="Sprites/IU/coin.png" class="iconStatus">
-                                <p class="atributo">$${preco}</p>
+                                <img src="Sprites/IU/coin.png" class="redIconStatus">
+                                <p class="red-atributo"> - $${preco}</p>
                             </div>
                             <div class="custo">
                                 <img src="Sprites/IU/forca.png" class="iconStatus">
-                                <p class="atributo">+${forca}</p>
+                                <p class="green-atributo">+ ${forca}</p>
                             </div>
                                 
                             
