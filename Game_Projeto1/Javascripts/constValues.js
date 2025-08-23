@@ -9,7 +9,7 @@ const PRECOS_TABELADOS = {
 
 const PRECO_CONTRATO = {
     sith: 100,
-    sayajin: 100
+    sayajin: 500
 }
 
 const NOMES_COISAS = {
