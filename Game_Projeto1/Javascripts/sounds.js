@@ -24,13 +24,13 @@ BOTAO_SOM.addEventListener("click", ()=>{
         ligado = true;
         ativarMusica();
         BOTAO_SOM.innerHTML = `<button>
-        <img src="Sprites/IU/semSom.png" width="54px" height="54px">
+        <img src="Sprites/IU/som.png" width="54px" height="54px">
         </button>`;
     } else {
         ligado = false;
         desativarMusica();
         BOTAO_SOM.innerHTML = `<button>
-        <img src="Sprites/IU/som.png" width="54px" height="54px">
+        <img src="Sprites/IU/semSom.png" width="54px" height="54px">
         </button>`;
     }
 });
