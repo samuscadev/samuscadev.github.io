@@ -12,6 +12,7 @@ function comprar(produto, valor){
   else{
       dadosJogador.receita -= valor;
       acrescentarRecurso(dadosJogador, produto, 100);
+      piscarBotao(0);
       salvarDados(dadosJogador);
       precContratos();
   }

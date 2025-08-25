@@ -23,3 +23,31 @@ if(document.getElementById("logo")){
       window.location.href='index.html';
   })
 }
+
+const BOTOES_SECAO = document.querySelectorAll(".botaoSecao")
+BOTOES_SECAO.forEach(botao => {
+    
+    botao.dataset.corOriginal = getComputedStyle(botao).backgroundColor;
+
+    botao.addEventListener("click", () => {
+        
+        BOTOES_SECAO.forEach(b => {
+            b.style.backgroundColor = b.dataset.corOriginal;
+        });
+
+        botao.style.backgroundColor = "white";
+    });
+});
+
+function piscarBotao(id){
+    let botao = BOTOES_SECAO[id];
+    botao.dataset.corOriginal = getComputedStyle(botao).backgroundColor;
+
+    setTimeout(()=>{
+        BOTOES_SECAO[id].style.backgroundColor = "red";
+    }, 500)
+
+    setTimeout(()=>{
+        BOTOES_SECAO[id].style.backgroundColor = botao.dataset.corOriginal;
+    }, 2000)
+}

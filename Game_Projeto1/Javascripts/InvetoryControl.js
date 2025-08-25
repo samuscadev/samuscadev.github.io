@@ -4,22 +4,6 @@ const SECAO_EXPLORA = document.getElementById("sec3");
 const SECAO_COMPRA = document.getElementById("sec5");
 const SECAO_CONSTRUCAO = document.getElementById("sec6");
 
-const BOTOES_SECAO = document.querySelectorAll(".botaoSecao")
-BOTOES_SECAO.forEach(botao => {
-    
-    botao.dataset.corOriginal = getComputedStyle(botao).backgroundColor;
-
-    botao.addEventListener("click", () => {
-        
-        BOTOES_SECAO.forEach(b => {
-            b.style.backgroundColor = b.dataset.corOriginal;
-        });
-
-        botao.style.backgroundColor = "white";
-    });
-});
-
-
 function preencherInventario(dadosJogador, secao){
     if(secao == 0){
         precEquipamentos(dadosJogador);
@@ -124,7 +108,8 @@ function precConstruir(dadosJogador){
                         </div>`;
     }
     
-    htmlString += "</div>";
+    htmlString += `</div>
+                <button onclick="mostrarSecao(0, SECOES)" class="botaoSecao">Voltar</button>`;
     SECAO_CONSTRUCAO.innerHTML = htmlString;
 }
 

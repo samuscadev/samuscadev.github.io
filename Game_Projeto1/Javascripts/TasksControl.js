@@ -15,6 +15,7 @@ function adicionarTarefa(chave, nome, dataAtual, dataConclusao){
     salvarDados(dadosJogador);
 
     Tasks.push(OBJETO)
+    piscarBotao(5);
 }
 
 function getTarefas(){
