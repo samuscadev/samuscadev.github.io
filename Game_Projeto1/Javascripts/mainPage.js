@@ -23,6 +23,6 @@ if (localStorage.getItem("dados")) {
 }
 else{
     SAVES.innerHTML = `
-        <button onclick="window.location.href='criarJogo.html'"> Novo Jogo</button>
+        <button onclick="window.location.href='criarJogo.html'" id="main-Button"> Novo Jogo</button>
     `;
 }

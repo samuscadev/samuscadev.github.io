@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic WorkShop</title>
+    <title>Space Expansion</title>
 
     <!--Fontes:-->
         <!--Barriecito Google_Fonts:-->
@@ -18,12 +18,22 @@
 </head>
 <body>
     <header>
-        <h1>Magic WorkShop</h1>
+        <h1>Space Expansion</h1>
     </header>
     <div id="menu-inicial">
-        <h2>Para Começar Digte seu nome:</h2>
+        <h2>Para Começar Digte um ID:</h2>
         <input type="text" value="Player" id="nome" required>
-        <button onclick="validar()">Enviar</button>
+        <h2>Nome do Seu Império:</h2>
+        <input type="text" value="Império Galático" id="impNome" required>
+        <h2>Escolha sua bandeira:</h2>
+        <h2>Escolha uma classe:</h2>
+        <select id="classes">
+            <option type="text" value="a">Bom de Cabeça</option>
+            <option type="text" value="b">Bom de Guerra</option>
+            <option type="text" value="c">Bom de Papo</option>
+        </select>
+        
+        <button onclick="validar()" id="main-Button">Criar Save</button>
     </div>
     
     <script src="Javascripts/localStorageSetup.js"></script>

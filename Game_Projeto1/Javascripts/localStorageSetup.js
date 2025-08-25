@@ -1,7 +1,9 @@
 
-function criarDados(nome){
+function criarDados(nome, nomeImp, spriteFlag){
   const dados = {
     nomeJogador: nome,
+    nomeImperio: nomeImp,
+    bandeira: spriteFlag,
     dias: 0,
     salario: 50,
     receita: 1000,
