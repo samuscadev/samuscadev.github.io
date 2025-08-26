@@ -140,17 +140,6 @@ button img{
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 850px) {
-    #mensagem{
-    /*Flex: */
-    width: 95vw;
-    position: absolute;
-    top: 0%;
-    margin: 5px;
-    left: 0%;
-    transform: none;
-    }
-}
 #quadrado{
     background-image: transparent;
     border: 3px solid white;

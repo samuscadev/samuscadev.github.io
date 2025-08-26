@@ -18,13 +18,15 @@
         display: none;
     }
 }
-
+.quebra-Custo{
+    width: 100%;
+}
 .custo{
-    width: 90%;
+    width: 100%;
     justify-content: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    
 }
 
 .custo p{

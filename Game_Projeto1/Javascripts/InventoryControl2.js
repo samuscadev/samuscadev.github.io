@@ -47,16 +47,16 @@ function precContratos(){
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
-                            <div class="custo">
-                                <img src="Sprites/IU/coin.png" class="redIconStatus">
-                                <p class="red-atributo"> - $${preco}</p>
+                            <div class="quebra-Custo">
+                                <div class="custo">
+                                    <img src="Sprites/IU/coin.png" class="redIconStatus">
+                                    <p class="red-atributo"> - $${preco}</p>
+                                </div>
+                                <div class="custo">
+                                    <img src="Sprites/IU/forca.png" class="iconStatus">
+                                    <p class="green-atributo">+ ${forca}</p>
+                                </div>
                             </div>
-                            <div class="custo">
-                                <img src="Sprites/IU/forca.png" class="iconStatus">
-                                <p class="green-atributo">+ ${forca}</p>
-                            </div>
-                                
-                            
                             <button onclick="contratarAgente('${chave}', ${preco})">Contratar</button>
                         </div>`;
     }
@@ -73,13 +73,15 @@ function precContratos(){
             htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
-                            <div class="custo">
-                                <img src="${sprite}" h="64px" height="64px" class="iconStatus">
-                                <p class="atributo">${valor}</p>
-                            </div>
-                            <div class="custo">
-                                <img src="Sprites/IU/forca.png" class="iconStatus">
-                                <p class="atributo">${forca}</p>
+                            <div class="quebra-Custo">
+                                <div class="custo">
+                                    <img src="${sprite}" h="64px" height="64px" class="iconStatus">
+                                    <p class="atributo">${valor}</p>
+                                </div>
+                                <div class="custo">
+                                    <img src="Sprites/IU/forca.png" class="iconStatus">
+                                    <p class="atributo">${forca}</p>
+                                </div>
                             </div>
                         </div>`;
         }    

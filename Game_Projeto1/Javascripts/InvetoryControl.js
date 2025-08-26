@@ -73,15 +73,17 @@ function precLoja(dadosJogador){
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
-
-                            <div class="custo">
-                                <img src="Sprites/IU/coin.png" class="iconStatus">
-                                <p class="atributo">$${preco}</p>
+                            <div class="quebra-Custo">
+                                <div class="custo">
+                                    <img src="Sprites/IU/coin.png" class="iconStatus">
+                                    <p class="atributo">$${preco}</p>
+                                </div>
+                                <div class="custo">
+                                    <img src="${sprite}" h="42px" height="42px" class="iconStatus">
+                                    <p class="atributo">+100</p>
+                                </div>
                             </div>
-                            <div class="custo">
-                                <img src="${sprite}" h="42px" height="42px" class="iconStatus">
-                                <p class="atributo">+100</p>
-                            </div>                              
+                                                          
 
                             <button onclick="comprar('${chave}', ${preco})">Comprar</button>
                         </div>`;
