@@ -1,5 +1,5 @@
 
-function criarDados(nome, nomeImp, spriteFlag){
+function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png"){
   const dados = {
     nomeJogador: nome,
     nomeImperio: nomeImp,

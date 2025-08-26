@@ -26,6 +26,7 @@ function acrescentarAgente(dadosJogador, agente){
     let dataConclusao = dadosJogador.dias + dadosJogador.tempTrabalho;
     
     adicionarTarefa(chave, descricao, dadosJogador.dias, dataConclusao);
+    mostrarMensagem(6);
   }
   else{
     window.alert("Save Desatualizado")

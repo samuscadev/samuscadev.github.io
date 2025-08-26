@@ -132,6 +132,12 @@ section{
     flex-wrap: wrap;
 }
 
+#bandeira{
+    border: 3px white solid;
+    padding: 2px;
+    border-radius: 50%;
+}
+
 .atributo{
     /* Cores: */
     background-color: rgb(9, 95, 255);
@@ -204,3 +210,11 @@ section{
 #gerenciar, #ferramentas, #sec-Dev-Tools{
     margin-left: 2%;
 }
+
+#cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+

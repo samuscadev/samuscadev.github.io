@@ -21,7 +21,11 @@ function atualizarStatus(elemento, dias) {
 
   elemento.innerHTML = `
     <h2>Status:</h2>
-    <p id="nome">${dados.nomeJogador}</p>
+    <div id="cabecalho">
+        <img id="bandeira" src="${dados.bandeira}">
+        <h3 id="nome">@${dados.nomeJogador}</h3>
+        <h3 class="atributo">${dados.nomeImperio}</h3>
+    </div>
 
     <div class="status">
         <img src="Sprites/IU/calendar.png" class="iconStatus">

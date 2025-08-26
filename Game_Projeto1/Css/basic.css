@@ -152,7 +152,7 @@ button img{
 #quadrado h1{
     color: white;
 }
-#main-Button{
+.main-Button{
     background-color: transparent;
     border: 2px solid white;
     border-radius: 0px;
@@ -163,7 +163,7 @@ button img{
     margin-left: auto;
 }
 
-#main-Button:hover{
+.main-Button:hover{
     background-color: white;
 }
 
@@ -172,7 +172,7 @@ button img{
 }
 
 #versao{
+    text-align: center;
     display: block;
-    position: static;
-    margin: 10px auto;
+    margin: 20px auto;
 }

@@ -75,6 +75,9 @@
     .quebra-Custo .atributo, .quebra-Custo .red-atributo, .quebra-Custo .green-atributo{
         flex: 1;
     }
+    #bandeira{
+        width: 32px; height: 32px;
+    }
     
 }
 

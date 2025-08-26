@@ -41,6 +41,12 @@ function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
         stringHtml = sHtml;                
         stringHtml += `<button onclick="fecharMensagem(1)">Fechar</button>`;
     }
+    if(id == 6){
+        let dadosJogador = carregarDados();
+        stringHtml = `  <h1>Agente Contratado!</h1>
+                        <p>Ele pegará uma nave e chegará e após ${dadosJogador.tempTrabalho} dias. Para ver quando um agente contratado chega, cheque a lista de tarefas:</p>
+                        <button onclick="fecharMensagem()">Fechar</button>`;
+    }
 
     TELA_DE_MENSAGEM.innerHTML = stringHtml;
     TELA_DE_MENSAGEM.style.display = "flex";

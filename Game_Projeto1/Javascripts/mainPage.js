@@ -17,12 +17,12 @@ if (localStorage.getItem("dados")) {
                 <p id="forca" class="atributo">${dadosJogador.planetasConquistados.length}</p>
             </div>
         </div>
-        <button onclick="window.location.href='game.html'" id="main-Button"> Jogar</button>
-        <button onclick="deletarDados()" id="main-Button"> Deletar Save</button>
+        <button onclick="window.location.href='game.html'" class="main-Button"> Jogar</button>
+        <button onclick="deletarDados()" class="main-Button"> Deletar Save</button>
     `;
 }
 else{
     SAVES.innerHTML = `
-        <button onclick="window.location.href='criarJogo.html'" id="main-Button"> Novo Jogo</button>
+        <button onclick="window.location.href='criarJogo.html'" class="main-Button"> Novo Jogo</button>
     `;
 }
