@@ -51,3 +51,20 @@ function piscarBotao(id){
         BOTOES_SECAO[id].style.backgroundColor = botao.dataset.corOriginal;
     }, 2000)
 }
+
+let devToolsOn = false;
+const FERRAMENTAS = document.getElementById("ferramentas");
+const FERRAMENTAS_Log = document.getElementById("sec-Dev-Tools");
+
+function ativarDev(){
+    if(devToolsOn){
+        devToolsOn = false;
+        FERRAMENTAS.style.display = "none";
+        FERRAMENTAS_Log.style.display = "none";
+    }
+    else if(!devToolsOn){
+        devToolsOn = true;
+        FERRAMENTAS.style.display = "block";
+        FERRAMENTAS_Log.style.display = "block";
+    }
+}

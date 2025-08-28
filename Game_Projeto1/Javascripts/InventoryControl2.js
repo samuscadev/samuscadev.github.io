@@ -43,7 +43,7 @@ function precContratos(){
         let nome = getNome(chave);
         let sprite = getSpritesAgentes(chave);
         let preco = getPrecoAgentes(chave) * dadosJogador.perDesconto;
-        let forca = getForcaAgentes(chave)
+        let forca = Math.floor(getForcaAgentes(chave) * dadosJogador.aumentoForca);
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
@@ -69,7 +69,7 @@ function precContratos(){
         if(valor > 0){
             let nome = getNome(chave);
             let sprite = getSpritesAgentes(chave);
-            let forca = getForcaAgentes(chave) * valor
+            let forca = Math.floor(getForcaAgentes(chave) * dadosJogador.aumentoForca) * valor;
             htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">

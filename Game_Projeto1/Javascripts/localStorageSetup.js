@@ -1,17 +1,17 @@
 
-function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png"){
+function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CABECA){
   const dados = {
     nomeJogador: nome,
     nomeImperio: nomeImp,
     bandeira: spriteFlag,
     dias: 0,
-    salario: 50,
-    receita: 1000,
-    forca: 0,
-    perDesconto: 1,
-    tempTrabalho: 15,
-    tempPesquisa: 20,
-    aumentoForca :1,
+    salario: classe.salario,
+    receita: classe.receita,
+    forca: classe.forca,
+    perDesconto: classe.perDesconto,
+    tempTrabalho: classe.tempTrabalho,
+    tempPesquisa: classe.tempPesquisa,
+    aumentoForca : classe.aumentoForca,
     
     recursos: {
       madeira: 0,

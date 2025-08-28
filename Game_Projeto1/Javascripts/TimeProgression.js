@@ -5,28 +5,27 @@ let pausado = false;
 function atualizarStatus(elemento, dias) {
   let dados = carregarDados();
 
-  if(dias == 1){ /*Se passou de dia*/ 
+  if(dias == 1){ 
     dados.receita += dados.salario;
     dados.dias += 1;
   }
   let forcaTotal = 0;
   for (let chave of Object.keys(dados.qntEquipamentos)) {
-      forcaTotal += getForca(chave) * dados.qntEquipamentos[chave];
+      forcaTotal += Math.floor(getForca(chave) * dados.qntEquipamentos[chave] * dados.aumentoForca);
   }
   for (let chave of Object.keys(dados.agentes)) {
-      forcaTotal += getForcaAgentes(chave) * dados.agentes[chave];
+      forcaTotal += Math.floor(getForcaAgentes(chave) * dados.agentes[chave] * dados.aumentoForca);
   }
   dados.forca = forcaTotal;
   salvarDados(dados);
 
   elemento.innerHTML = `
-    <h2>Status:</h2>
+    <h2>Status:</h2>-
     <div id="cabecalho">
         <img id="bandeira" src="${dados.bandeira}">
         <h3 id="nome">@${dados.nomeJogador}</h3>
         <h3 class="atributo">${dados.nomeImperio}</h3>
     </div>
-
     <div class="status">
         <img src="Sprites/IU/calendar.png" class="iconStatus">
         <p id="dias" class="atributo">${dados.dias}</p>

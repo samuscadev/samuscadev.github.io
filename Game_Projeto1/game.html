@@ -23,22 +23,25 @@
 <body>
     <header>
         <h1 id="logo">Space Expansion</h1>
+        <button onclick="ativarDev()" id="config">
+            <img src="Sprites/IU/opitions.png" width="54px" height="54px">
+        </button>
     </header>
 
     <div id="Painel-Status"></div>
     
     <div class="menu">
         <div id="acao">
-            <button onclick="pararPassagemTempo()" >
+            <button onclick="pararPassagemTempo()" title="Parar Tempo">
                 <img src="Sprites/IU/pause.png" width="54px" height="54px">
             </button>
         </div>
-        <div id="som">
-            <button onclick="ativarMusica()" >
+        <div id="som" title="Música">
+            <button onclick="ativarMusica()">
                 <img src="Sprites/IU/semSom.png" width="54px" height="54px">
             </button>
         </div>
-        <div id="troca">
+        <div id="troca" title="Trocar Música">
             <button onclick="trocarMusica()" >
                 <img src="Sprites/IU/change.png" width="54px" height="54px">
             </button>
@@ -48,27 +51,33 @@
 
     <h1 id="gerenciar">Gerenciar:</h1>
     <div class="menu">
-        <button onclick="mostrarSecao(1, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(1, SECOES)" class="botaoSecao" title="Recursos">
             <img src="Sprites/itens/Bars/bar_Madeira.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(0, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(0, SECOES)" class="botaoSecao" title="Naves">
             <img src="Sprites/itens/Ships/ship_Destroyer.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(4, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(4, SECOES)" class="botaoSecao" title="Loja">
             <img src="Sprites/IU/shop.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(2, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(2, SECOES)" class="botaoSecao" title="Exploração Espacial">
             <img src="Sprites/planets/planet_1.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(3, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(3, SECOES)" class="botaoSecao" title="Pesquisas">
             <img src="Sprites/IU/search.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(6, SECOES)" class="botaoSecao">
-            <img src="Sprites/IU/clock.png" width="54px" height="54px">
+        <button onclick="mostrarSecao(6, SECOES)" class="botaoSecao" title="Tarefas">
+            <img src="Sprites/IU/calendar.png" width="54px" height="54px">
         </button>
-        <button onclick="mostrarSecao(7, SECOES)" class="botaoSecao">
+        <button onclick="mostrarSecao(7, SECOES)" class="botaoSecao" title="Agentes">
             <img src="Sprites/IU/sith.png" width="54px" height="54px">
-        </button>                  
+        </button> 
+        <button onclick="mostrarSecao(8, SECOES)" class="botaoSecao" title="Conquistas">
+            <img src="Sprites/IU/trofeu.png" width="54px" height="54px">
+        </button>
+        <button onclick="mostrarSecao(9, SECOES)" class="botaoSecao" title="Administração">
+            <img src="Sprites/IU/coin.png" width="54px" height="54px">
+        </button>                       
     </div>
 
     <section id="sec1"></section>
@@ -82,6 +91,14 @@
     <section id="sec6"></section>
     <section id="sec7"></section>
     <section id="sec8"></section>
+    <section id="sec9">
+        <h1>Consquistas:</h1>
+        <h2>Em Breve!</h2>
+    </section>
+    <section id="sec10">
+        <h1>Adiministração:</h1>
+        <h2>Em Breve!</h2>
+    </section>
 
     <section id="erro">
         <p>Erro de Seção, A seção que você Busca é Inválida!</p>
@@ -109,6 +126,7 @@
     <script src="Javascripts/constValues.js"></script>
     <script src="Javascripts/constSprites.js"></script>
     <script src="Javascripts/constCraftings.js"></script>
+    <script src="Javascripts/constClasses.js"></script>
     
     <script src="Javascripts/verificacaoTime.js"></script>
     <script src="Javascripts/TasksControl.js"></script>
@@ -132,6 +150,6 @@
     <script src="Javascripts/stars.js" defer></script>
     <script src="Javascripts/sounds.js"></script>
     
-    <p id="versao">versão 0.9.2 - Grilled ham and cheese</p>
+    <p id="versao">versão 0.9.3 - Grilled ham and cheese</p>
 </body>
 </html>

@@ -100,12 +100,17 @@ function precConstruir(dadosJogador){
     
     for (let chave of Object.keys(dadosJogador.qntEquipamentos || {})) { 
         let sprite = getSpritesEquipamentos(chave);
-        let nome = getNome(chave)
+        let nome = getNome(chave);
+        let forca = Math.floor(getForca(chave) * dadosJogador.aumentoForca);
 
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
                             <h3>Uma Unidade</h3>
+                            <div class="custo">
+                                <img src="Sprites/IU/forca.png" class="iconStatus">
+                                <p class="green-atributo">+ ${forca}</p>
+                            </div>
                             <button onclick="construirItem('${chave}')">Construir</button>
                         </div>`;
     }
@@ -125,11 +130,13 @@ function precRecursos(dadosJogador){
         if(valor > 0){
             estaVazio = false;
             let sprite = getSprites(chave);
-            let nome = getNome(chave)
+            let nome = getNome(chave);
+    
             htmlString += ` <div class="carta">
                                 <h3>${nome}</h3>
                                 <img src="${sprite}" h="64px" height="64px">
                                 <h3>${valor}</h3>
+                                
                             </div>`
         }
     }
@@ -154,7 +161,7 @@ function precEquipamentos(dadosJogador){
             estaVazio = false;
             let sprite = getSpritesEquipamentos(chave);
             let nome = getNome(chave)
-            let forca = getForca(chave)
+            let forca = Math.floor(getForca(chave) * dadosJogador.aumentoForca);
             htmlString += ` <div class="carta">
                                 <h3>${nome}</h3>
                                 <img src="${sprite}" h="64px" height="64px">
@@ -175,7 +182,7 @@ function precEquipamentos(dadosJogador){
                         </div>`
     }
 
-    htmlString += `     <button onclick="mostrarSecao(5, SECOES)">Construir Equipamentos</button>
-                    </div>`;
+    htmlString += `</div>
+    <button onclick="mostrarSecao(5, SECOES)">Construir Equipamentos</button>`;
     SECAO_UM.innerHTML = htmlString;
 }

@@ -211,6 +211,10 @@ section{
     margin-left: 2%;
 }
 
+#ferramentas, #sec-Dev-Tools{
+    display: none;
+}
+
 #cabecalho{
     display: flex;
     flex-direction: row;

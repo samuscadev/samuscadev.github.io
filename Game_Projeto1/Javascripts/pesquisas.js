@@ -17,3 +17,10 @@ function aumentarForca(id){
     dadosJogador.aumentoForca = EVLO_FORCA[id];
     salvarDados(dadosJogador);
 }
+
+function getLevel(valor, vetor){
+    indice = vetor.indexOf(valor);
+    if(indice == -1){
+        
+    }
+}

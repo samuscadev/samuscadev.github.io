@@ -14,7 +14,7 @@ function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
     }
 
     if(id == 1){
-        stringHtml = `<h1>Itens necessarios para construção</h1>`;
+        stringHtml = `<h1>Construção:</h1>`;
         stringHtml += sHtml;
         stringHtml += `<button onclick="verificaConstrucao('${chave}')">Construir</button>`;
         stringHtml += `<button onclick="fecharMensagem()">Fechar</button>`;

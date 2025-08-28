@@ -20,12 +20,26 @@ header{
     /*Margens: */
     margin: 0px;
     padding: 10px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+header button{
+    background-color: transparent;
+    width: 32px; height: 32px;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+header button img{
+    width: 24px; height: 24px;
+}
 h1{
     /* Fonte: */
     font-family: "Barriecito", system-ui;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     font-size: 30pt;
     
@@ -175,4 +189,30 @@ button img{
     text-align: center;
     display: block;
     margin: 20px auto;
+}
+
+select{
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    font-family: "Barriecito", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14pt;
+    outline: none; 
+}
+
+select:hover{
+    background: rgb(9, 95, 255);
+}
+
+#classes option {
+  background: rgb(9, 95, 255);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+#classes option:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(9, 95, 255);
 }

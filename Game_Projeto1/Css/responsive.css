@@ -54,6 +54,10 @@
         gap: 2px;
         padding: 2px 4px;
     }
+    #mensagem .inventario{
+        height: 150px;
+        overflow: scroll;
+    }
     .carta{
         border: 1px rgba(255, 255, 255, 0.404) solid;
         gap: 0px;
@@ -89,5 +93,8 @@
         top: 5%;
         left: 2%;
         transform: none;
+    }
+    #config{
+        display: none;
     }
 }
