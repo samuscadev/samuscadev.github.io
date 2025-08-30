@@ -1,8 +1,6 @@
 function verificacaoDiaria() {
     let dadosJogador = carregarDados();
-
     if(dadosJogador.listaAfazeres.length > 0){
-
         for (let i = dadosJogador.listaAfazeres.length - 1; i >= 0; i--) {
             let tarefa = dadosJogador.listaAfazeres[i];
 
@@ -12,16 +10,19 @@ function verificacaoDiaria() {
                 if (dadosJogador.qntEquipamentos.hasOwnProperty(chave)) {
                     dadosJogador.qntEquipamentos[chave] += 1;
                     dadosJogador.listaAfazeres.splice(i, 1);
+                    alterarPropriedade(`qntEquipamentos.${chave}`, dadosJogador.qntEquipamentos[chave]);
 
                 } else if (dadosJogador.agentes.hasOwnProperty(chave)) {
                     dadosJogador.agentes[chave] += 1;
                     dadosJogador.listaAfazeres.splice(i, 1);
+                    alterarPropriedade(`agentes.${chave}`, dadosJogador.agentes[chave]);
 
-                } else {
-                    window.alert("Erro ao cadastrar tarefa");
-                }
-                salvarDados(dadosJogador);
-
+                } else if(dadosJogador.hasOwnProperty(chave)){
+                    dadosJogador.listaAfazeres.splice(i, 1);
+                    console.log(chave);
+                    evoluir(chave);
+                } 
+                alterarPropriedade("listaAfazeres", dadosJogador.listaAfazeres);
                 precContratos();
                 precConstruir(dadosJogador);
             }
@@ -29,8 +30,10 @@ function verificacaoDiaria() {
     }
     else{
         console.log("verificacaoDiaria : Lista Vazia")
-    }
-    
+    } 
 }
 
-setInterval(verificacaoDiaria, 4000);
+setInterval(() => {
+    verificacaoDiaria()
+}, 400);
+

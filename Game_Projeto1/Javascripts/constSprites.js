@@ -19,6 +19,8 @@ const SPRITES_EQUIPAMENTOS = {
 const SPRITES_AGENTES = {
     sith: "Sprites/IU/sith.png",
     sayajin: "Sprites/IU/sayajin.ico",
+    yoda: "Sprites/IU/yoda.png",
+    special: "Sprites/IU/special.png",
 }
 
 function getSprites(valor){

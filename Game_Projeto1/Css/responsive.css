@@ -40,7 +40,9 @@
         width: 135px;
         height: 135px;
     }
-
+    #Painel-Status{
+        gap: 1px;
+    }
     .iconStatus, .redIconStatus{
         width: 28px;
         height: 28x;

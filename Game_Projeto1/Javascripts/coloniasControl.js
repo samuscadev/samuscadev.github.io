@@ -34,26 +34,26 @@ function preColonia(){
 
 function colonizar(){
     let dadosJogador = carregarDados();
-    
-    
+        
     let anexado = dadosJogador.planetaAlvo;
     let custo = ultimaCasaComZeros(anexado.recursos.diamante * 10);
-    dadosJogador.receita -= custo;
-    dadosJogador.qntEquipamentos.shipTravel -= 1;
-    dadosJogador.qntEquipamentos.shipBus -= 1;
+    
+    alterarPropriedade("receita", dadosJogador.receita - custo);
+    alterarPropriedade("qntEquipamentos.shipTravel", dadosJogador.qntEquipamentos.shipTravel - 1);
+    alterarPropriedade("qntEquipamentos.shipBus", dadosJogador.qntEquipamentos.shipBus - 1);
 
-    salvarDados(dadosJogador);
     dadosJogador.planetasConquistados.push(anexado);
-    console.log(anexado.recursos);
+    alterarPropriedade("planetasConquistados", dadosJogador.planetasConquistados);
+
     Object.keys(anexado.recursos).forEach(recurso => {
-        dadosJogador.recursos[recurso] += anexado.recursos[recurso];
+        alterarPropriedade(`recursos.${recurso}`, dadosJogador.recursos[recurso] + anexado.recursos[recurso]);
     });
-    salvarDados(dadosJogador);
+    
     precExploracao();
     let descricao = `Você colonizou o planeta de ${anexado.nome}`;
     let dataAtual = dadosJogador.dias;
     let dataConclusao = dadosJogador.dias;
     adicionarTarefa(null, descricao, dataAtual, dataConclusao);
-    salvarDados(dadosJogador);
+    
     fecharMensagem(1);
 }

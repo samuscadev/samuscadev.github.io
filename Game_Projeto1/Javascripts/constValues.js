@@ -8,8 +8,10 @@ const PRECOS_TABELADOS = {
 }
 
 const PRECO_CONTRATO = {
-    sith: 1000,
-    sayajin: 2000
+    sith: 10000,
+    sayajin: 20000,
+    yoda: 40000,
+    special: 3000,
 }
 
 const NOMES_COISAS = {
@@ -28,12 +30,20 @@ const NOMES_COISAS = {
     shipAngular: "Nave Ângular",
 
     sith: "Agente Sith",
-    sayajin: "Guerreiro Espacial",
+    sayajin: "Guerreiro Sayajin",
+    yoda: "Agente Jedi",
+    special: "Za'kku Special Hunters",
+
+    perDesconto: "Desconto em Produtos",
+    tempTrabalho: "Tempo de Construção/Trabalho",
+    aumentoForca: "Força das tropas",
 }
 
 const FORCA_AGENTES = {
-    sith: 1000,
-    sayajin: 2000,
+    sith: 500,
+    sayajin: 1000,
+    yoda: 2000,
+    special: 1500,
 }
 
 const FORCA_EQUIPAMENTOS = {

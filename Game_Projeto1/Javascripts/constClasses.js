@@ -3,8 +3,8 @@ const CABECA = {
     receita: 1000,
     forca: 0,
     perDesconto: 0.95,
-    tempTrabalho: 18,
-    tempPesquisa: 18,
+    tempTrabalho: 20, //18
+    tempPesquisa: 2, //10
     aumentoForca :0.95,
 }
 

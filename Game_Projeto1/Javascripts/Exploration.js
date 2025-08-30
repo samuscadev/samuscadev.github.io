@@ -2,14 +2,15 @@ function buscarPlaneta(){
     let dadosPlanetaGerado = gerarPlaneta();
     let dadosJogador = carregarDados();
     dadosJogador.planetaAlvo = dadosPlanetaGerado;
-    salvarDados(dadosJogador);
-
+    alterarPropriedade("planetaAlvo", dadosJogador.planetaAlvo);
+    
     let sHTML = `
         
             <div id="Planeta-Show">
                 <img src="${dadosPlanetaGerado.sprite}" h="64px" height="64px">
                 <h1>${dadosPlanetaGerado.nome}</h1>
             </div>
+            <div class="inventario">
             
                 <div class="custo">
                                 <img src="Sprites/IU/population.png" h="42px" height="42px" class="iconStatus">
@@ -32,10 +33,10 @@ function buscarPlaneta(){
     }
 
     if(dadosPlanetaGerado.forca > 0){
-        sHTML += `<button onclick="preBatalha()">Batalhar</button>`;
+        sHTML += `</div><button onclick="preBatalha()">Batalhar</button>`;
     }
     else{
-        sHTML += `<button onclick="preColonia()">Colonizar</button>`;
+        sHTML += `</div><button onclick="preColonia()">Colonizar</button>`;
     }
 
     mostrarMensagem(3, sHTML);

@@ -14,6 +14,9 @@ function preencherInventario(dadosJogador, secao){
     else if(secao == 2){
         precExploracao();
     }
+    else if(secao == 3){
+        precPesquisas();
+    }
     else if(secao == 4){
         precLoja(dadosJogador);
     }
@@ -25,6 +28,9 @@ function preencherInventario(dadosJogador, secao){
     }
     else if(secao == 7){
         precContratos();
+    }
+    else if(secao == 9){
+        precAdministracao();
     }
     
 }
@@ -69,18 +75,18 @@ function precLoja(dadosJogador){
     for (let chave of Object.keys(dadosJogador.recursos || {})) { 
         let nome = getNome(chave)
         let sprite = getSprites(chave);
-        let preco = getPreco(chave) * dadosJogador.perDesconto;
+        let preco = Math.floor(getPreco(chave) * dadosJogador.perDesconto);
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
                             <img src="${sprite}" h="64px" height="64px">
                             <div class="quebra-Custo">
                                 <div class="custo">
-                                    <img src="Sprites/IU/coin.png" class="iconStatus">
-                                    <p class="atributo">$${preco}</p>
+                                    <img src="Sprites/IU/coin.png" class="redIconStatus">
+                                    <p class="red-atributo">- $${preco}</p>
                                 </div>
                                 <div class="custo">
-                                    <img src="${sprite}" h="42px" height="42px" class="iconStatus">
-                                    <p class="atributo">+100</p>
+                                    <img src="${sprite}" h="42px" height="42px" class="greenIconStatus">
+                                    <p class="green-atributo">+100</p>
                                 </div>
                             </div>
                                                           

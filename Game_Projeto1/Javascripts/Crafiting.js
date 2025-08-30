@@ -1,45 +1,54 @@
 function construirItem(item){
     const RECEITA = getReceitaItem(item);
     let sHtml = `<div class="inventario">`;
-    let dadosJogador = carregarDados() || {};
+    let dadosJogador;
 
-    for (let chave of Object.keys(RECEITA)) { 
+    setTimeout(()=>{
+        dadosJogador = carregarDados();
+        for (let chave of Object.keys(RECEITA)) { 
         let nome = getNome(chave)
         let sprite = getSprites(chave);
         let preco = RECEITA[chave];
         let estoque = dadosJogador.recursos[chave]
         sHtml += ` <div class="carta">
-                            <h3>${nome}</h3>
-                            <img src="${sprite}" h="64px" height="64px">
-                            <h3>Custo: ${preco}</h3>
-                            <h3>Estoque: ${estoque}</h3>
-                        </div>`;
+                            <div class="custo">
+                                <img src="${sprite}" class="redIconStatus">
+                                <p class="red-atributo">Custo: ${preco}</p>
+                            </div>
+                            <div class="custo">
+                                <img src="${sprite}" class="iconStatus">
+                                <p class="atributo">Estoque: ${estoque}</p>
+                            </div>
+                    </div>`;
     }
     let tempo = dadosJogador.tempTrabalho
 
     sHtml += `</div>
               <h3> Tempo necessário: ${tempo} dias</h3>`;
     mostrarMensagem(1, sHtml, item)
+    }, 150);    
 }
 
 function verificaConstrucao(item){
     const RECEITA = getReceitaItem(item);
-    let dadosJogador = carregarDados() || {};
-    let valido = true;
-    if (!RECEITA) {
-        console.error("Receita não encontrada para:", item);
-    }
-    for (let chave of Object.keys(RECEITA)) { 
-        if(dadosJogador.recursos[chave] < RECEITA[chave]){
-            valido = false;
-            construcaoInvalida();
+    let dadosJogador;
+    setTimeout(()=>{
+         dadosJogador = carregarDados() || {};
+        let valido = true;
+        if (!RECEITA) {
+            console.error("Receita não encontrada para:", item);
         }
-    }
-    if(valido){
-        construir(item);
-        construirItem(item)
-    }
-    
+        for (let chave of Object.keys(RECEITA)) { 
+            if(dadosJogador.recursos[chave] < RECEITA[chave]){
+                valido = false;
+                construcaoInvalida();
+            }
+        }
+        if(valido){
+            construir(item);
+            construirItem(item);
+        }
+    }, 150);    
 }
 
 function construcaoInvalida(){
@@ -48,15 +57,14 @@ function construcaoInvalida(){
 
 function construir(item){
     const RECEITA = getReceitaItem(item);
-    let dadosJogador = carregarDados() || {};
+    let dadosJogador = carregarDados();
 
-    for (let chave of Object.keys(RECEITA)) { 
-        dadosJogador.recursos[chave] = dadosJogador.recursos[chave] - RECEITA[chave];            
+    for (let chave of Object.keys(RECEITA)) {  
+        alterarPropriedade(`recursos.${chave}`, dadosJogador.recursos[chave] - RECEITA[chave]);           
     }
-    salvarDados(dadosJogador)
 
     let chave = item;
-    let descricao = `Construção de ${item}`;
+    let descricao = `Construção de ${getNome(item)}`;
     let dataConclusao = dadosJogador.dias + dadosJogador.tempTrabalho;
     
     adicionarTarefa(chave, descricao, dadosJogador.dias, dataConclusao);

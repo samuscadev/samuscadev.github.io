@@ -4,7 +4,7 @@ function preBatalha(){
     let forcaInimiga = formatarNumero(inimigo.forca);
     let forca = formatarNumero(dadosJogador.forca);
     let nomePlaneta = inimigo.nome;
-    let custo = ultimaCasaComZeros(inimigo.forca);
+    let custo = ultimaCasaComZeros(inimigo.forca) * dadosJogador.perDesconto;
 
     let sHtml = `<h2>Você deseja atacar "${nomePlaneta}"?</h2>
                     
@@ -37,9 +37,9 @@ function calculoAutomaticoBatalha(){
     let inimigo = dadosJogador.planetaAlvo;
     let forcaInimiga = inimigo.forca;
     let forca = dadosJogador.forca;
-    let custo = ultimaCasaComZeros(inimigo.forca);
-    
-    dadosJogador.receita -= custo;
+    let custo = ultimaCasaComZeros(inimigo.forca) * dadosJogador.perDesconto;
+
+    alterarPropriedade("receita", dadosJogador.receita - custo);
 
     let porcentagemDanos = ((forca - forcaInimiga) / forcaInimiga) * 100;
     console.log(porcentagemDanos)
@@ -64,10 +64,10 @@ function calculoAutomaticoBatalha(){
                 <p class="green-atributo">+ ${inimigo.bonus}/dia</p>
             </div>
         `;
-        dadosJogador.salario +=  inimigo.bonus;
+        alterarPropriedade("salario", dadosJogador.salario + inimigo.bonus)
 
         for (let chave of Object.keys(inimigo.recursos)) {
-            dadosJogador.recursos[chave] +=  inimigo.recursos[chave];
+            alterarPropriedade(`recursos.${chave}`, dadosJogador.recursos[chave] + inimigo.recursos[chave])
             let sprite = getSprites(chave);
             let qnt = inimigo.recursos[chave];
             sHtml += `          <div class="custo">
@@ -76,7 +76,6 @@ function calculoAutomaticoBatalha(){
                                 </div>`;
         }
 
-        salvarDados(dadosJogador);
         sHtml += `<button onclick="anexar()">Anexar</button>`;
     }
     else {
@@ -104,13 +103,12 @@ function calculoAutomaticoBatalha(){
                 let sprite = getSpritesEquipamentos(tipo);
                 sHtml += `<div class="custo">
                                 <img src="${sprite}">
-                                <p class="atributo">+ ${remover}</p>
+                                <p class="red-atributo">- ${remover}</p>
                 </div>`;
                 console.log(tipo, " : ", remover);
 
-                dadosJogador.qntEquipamentos[tipo] -= remover;
+                alterarPropriedade(`qntEquipamentos.${tipo}`, dadosJogador.qntEquipamentos[tipo] - remover);
                 perda -= remover;
-                salvarDados(dadosJogador)
             }
         }
         if(naoPerdeuAlgo){
@@ -122,7 +120,6 @@ function calculoAutomaticoBatalha(){
         }
     }
     mostrarMensagem(5, sHtml);
-    salvarDados(dadosJogador); 
 }
 
 function anexar(){
@@ -130,12 +127,12 @@ function anexar(){
 
     let anexado = dadosJogador.planetaAlvo;
     dadosJogador.planetasConquistados.push(anexado);
-    salvarDados(dadosJogador);
+    alterarPropriedade("planetasConquistados", dadosJogador.planetasConquistados);
+    
     precExploracao();
     let descricao = `Você anexou o planeta de ${anexado.nome}`;
     let dataAtual = dadosJogador.dias;
     let dataConclusao = dadosJogador.dias;
     adicionarTarefa(null, descricao, dataAtual, dataConclusao);
-    salvarDados(dadosJogador);
     fecharMensagem(1);
 }

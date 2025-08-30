@@ -39,7 +39,16 @@ const NAMES = [
 const SPRITES_PLANETAS = [
     "Sprites/planets/planet_1.png",
     "Sprites/planets/planet_2.png",
-    "Sprites/planets/planet_3.png"
+    "Sprites/planets/planet_3.png",
+    "Sprites/planets/planet_4.png",
+    "Sprites/planets/planet_5.webp",
+    "Sprites/planets/planet_6.png",
+    "Sprites/planets/planet_7.png",
+    "Sprites/planets/planet_8.webp",
+    "Sprites/planets/planet_9.webp",
+    "Sprites/planets/planet_10.png",
+    "Sprites/planets/planet_11.webp",
+    "Sprites/planets/planet_12.webp",
 ]
 
 function sortearNumero(min, max) {

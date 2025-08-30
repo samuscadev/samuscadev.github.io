@@ -1,5 +1,66 @@
 const SECAO_TASKS = document.getElementById("sec7");
 const SECAO_CONTRATO = document.getElementById("sec8");
+const SECAO_PESQUISA = document.getElementById("sec4");
+
+function precPesquisas(){
+    let dadosJogador = carregarDados();
+    let htmlString = `
+        <h1>Pesquisas:</h1>
+        <h3>Os cientistas do ${dadosJogador.nomeImperio} levam ${dadosJogador.tempPesquisa} dias para concluir uma pesquisa</h3>
+        <h2>Pesquisas Disponiveis:</h2>
+        <div class="Inventario">
+            <div class="carta">
+                <h3>Trabalho</h3>
+                <p>Essas pesquisas encontram formas para diminuir o tempo de construção e contrato de agentes</p>
+                <div class="custo">
+                    <img src="Sprites/IU/level.png" class="greenIconStatus">
+                    <p class="green-atributo"> Level: ${dadosJogador.levelPesquisaTrabalho}</p>
+                </div>`
+
+    if(dadosJogador.pesquisaEmAndamento){
+        htmlString += `<h3>Já à uma pesquisa em andamento, seus cientistas estão sobrecarregados, não há o que se possa fazer!</h3>`
+    }
+    else{
+        htmlString += `<button onclick="pesquisar(0)">Pesquisar</button>`;
+    }           
+    
+    htmlString +=     
+        `</div>
+            <div class="carta">
+                <h3>Negocios</h3>
+                <p>Os comerciantes de ${dadosJogador.nomeImperio} encontraram descontos e os preços dos produtos ficaram mais baratos</p>
+                <div class="custo">
+                    <img src="Sprites/IU/level.png" class="greenIconStatus">
+                    <p class="green-atributo"> Level: ${dadosJogador.levelPesquisaDesconto}</p>
+                </div>`
+
+    if(dadosJogador.pesquisaEmAndamento){
+        htmlString += `<h3>Já à uma pesquisa em andamento, seus cientistas estão sobrecarregados, não há o que se possa fazer!</h3>`
+    }
+    else{
+        htmlString += `<button onclick="pesquisar(1)">Pesquisar</button>`;
+    } 
+        
+    htmlString += 
+    `</div>
+        <div class="carta">
+            <h3>Militar</h3>
+            <p>Essas pesquisas ajudaram a aumentar a força dos seus equipamentos e agentes</p>
+            <div class="custo">
+                <img src="Sprites/IU/level.png" class="greenIconStatus">
+                <p class="green-atributo"> Level: ${dadosJogador.levelPesquisaForca}</p>
+            </div>`
+    if(dadosJogador.pesquisaEmAndamento){
+        htmlString += `<h3>Já à uma pesquisa em andamento, seus cientistas estão sobrecarregados, não há o que se possa fazer!</h3>`
+    }
+    else{
+        htmlString += `<button onclick="pesquisar(2)">Pesquisar</button>`;
+    }             
+                
+    htmlString += `</div></div> `;
+
+    SECAO_PESQUISA.innerHTML = htmlString;
+}
 
 function precTasks(){
     let tarefas = getTarefas();
@@ -42,7 +103,7 @@ function precContratos(){
     for (let chave of Object.keys(dadosJogador.agentes || {})) {
         let nome = getNome(chave);
         let sprite = getSpritesAgentes(chave);
-        let preco = getPrecoAgentes(chave) * dadosJogador.perDesconto;
+        let preco = Math.floor(getPrecoAgentes(chave) * dadosJogador.perDesconto);
         let forca = Math.floor(getForcaAgentes(chave) * dadosJogador.aumentoForca);
         htmlString += ` <div class="carta">
                             <h3>${nome}</h3>
@@ -50,7 +111,7 @@ function precContratos(){
                             <div class="quebra-Custo">
                                 <div class="custo">
                                     <img src="Sprites/IU/coin.png" class="redIconStatus">
-                                    <p class="red-atributo"> - $${preco}</p>
+                                    <p class="red-atributo"> - $${formatarNumero(preco)}</p>
                                 </div>
                                 <div class="custo">
                                     <img src="Sprites/IU/forca.png" class="iconStatus">

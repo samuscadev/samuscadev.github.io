@@ -3,7 +3,7 @@ function carregarDados() {
 }
 
 function salvarDados(dados) {
-  localStorage.setItem("dados", JSON.stringify(dados));
+    localStorage.setItem("dados", JSON.stringify(dados));
 }
 
 function formatarNumero(num) {
@@ -32,9 +32,10 @@ BOTOES_SECAO.forEach(botao => {
     botao.addEventListener("click", () => {
         
         BOTOES_SECAO.forEach(b => {
-            b.style.backgroundColor = b.dataset.corOriginal;
+            b.style.backgroundImage = "linear-gradient(rgb(33, 110, 255) ,rgb(9, 95, 255),rgb(0, 61, 175))";
         });
 
+        botao.style.backgroundImage = "linear-gradient(transparent, transparent)";
         botao.style.backgroundColor = "white";
     });
 });
