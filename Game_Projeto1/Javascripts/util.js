@@ -1,5 +1,5 @@
 function carregarDados() {
-  return JSON.parse(localStorage.getItem("dados"));
+    return JSON.parse(localStorage.getItem("dados"));
 }
 
 function salvarDados(dados) {
@@ -9,6 +9,7 @@ function salvarDados(dados) {
 function formatarNumero(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
 
 function ultimaCasaComZeros(num) {
     const str = num.toString();

@@ -6,7 +6,9 @@ function precPesquisas(){
     let dadosJogador = carregarDados();
     let htmlString = `
         <h1>Pesquisas:</h1>
-        <h3>Os cientistas do ${dadosJogador.nomeImperio} levam ${dadosJogador.tempPesquisa} dias para concluir uma pesquisa</h3>
+        <h3>Os cientistas do ${dadosJogador.nomeImperio} levam ${dadosJogador.tempPesquisa} dias para concluir uma pesquisa, 
+        além de que o custo para uma pesquisa atualmente é de $${dadosJogador.custoPesquisa}</h3>
+        
         <h2>Pesquisas Disponiveis:</h2>
         <div class="Inventario">
             <div class="carta">
@@ -64,26 +66,43 @@ function precPesquisas(){
 
 function precTasks(){
     let tarefas = getTarefas();
-    let htmlString = `
-        <h1>Tarefas Recentes:</h1>
-        <p>Atualizar a página ou sair, deletam suas antigas tarefas</p>
+    let dadosJogador = carregarDados();
+    let andamento = dadosJogador.listaAfazeres;
+    let htmlString = `<h1>Em andamento:</h1>
+                    <div class="inventario">`;
+
+    if(andamento.length == 0){
+        htmlString += ` <h3>Você não possui tarefas sendo Realizadas!</h3>`;
+    }
+    else {
+        andamento.reverse().forEach(tarefa => {
+        htmlString += `
+            <div class="carta">
+                <h3>${tarefa.descricao}</h3>
+                <p>${tarefa.inicio} e ${tarefa.conclusao}</p>
+            </div>
+        `;
+        });
+    }
+
+    htmlString += `
+        </div><h1>Tarefas Recentes Concluidas:</h1>
+        <p>Atualizar a página ou sair, deletam essas Tarefas:</p>
         <div class="inventario">
     `;
     
     if(tarefas.length == 0){
         htmlString += ` <h3>Você não possui tarefas para Realizar ou já Realizadas!</h3>`;
     }
-    else{
-
-        tarefas.slice(-10).forEach(tarefa => {
-            htmlString += `
-                <div class="carta">
-                    <h3>${tarefa.tarefa}</h3>
-                    <p>${tarefa.inicio} e ${tarefa.conclusao}</p>
-                </div>
-            `;
+    else {
+        tarefas.slice(-10).reverse().forEach(tarefa => {
+        htmlString += `
+            <div class="carta">
+                <h3>${tarefa.descricao}</h3>
+                <p>${tarefa.conclusao}</p>
+            </div>
+        `;
         });
-
     }
 
     htmlString += "</div>";

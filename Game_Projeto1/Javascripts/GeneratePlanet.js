@@ -72,6 +72,7 @@ function falue(){
 function gerarPlaneta(){
     const TAM_NAME = NAMES.length - 1;
     let nomePlaneta = NAMES[sortearNumero(0, TAM_NAME)];
+    let dadosJogador = carregarDados();
 
     const ID = sortearNumero(1, 999);
     const STR_ID = ID.toString();
@@ -82,16 +83,17 @@ function gerarPlaneta(){
 
     const HABITAVEL = falue();
     const POPULACAO = HABITAVEL ? sortearNumero(10000, 999999) : 0;
-    const FORCA = Math.floor(POPULACAO * sortearTaxa(0.01, 0.09))
-    const BONUS = HABITAVEL ? sortearNumero(10, 999) : 0;
+    const FORCA = Math.floor(POPULACAO * sortearTaxa(0.04, 0.09) * (dadosJogador.aumentoForca * 0.75));
+    const BONUS = HABITAVEL ? sortearNumero(1, 99) : sortearNumero(100, 999);
+    const CUSTO = HABITAVEL ? Math.floor(ultimaCasaComZeros(FORCA) * dadosJogador.perDesconto) : Math.floor(BONUS * sortearNumero(1, 29) *  dadosJogador.perDesconto * 100);
 
     const RECURSOS = {
-        madeira: sortearNumero(1, 1999),
-        pedra: sortearNumero(1, 9999),
-        tungstenio: sortearNumero(1, 1999),
-        ferro: sortearNumero(1, 1999),
-        vermelhita: sortearNumero(1, 1999),
-        diamante: sortearNumero(1, 1999)
+        madeira: ultimaCasaComZeros(sortearNumero(1, 9999)),
+        pedra: ultimaCasaComZeros(sortearNumero(1, 9999)),
+        tungstenio: sortearNumero(1, 1500),
+        ferro: sortearNumero(1, 1500),
+        vermelhita: ultimaCasaComZeros(sortearNumero(1, 999)),
+        diamante: ultimaCasaComZeros(sortearNumero(1, 99))
     }
     const DADOS = {
         nome: nomePlaneta,
@@ -99,7 +101,8 @@ function gerarPlaneta(){
         populacao: POPULACAO,
         forca : FORCA,
         recursos: RECURSOS,
-        bonus: BONUS
+        bonus: BONUS,
+        custo: CUSTO,
     }
     
     return DADOS;

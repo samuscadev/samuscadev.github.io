@@ -3,19 +3,21 @@ let Tasks = [];
 function adicionarTarefa(chave, nome, dataAtual, dataConclusao){
     let dadosJogador = carregarDados();
     const OBJETO = {
-        tarefa: nome,
-        inicio: `Início no dia: ${dataAtual}`,
-        conclusao: `Conclusão no dia: ${dataConclusao}`,
-    }
-    const TAREFA = {
         chave: chave,
-        data: dataConclusao
+        data: dataConclusao,
+        descricao: nome,
+        inicio: `Dia de Início: <b>${dataAtual}</b>`,
+        conclusao: `Conclusão no dia: <b>${dataConclusao}</b>`,
     }
-    dadosJogador.listaAfazeres.push(TAREFA);
+    
+    dadosJogador.listaAfazeres.push(OBJETO);
     alterarPropriedade("listaAfazeres", dadosJogador.listaAfazeres);
     
-    Tasks.push(OBJETO);
     piscarBotao(5);
+}
+
+function TarefaConcluida(tarefa){
+    Tasks.push(tarefa);
 }
 
 function getTarefas(){

@@ -29,6 +29,9 @@ function preencherInventario(dadosJogador, secao){
     else if(secao == 7){
         precContratos();
     }
+    else if(secao == 8){
+        precConquistas();
+    }
     else if(secao == 9){
         precAdministracao();
     }
@@ -37,15 +40,14 @@ function preencherInventario(dadosJogador, secao){
 
 function precExploracao(){
     let dadosJogador = carregarDados();
-    let htmlString = `  <h1>Exploração Espacial</h1>
-                        <h2>Buscar Planeta</h2>
-                        <button onclick="buscarPlaneta()">Buscar</button>
+    let htmlString = `  <h1>Exploração Espacial:</h1>
+                        <button onclick="buscarPlaneta()">EXPLORAR</button>
                         `;
 
     htmlString += "</div>";
 
     if(dadosJogador.planetasConquistados.length > 0){
-        htmlString += `<h2>${dadosJogador.planetasConquistados.length} Planeta(s) Conquistados: </h2>
+        htmlString += `<h1>${dadosJogador.planetasConquistados.length} Planeta(s) Conquistados: </h1>
         <div class="inventario">`;
 
         dadosJogador.planetasConquistados.forEach(planeta => {
@@ -68,8 +70,7 @@ function precExploracao(){
 }
 
 function precLoja(dadosJogador){
-    let htmlString = `  <h1>Compras</h1>
-                        <h2>Recursos</h2>
+    let htmlString = `  <h1>Compras:</h1>
                         <div class="inventario">`;
     
     for (let chave of Object.keys(dadosJogador.recursos || {})) { 
@@ -127,8 +128,8 @@ function precConstruir(dadosJogador){
 }
 
 function precRecursos(dadosJogador){
-    let htmlString = `  <h1>Recursos</h1>
-                        <h2>Seu Estoque</h2>
+    let htmlString = `  <h1>Seu Estoque:</h1>
+                        <button onclick="mostrarSecao(4, SECOES)">COMPRAR</button>
                         <div class="inventario">`;
     let estaVazio = true;
     for (let [chave, valor] of Object.entries(dadosJogador.recursos || {})) {
@@ -157,8 +158,8 @@ function precRecursos(dadosJogador){
 }
 
 function precEquipamentos(dadosJogador){
-    let htmlString = `  <h1>Equipamentos</h1>
-                        <h2>Seus Equipamentos</h2>
+    let htmlString = `  <h1>Seus Equipamentos:</h1>
+                        <button onclick="mostrarSecao(5, SECOES)">CONSTRUIR</button>
                         <div class="inventario">`;
     let estaVazio = true;
     for (let [chave, valor] of Object.entries(dadosJogador.qntEquipamentos || {})) {
@@ -188,7 +189,6 @@ function precEquipamentos(dadosJogador){
                         </div>`
     }
 
-    htmlString += `</div>
-    <button onclick="mostrarSecao(5, SECOES)">Construir Equipamentos</button>`;
+    htmlString += `</div>`;
     SECAO_UM.innerHTML = htmlString;
 }

@@ -99,4 +99,12 @@
     #config{
         display: none;
     }
+    #pop-Up img{
+        width: 24px; height: 24px;
+        border: 1px rgba(167, 39, 0, 0.699) solid;
+    }
+
+    section .inventario{
+        max-height: 200px;
+    }
 }

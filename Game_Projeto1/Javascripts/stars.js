@@ -90,3 +90,28 @@
   seed();
   addLoop();
 })();
+
+
+/* Gera uma estrela cadente única e aleatória (vai para a esquerda)
+   Cada estrela é removida depois de executar a animação 1 vez. */
+function spawnShootingStar() {
+  const s = document.createElement('div');
+  s.className = 'shooting-star single';
+  const top = 5 + Math.random() * 30;            // posição vertical inicial (5% a 35%)
+  const left = 70 + Math.random() * 30;          // começa pra direita (70% a 100%)
+  const dur = 0.9 + Math.random() * 1.6;         // duração aleatória
+  const delay = Math.random() * 6;               // delay aleatório
+
+  s.style.top = top + '%';
+  s.style.left = left + '%';
+  s.style.setProperty('--dur', dur + 's');
+  s.style.setProperty('--delay', delay + 's');
+
+  document.getElementById('sky').appendChild(s);
+
+  // remove o elemento após terminar (duração + delay + margem)
+  setTimeout(() => s.remove(), (dur + delay) * 1000 + 500);
+}
+
+// exemplo: cria uma estrela a cada 2.5s
+setInterval(spawnShootingStar, 2500);

@@ -61,3 +61,34 @@ function fecharMensagem(par = null){
     TELA_DE_MENSAGEM.style.display = "none";
     ativarPassagemTempo();
 }
+
+const POP_UP = document.getElementById("pop-Up");
+
+function mostrarPopUp(img, texto){
+    POP_UP.style.display = "flex";
+    POP_UP.innerHTML = `
+        <img src="${img}">
+        <h3>${texto}</h3>
+    `
+
+    setTimeout(()=>{
+        POP_UP.style.opacity = 0.5;
+    }, 500);
+    setTimeout(()=>{
+        POP_UP.style.opacity = 1;
+    }, 1000);
+
+    setTimeout(fecharPopUp, 5000);
+}
+
+function fecharPopUp(){
+    setTimeout(()=>{
+        POP_UP.style.opacity = 0.5;
+    }, 500);
+    setTimeout(()=>{
+        POP_UP.style.opacity = 0;
+    }, 1000);
+    setTimeout(()=>{
+        POP_UP.style.display = "none";
+    }, 1050);
+}

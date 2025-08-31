@@ -1,17 +1,18 @@
 const PRECOS_TABELADOS = {
-    madeira: 100,
-    pedra: 200,
-    tungstenio: 300,
-    ferro: 400,
-    vermelhita: 500,
-    diamante: 600
+    madeira: 120,
+    pedra: 240,
+    tungstenio: 360,
+    ferro: 540,
+    vermelhita: 630,
+    diamante: 810
 }
-
-const PRECO_CONTRATO = {
-    sith: 10000,
-    sayajin: 20000,
-    yoda: 40000,
-    special: 3000,
+const FORCA_EQUIPAMENTOS = {
+    shipWar: 100,
+    shipTravel: 0,
+    shipSpy: 20,
+    shipDestroyer: 2500,
+    shipBus: 0,
+    shipAngular: 10000,
 }
 
 const NOMES_COISAS = {
@@ -32,7 +33,7 @@ const NOMES_COISAS = {
     sith: "Agente Sith",
     sayajin: "Guerreiro Sayajin",
     yoda: "Agente Jedi",
-    special: "Za'kku Special Hunters",
+    special: "Caçadores Especiais",
 
     perDesconto: "Desconto em Produtos",
     tempTrabalho: "Tempo de Construção/Trabalho",
@@ -40,22 +41,17 @@ const NOMES_COISAS = {
 }
 
 const FORCA_AGENTES = {
-    sith: 500,
+    sith: 750,
     sayajin: 1000,
     yoda: 2000,
-    special: 1500,
+    special: 150,
 }
-
-const FORCA_EQUIPAMENTOS = {
-    shipWar: 100,
-    shipTravel: 0,
-    shipSpy: 20,
-    shipDestroyer: 250,
-    shipBus: 0,
-    shipAngular: 500
+const PRECO_CONTRATO = {
+    sith: 10000,
+    sayajin: 20000,
+    yoda: 40000,
+    special: 1000,
 }
-
-
 
 function getForca(valor){
     return FORCA_EQUIPAMENTOS[valor]
@@ -80,4 +76,15 @@ function getPreco(valor){
         window.alert(`Erro ao Capturar Preço de ${valor}! error in constValues.js`),
         null
     );
+}
+
+function getConquistaClass(id){
+    let dadosJogador = carregarDados();
+    let conquistas = dadosJogador.conquistas;
+    if(conquistas[id] === false){
+        return "conquista-cinza"; 
+    }
+    else{
+        return "conquista-golden";
+    }
 }

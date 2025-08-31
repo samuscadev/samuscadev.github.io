@@ -1,11 +1,9 @@
 /* Tela inteira para o céu */
 #sky {
-    z-index: -999;
+    z-index: -97;
   position: fixed;
   inset: 0;
   overflow: hidden;
-  background:
-    radial-gradient(1200px 800px at 70% 20%, #0b1530 0%, #070f24 40%, #050b1a 70%, #040814 100%);
 }
 
 /* Cada estrela */
@@ -51,3 +49,5 @@
     opacity: 1;
   }
 }
+
+

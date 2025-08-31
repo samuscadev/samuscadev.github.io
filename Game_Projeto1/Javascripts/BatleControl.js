@@ -88,6 +88,7 @@ function calculoAutomaticoBatalha(){
         let dataAtual = dadosJogador.dias;
         let dataConclusao = dadosJogador.dias;
         adicionarTarefa(null, descricao, dataAtual, dataConclusao);
+        updateConquistas(6);
 
         // percorrer os equipamentos e reduzir
         let equipamentos = dadosJogador.qntEquipamentos;
@@ -127,12 +128,11 @@ function anexar(){
 
     let anexado = dadosJogador.planetaAlvo;
     dadosJogador.planetasConquistados.push(anexado);
+    let img = dadosJogador.planetaAlvo.sprite;
+    mostrarPopUp(img, "Planeta Anexado!");
     alterarPropriedade("planetasConquistados", dadosJogador.planetasConquistados);
     
+    updateConquistas(5);
     precExploracao();
-    let descricao = `Você anexou o planeta de ${anexado.nome}`;
-    let dataAtual = dadosJogador.dias;
-    let dataConclusao = dadosJogador.dias;
-    adicionarTarefa(null, descricao, dataAtual, dataConclusao);
     fecharMensagem(1);
 }

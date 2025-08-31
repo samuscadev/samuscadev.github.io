@@ -8,6 +8,8 @@ function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CA
     salario: classe.salario,
     receita: classe.receita,
     forca: classe.forca,
+    aumentoCustosPesquisa: classe.aumentoCustosPesquisa,
+    custoPesquisa: classe.custoPesquisa,
     perDesconto: classe.perDesconto,
     tempTrabalho: classe.tempTrabalho,
     tempPesquisa: classe.tempPesquisa,
@@ -16,6 +18,7 @@ function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CA
     levelPesquisaTrabalho: 1,
     levelPesquisaDesconto: 1,
     pesquisaEmAndamento: false,
+
 
     recursos: {
       madeira: 0,
@@ -47,6 +50,7 @@ function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CA
     planetasConquistados: [],
     vitorias: [],
     conquistas: [false, false, false, false,false,false,false,false,false,false,false,false,false],
+    numConquistas: 0,
   };
   localStorage.setItem("dados", JSON.stringify(dados));
 }

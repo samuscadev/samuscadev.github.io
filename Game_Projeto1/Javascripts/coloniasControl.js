@@ -2,12 +2,12 @@ function preColonia(){
     let dadosJogador = carregarDados();
     let inimigo = dadosJogador.planetaAlvo;
     let nomePlaneta = inimigo.nome;
-    let custo = ultimaCasaComZeros(inimigo.recursos.diamante * 10);
+    let custo = inimigo.custo;
 
     let sHtml = `<h2>Você deseja Colonizar "${nomePlaneta}"?</h2>
                     <div class="custo">
                         <img src="Sprites/IU/coin.png" class="redIconStatus">
-                        <p class="red-atributo">- ${custo}</p>
+                        <p class="red-atributo">- ${formatarNumero(custo)}</p>
                     </div>
                     <div class="custo">
                         <img src="Sprites/itens/Ships/ship_Travel.png" class="redIconStatus">
@@ -54,6 +54,7 @@ function colonizar(){
     let dataAtual = dadosJogador.dias;
     let dataConclusao = dadosJogador.dias;
     adicionarTarefa(null, descricao, dataAtual, dataConclusao);
+    updateConquistas(4);
     
     fecharMensagem(1);
 }

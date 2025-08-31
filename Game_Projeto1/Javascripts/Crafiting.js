@@ -66,6 +66,6 @@ function construir(item){
     let chave = item;
     let descricao = `Construção de ${getNome(item)}`;
     let dataConclusao = dadosJogador.dias + dadosJogador.tempTrabalho;
-    
+    updateConquistas(2);
     adicionarTarefa(chave, descricao, dadosJogador.dias, dataConclusao);
 }

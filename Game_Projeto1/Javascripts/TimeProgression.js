@@ -26,8 +26,8 @@ function atualizarStatus(elemento, dias) {
         <h3 id="nome">@${dados.nomeJogador}</h3>
     </div>
     <div class="status">
-        <img src="Sprites/IU/calendar.png" class="iconStatus">
-        <p id="dias" class="atributo">${dados.dias}</p>
+        <img src="Sprites/IU/moon.webp" class="iconStatus" id="sun">
+        <p id="dias" class="atributo">${formatarNumero(dados.dias)}</p>
     </div>
     <div class="status">
         <img src="Sprites/IU/coin.png" class="iconStatus">
@@ -44,7 +44,7 @@ function atualizarStatus(elemento, dias) {
 function atualizarPainel(){
     setInterval(() => {
         atualizarStatus(PAINEL_STATUS_El, 0);
-    }, 250);
+    }, 100);
 }
 
 function passagemTempo(){
