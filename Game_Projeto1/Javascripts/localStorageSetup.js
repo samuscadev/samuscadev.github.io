@@ -7,6 +7,8 @@ function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CA
     dias: 0,
     salario: classe.salario,
     receita: classe.receita,
+    gemas: 0,
+    missoes: [],
     forca: classe.forca,
     aumentoCustosPesquisa: classe.aumentoCustosPesquisa,
     custoPesquisa: classe.custoPesquisa,
@@ -49,7 +51,7 @@ function criarDados(nome, nomeImp, spriteFlag="Sprites/flags/5.png", classe = CA
     planetaAlvo: null,
     planetasConquistados: [],
     vitorias: [],
-    conquistas: [false, false, false, false,false,false,false,false,false,false,false,false,false],
+    conquistas: Array(25).fill(false),
     numConquistas: 0,
   };
   localStorage.setItem("dados", JSON.stringify(dados));

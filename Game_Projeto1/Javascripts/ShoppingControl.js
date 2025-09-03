@@ -13,8 +13,9 @@ function comprar(produto, valor){
 
           let texto = `Compra: +100 "${getNome(produto)}"`;
           let img = getSprites(produto);
-          mostrarPopUp(img, texto);
-          setTimeout(()=>{updateConquistas(0)}, 6000);
+          if(!updateConquistas(0)){
+            mostrarPopUp(img, texto);
+          }          
       }
       piscarBotao(0);
       precContratos();

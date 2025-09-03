@@ -2,6 +2,18 @@
     /*Especificidades:*/
     transition: all 100ms ease-in-out;
 }
+
+#cabeca{
+
+    background-image: linear-gradient(rgba(255, 237, 74, 0.336) , transparent);
+    
+    margin: 0px;
+    padding: 10px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 #Painel-Status{
     /*Flex: */
     display: flex;
@@ -36,6 +48,19 @@ section{
     
     /*Margens: */
     margin: 10px 2%;
+}
+
+.layer1 {
+  background: linear-gradient(rgb(223, 94, 255), rgb(235, 18, 255), rgb(255, 233, 30), rgb(255, 147, 7));
+  z-index: -99;
+}
+
+/* gradiente final */
+.layer2 {
+  background: linear-gradient(rgb(31, 31, 105), rgb(20, 20, 75), rgb(30, 14, 56), rgb(23, 8, 48));
+  z-index: -98;
+  opacity: 0; /* começa invisível */
+  animation: fade 6s infinite alternate; /* anima a opacidade */
 }
 
 #mensagem .inventario{

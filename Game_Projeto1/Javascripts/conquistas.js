@@ -11,7 +11,11 @@ function updateConquistas(id){
         mostrarPopUp("Sprites/IU/trofeu.png", "Conquista Concluída!");
         precConquistas();
     }
+    else{
+        return false;
+    }
     alterarPropriedade("conquistas", conquistas);
+    return true;
 }
 
 

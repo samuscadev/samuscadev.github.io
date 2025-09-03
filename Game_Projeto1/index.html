@@ -36,12 +36,25 @@
         <p>Se estiver vendo isso é por que seu ultimo save está desatualizado e você precisará criar um novo save! Delete seu save:</p>
         <button onclick="deletarDados()" class="main-Button"> Deletar Save</button>
     </div>
+
+    <button class="main-Button" onclick="mostrarNota()">Notas da Ultima Versão</button>
+    <h3 id="note">Nota: Os saves da versão anterior tiveram de passar por modificações para comtemplar os novos recursos;
+        localStorage: Agora possui um corretor padrão para caso seu save esteja desatualizado corrigir, caso queira o fazer manualmente, delete seu antigo e crie um novo save
+    </h3>
     
+    <p id="versao">versão 1.0 - Banana Split</p>
     <script src="Javascripts/localStorageSetup.js"></script>
     <script src="Javascripts/util.js"></script>
     <script src="Javascripts/mainPage.js"></script>
     <script src="Javascripts/stars.js" defer></script>
     
+    <script>
+        const nota = document.getElementById("note");
+
+        function mostrarNota(){
+            nota.style.display = "block";
+        }
+    </script>
     <script>
         const animacoes = [
             "Sprites/planets/anim_1.mp4",
@@ -54,9 +67,9 @@
 
         setInterval(() => {
             indice = (indice + 1) % animacoes.length;
-            video.src = animacoes[indice]; // troca o vídeo
-            video.load();                 // carrega o novo vídeo
-            video.play();                 // toca automaticamente
+            video.src = animacoes[indice]; 
+            video.load();                 
+            video.play();                 
         }, 3000);
     </script>
 </body>

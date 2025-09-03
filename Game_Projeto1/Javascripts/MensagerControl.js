@@ -47,6 +47,11 @@ function mostrarMensagem(id, sHtml = "<p></p>", chave = "none"){
                         <p>Ele pegará uma nave e chegará e após ${dadosJogador.tempTrabalho} dias. Para ver quando um agente contratado chega, cheque a lista de tarefas:</p>
                         <button onclick="fecharMensagem()">Fechar</button>`;
     }
+    if(id == 7){
+        stringHtml = `  <h1>Level Máximo!</h1>
+                        <p>Você chegou ao limite de Evolução desta pesquisa!</p>
+                        <button onclick="fecharMensagem()">Fechar</button>`;
+    }
 
     TELA_DE_MENSAGEM.innerHTML = stringHtml;
     TELA_DE_MENSAGEM.style.display = "flex";
@@ -73,22 +78,22 @@ function mostrarPopUp(img, texto){
 
     setTimeout(()=>{
         POP_UP.style.opacity = 0.5;
-    }, 500);
+    }, 100);
     setTimeout(()=>{
         POP_UP.style.opacity = 1;
-    }, 1000);
+    }, 250);
 
-    setTimeout(fecharPopUp, 5000);
+    setTimeout(fecharPopUp, 1200);
 }
 
 function fecharPopUp(){
     setTimeout(()=>{
         POP_UP.style.opacity = 0.5;
-    }, 500);
+    }, 100);
     setTimeout(()=>{
         POP_UP.style.opacity = 0;
-    }, 1000);
+    }, 250);
     setTimeout(()=>{
         POP_UP.style.display = "none";
-    }, 1050);
+    }, 255);
 }

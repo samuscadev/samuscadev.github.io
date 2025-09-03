@@ -7,7 +7,7 @@ function aumentarDesconto(){
         alterarPropriedade("levelPesquisaDesconto", dadosJogador.levelPesquisaDesconto + 1);
     }
     else{
-        console.log("Level Max");
+        mostrarMensagem(7);
     }
     alterarPropriedade("pesquisaEmAndamento", false);
     setTimeout(precPesquisas, 100);
@@ -21,7 +21,7 @@ function aumentarTrabalho(){
         alterarPropriedade("levelPesquisaTrabalho", dadosJogador.levelPesquisaTrabalho + 1);
     }
     else{
-        console.log("Level Max");
+        mostrarMensagem(7);
     }
     alterarPropriedade("pesquisaEmAndamento", false);   
     setTimeout(precPesquisas, 100); 
@@ -35,7 +35,7 @@ function aumentarForca(){
         alterarPropriedade("levelPesquisaForca", dadosJogador.levelPesquisaForca + 1);
     }
     else{
-        console.log("Level Max");
+        mostrarMensagem(7);
     }
     alterarPropriedade("pesquisaEmAndamento", false);
     setTimeout(precPesquisas, 100);

@@ -39,7 +39,7 @@ body {
 header{
     
     /* Cores: */
-    background-image: linear-gradient(rgb(33, 55, 255) ,rgb(9, 25, 255), rgb(0, 17, 175));
+    background-image: linear-gradient(rgb(33, 55, 255) , transparent);
 
 
     /*Margens: */
@@ -195,11 +195,23 @@ button img{
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#quadrado:hover{
+    color: rgb(0, 17, 255);
+    background-image: linear-gradient(white, rgb(105, 105, 105));
 }
 
 #quadrado h1{
     color: white;
+    font-size: 18pt;
 }
+
 .main-Button{
     background-color: transparent;
     border: 2px solid white;
@@ -249,4 +261,8 @@ select:hover{
 #classes option:hover{
     background: rgb(255, 255, 255);
     color: rgb(9, 95, 255);
+}
+
+#note{
+    display: none;
 }

@@ -1,10 +1,10 @@
 const CABECA = {
-    salario: 100,
+    salario: 50,
     receita: 1000,
     forca: 0,
     perDesconto: 0.95,
-    tempTrabalho: 20, //18
-    tempPesquisa: 2, //10
+    tempTrabalho: 18, //18
+    tempPesquisa: 10, //10
     aumentoCustosPesquisa: 10,
     custoPesquisa: 10,
     aumentoForca :0.95,
@@ -38,12 +38,12 @@ const CONQUISTADOR = {
     salario: 150,
     receita: 0,
     forca: 10000,
-    perDesconto: 2.5,
+    perDesconto: 1.75,
     tempTrabalho: 20,
     tempPesquisa: 30,
     aumentoCustosPesquisa: 250,
     custoPesquisa: 1000,
-    aumentoForca : 3,
+    aumentoForca : 3.5,
 }
 
 const CIENTISTA = {
