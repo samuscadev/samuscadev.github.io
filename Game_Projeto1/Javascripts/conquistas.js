@@ -9,6 +9,7 @@ function updateConquistas(id){
     if(conquistas[id] === false){
         conquistas[id] = true;
         mostrarPopUp("Sprites/IU/trofeu.png", "Conquista Concluída!");
+        alterarPropriedade("numConquistas", dadosJogador.numConquistas + 1);
         precConquistas();
     }
     else{
