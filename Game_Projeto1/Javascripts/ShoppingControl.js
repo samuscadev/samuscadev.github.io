@@ -25,7 +25,7 @@ function comprar(produto, valor){
 function acrescentarAgente(dadosJogador, agente){
   if (dadosJogador.agentes.hasOwnProperty(agente)) {
     let chave = agente;
-    if(chave == "jedi"){
+    if(chave == "yoda"){
       updateConquistas(8);
     }
     let descricao = `Contrato  de um ${agente}`;
