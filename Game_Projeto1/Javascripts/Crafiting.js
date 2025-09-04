@@ -67,5 +67,6 @@ function construir(item){
     let descricao = `Construção de ${getNome(item)}`;
     let dataConclusao = dadosJogador.dias + dadosJogador.tempTrabalho;
     updateConquistas(2);
+    mostrarPopUp(`${getSpritesEquipamentos(item)}`, `Construção de +1 : ${getNome(item)} em andamento`);
     adicionarTarefa(chave, descricao, dadosJogador.dias, dataConclusao);
 }
