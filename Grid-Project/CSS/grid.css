@@ -1,0 +1,69 @@
+#conteiner{
+    height: 600px;
+    width: 600px;
+
+    display: grid;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tamPadrao{
+    width: 110px; height: 110px;
+}
+
+.jogador{
+    z-index: 1;
+}
+
+.tiles{
+    background-size: cover;
+    z-index: 0;
+}
+
+@media (max-width: 900){
+    #status{
+        display: block;
+    }
+}
+
+@media (max-width: 200px){
+    #conteiner{
+        height: 150px;  width: 150px;
+    }
+    .tamPadrao{
+        height: 30px;  width: 30px;
+    }
+}
+@media (min-width: 201px) and (max-width: 300px){
+    #conteiner{
+        height: 200px;  width: 200px;
+    }
+    .tamPadrao{
+        height: 40px;  width: 40px;
+    }
+}
+@media (min-width: 301px) and (max-width: 400px){
+    #conteiner{
+        height: 250px;  width: 250px;
+    }
+    .tamPadrao{
+        height: 50px;  width: 50px;
+    }
+}
+@media (min-width: 401px) and (max-width: 500px){
+    #conteiner{
+        height: 300px;  width: 300px;
+    }
+    .tamPadrao{
+        height: 60px;  width: 60px;
+    }
+}
+@media (min-width: 500px) and (max-width: 600px){
+    #conteiner{
+        height: 500px;  width: 500px;
+    }
+    .tamPadrao{
+        height: 100px;  width: 100px;
+    }
+}
