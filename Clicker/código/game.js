@@ -11,10 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const textoDaMensagem = document.querySelector('#texto-mensagem-tela');
     const tituloDaMensagem = document.querySelector('#Titulo-mensagem-tela');
     const balaoMagicoEL = document.querySelector('#Balao-magico');
+    const espadaAtualEl = document.querySelector('#espadaAtual');
 
     let taxaAumentoDeMeta;
 
     let quatidadedeaumentos = 0;
+
     const mensagensObj = [
         {mensagens: `Os zumbis estão por toda a cidade, precisamos de um heroí que recupere as armas lendarias e os derrote!`},
         {mensagens: 'A vida é assim garoto, na próxima você consegue :D'},
@@ -43,21 +45,30 @@ document.addEventListener("DOMContentLoaded", function() {
     let zumbisMortos = 0;
     let zumbiEspecialAtivo = false;
     let metaCliques =  5;
-    metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
+    metaAtualEl.textContent = `🎯 OBJETIVO: ${metaCliques}`;
 
-    // Array de zumbis normais e o zumbi especial
-        const zumbis = [
-        { nome: "Girassol", vida: 100, img: "images/zombie level 1.gif" },
-        { nome: "Aí meu zoió", vida: 550, img: "images/zombie 2.gif" },
-        { nome: "Maicombi", vida: 1530, img: "images/zombie 3.gif" },
-        { nome: "ICone", vida: 2022, img: "images/zombie 4.gif" },
-        { nome: "Pros Crias", vida: 3400, img: "images/ganon.gif" },
-        { nome: "Monstro Aleatorio", vida: 4000, img: "images/geco.gif" },
-        { nome: "Não é um Zumbi", vida: 5555, img: "images/flor-head.gif" }
+    const zumbis = [
+        { nome: "Girassol", vida: 1, img: "images/zombie level 1.gif" },
+        { nome: "Aí meu zoió", vida: 5, img: "images/zombie 2.gif" },
+        { nome: "Maycombi", vida: 1, img: "images/zombie 3.gif" },
+        { nome: "ICone", vida: 2, img: "images/zombie 4.gif" },
+        { nome: "Reboleichion", vida: 3, img: "images/ganon.gif" },
+        { nome: "Monstro Aléatorio", vida: 4, img: "images/geco.gif" },
+        { nome: "Espere, Isto não é um Zumbi", vida: 5, img: "images/flor-head.gif" }
         
     ];
-    
 
+    const spritesEspadas = [
+        "images/Espada_de_piedra.webp",
+        "images/Espada_de_oro.webp",
+        "images/Diamond_Sword.webp",
+        "images/espadaroxinha.gif",
+        "images/Netherite_Sword.webp",
+        "images/espada suprema.gif",
+        "images/deusessword.gif",
+        "images/machadin.gif",
+        "images/luminite-sword.gif"
+    ]
     const nomesItens = [
         {nome: "Anel"},
         {nome: "Poção"},
@@ -67,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {nome: "Baú"},
     ];
 
-    const zumbiEspecial = { nome: "Algum Boss Do Terraria", vida: 1, img: "images/Ocram.webp" };
+    const zumbiEspecial = { nome: "Baratão", vida: 1, img: "images/Ocram.webp" };
 
     const danosEspadas = [1, 5, 10, 15, 20, 35, 45, 65, 95];
     const precosEspadas = [0, 100, 300, 500, 800, 1000, 2500, 5000, 8555];
@@ -75,9 +86,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const precosUtensilios = [10000, 15000, 22000, 18000, 35000, 100000];
 
     function mostrarObjeto() {
-        balaoMagicoEL.style.display = 'flex';  // Mostra o objeto
+        balaoMagicoEL.style.display = 'flex';
         setTimeout(() => {
-            balaoMagicoEL.style.display = 'none'; // Esconde após 2 segundos
+            balaoMagicoEL.style.display = 'none';
         }, 1250);
     }
 
@@ -96,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
         else{
             vidaZumbi = zumbiAtual.vida;
         }
-        vidaZumbiAtualEl.textContent = `Vida: ${Math.trunc(Number(vidaZumbi))}`;
+        vidaZumbiAtualEl.textContent = `❤️ ${Math.trunc(Number(vidaZumbi))}`;
     }
     atualizarZumbi();
 
@@ -134,12 +145,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 vidaZumbi -= dano;
             }
 
-            vidaZumbiAtualEl.textContent = `Vida: ${vidaZumbi}`;
-            cliquesEl.textContent = `Cliques: ${moedas}`;
+            vidaZumbiAtualEl.textContent = `❤️ ${vidaZumbi}`;
+            cliquesEl.textContent = `${moedas}`;
 
             if (vidaZumbi <= 0) {
                 zumbisMortos++;
-                zumbisMortosEl.textContent = `Zumbis Mortos: ${zumbisMortos}`;
+                zumbisMortosEl.textContent = `${zumbisMortos}`;
 
                 if (zumbisMortos % 10 === 0) {
 
@@ -161,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     balaoMagicoEL.addEventListener("click", function(){
         moedas += 100;
-        cliquesEl.textContent = `Cliques: ${moedas}`;
+        cliquesEl.textContent = `${moedas}`;
     });
 
 
@@ -206,16 +217,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (moedas >= preco) {
                 dano = danosEspadas[index];
-                danoAtualEl.textContent = `Dano Atual: ${dano}`;
+                espadaAtualEl.src = spritesEspadas[index];
+                danoAtualEl.textContent = `Dano: ${dano}`;
                 if(precosEspadas[index] != 0){
                     metaCliques = 5;
                 }
                 moedas -= preco;
-                cliquesEl.textContent = `Cliques: ${moedas}`;
+                cliquesEl.textContent = `${moedas}`;
                 precosEspadas[index] = 0;
                 espada.querySelector('.preco_espadinha p').textContent = "Grátis";
                 
-                metaAtualEl.textContent = `Meta de Cliques: ${metaCliques}`;
+                metaAtualEl.textContent = `🎯 OBJETIVO: ${metaCliques}`;
             } else {
 
                 tituloDaMensagem.textContent = mensagensObj[5].titulos;
@@ -234,9 +246,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const seconds = timeLeft % 60;
     
         // Atualiza o display do timer
-        timerEl.textContent = `Tempo: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    
-        // Muda a cor para vermelho quando o tempo é menor que 10 segundos
+        timerEl.textContent = `⏱️ Tempo: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
         if (timeLeft < 10) {
             timerEl.style.color = 'rgb(255, 221, 31)'; // vermelho
         } else {
@@ -248,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timeLeft = 60;  // Reseta o tempo
             taxaAumentoDeMeta = (Math.random() * 0.4 + 1.1);
             metaCliques = taxaAumentoDeMeta * moedas;  // Incrementa a meta de cliques
-            metaAtualEl.textContent = `Meta de Cliques: ${Math.trunc(metaCliques)}`;
+            metaAtualEl.textContent = `🎯 OBJETIVO: ${Math.trunc(metaCliques)}`;
     
             quatidadedeaumentos ++;
             if(itemAtual == 5 && quatidadedeaumentos %2 == 0){
@@ -266,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timeLeft--;
             if(itemAtual == 1){
                 moedas +=5;
-                cliquesEl.textContent = `Cliques: ${moedas}`;
+                cliquesEl.textContent = `${moedas}`;
             }
             
         } else {

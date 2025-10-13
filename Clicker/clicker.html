@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <title>Zoombie Clicker</title>
     <link rel="stylesheet" href="estilos_base_clicker.css">
     <link rel="stylesheet" href="estilo-colecionaveis.css">
@@ -26,10 +26,10 @@
 
         <div id="inicio_header"> 
             <img src="images/zombie-mine.gif" alt="Coin Icon">
-            <h1>Zoombie Clicker Game</h1>
+            <h1>Zoombie Clicker</h1>
         </div>
         
-        <button id="alterna-menu">Armas</button>
+        <button id="alterna-menu">Loja</button>
     </header>
     <div id="mensagem-de-tela">
         <h1 id="Titulo-mensagem-tela">Você perdeu!</h1> 
@@ -39,7 +39,6 @@
     </div>
 
     <main class="conteudo-principal">
-
         <div id="Balao-magico">+100</div>
 
             <section id="store" class="c_store">
@@ -112,21 +111,29 @@
             </div>        
         </section>
                 
-        <div id="timer">Tempo: 1:00</div>
-        <p id="meta">Meta de cliques atual: 100</p>
-        <section class="game_em_si">
-            <article id="jogador" class="c_jogador">
-
-                <p id="dano_atual">Poder de Clique: 1</p>
-                <p id="cliques">Cliques: 0</p>
-                <p id="zumbis_mortos">Zumbis Mortos: 0</p>
-            </article>
-        
+        <div id="timer"></div>
+        <p id="meta"></p>
+        <section class="game_em_si">        
             <article id="zombie" class="c_zombie">
                 <img src="images/zombie level 1.gif" alt="Zumbi" id="zombie-atual">
-                <p id="Nome_inimigo">Zumbi 1</p>
-                <p id="vida_zumbi_atual">Vida: 100</p>
+                <p id="Nome_inimigo"></p>
+                <p id="vida_zumbi_atual"></p>
             </article>
+        </section>
+
+        <section id="jogador" class="c_jogador">
+                <div class="status-jogador">
+                    <img id="espadaAtual" src="images/Espada_de_piedra.webp" width="50px" height="50px">
+                    <p id="dano_atual">Dano: 1</p>
+                </div>
+                <div class="status-jogador">
+                    <img src="images/click.gif" width="50px" height="50px">
+                    <p id="cliques">0</p>
+                </div>
+                <div class="status-jogador">
+                    <img src="images/zombie-mine.gif" width="50px" height="50px">
+                    <p id="zumbis_mortos">0</p>
+                </div>
         </section>
 
         <section id="playerContainer">
@@ -177,17 +184,13 @@
             </article>
         </section>
         
-        <img id="morcegu" src="images/morcegu.gif">
-        <p id="version">Versão 7.1 (Você está na Ultima Versão)</p>
-
-        
+        <p id="version">Versão 2.0.0 - Os Zumbis estão a solta!</p>        
     </main>
 
     <script src="código/game.js"></script>
     <script src="código/timer.js"></script>
     <script src="código/lojinha.js"></script>
     <script src="código/sounds.js"></script>
-    <script src="código/efeitinhos.js"></script>
     <script src="código/efeitos-ponteiro.js"></script>
 </body>
 </html>

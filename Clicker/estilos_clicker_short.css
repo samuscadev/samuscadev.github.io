@@ -52,6 +52,11 @@ div .preco_espadinha img{
     margin-left: 0px;
 }
 
+.c_zombie img {
+    width: 100px; height: 100px;
+    transition: all 100ms ease-in-out;
+}
+
 .c_jogador, .c_zombie{
     width: 100%;
 }
@@ -67,10 +72,6 @@ div .preco_espadinha img{
     margin-top: 2%;
 }
 
-#zombie-atual{
-    width: 30%;
-}
-
 .menu-lateral h1{
     display: none;
 }
@@ -79,10 +80,6 @@ div .preco_espadinha img{
 }
 .como-jogar, .como-jogar p{
     font-size: 15px;
-}
-
-#timer, #meta, #txto-item-atual{
-    font-size: 110%;
 }
 
 #mensagem-de-tela{
@@ -109,10 +106,4 @@ div .preco_espadinha img{
 #timer{
     font-size: 290%;
 }
-#morcegu{
-    width: 35%;
-}
-#flor{
-    position: fixed;
-    width: 25%;
-}
+
